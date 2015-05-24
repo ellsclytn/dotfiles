@@ -4,6 +4,11 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 brew tap caskroom/cask
 brew install brew-cask
+brew install git
+brew install node
+brew install rbenv
+brew install ruby-build
+brew install wget
 brew update && brew upgrade brew-cask && brew cleanup
 
 brew cask install alfred
@@ -24,6 +29,7 @@ brew cask install spotify
 brew cask install steam
 brew cask install sublime-text
 brew cask install teamspeak-client
+brew cask install the-unarchiver
 brew cask install transmission
 brew cask install vlc
 
