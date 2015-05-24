@@ -11,6 +11,10 @@ brew install node
 brew install rbenv
 brew install ruby-build
 brew install wget
+
+echo 'export HOMEBREW_CASK_OPTS="--appdir=/Applications"'
+source ~/.bash_profile
+
 brew update && brew upgrade brew-cask && brew cleanup
 
 brew cask install adobe-creative-cloud
