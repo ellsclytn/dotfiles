@@ -1,0 +1,30 @@
+#!/bin/sh
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew tap caskroom/cask
+brew install brew-cask
+brew update && brew upgrade brew-cask && brew cleanup
+
+brew cask install alfred
+brew cask install android-file-transfer
+brew cask install filezilla
+brew cask install firefox
+brew cask install flux
+brew cask install google-chrome
+brew cask install google-earth
+brew cask install google-hangouts
+brew cask install iterm2
+brew cask install kodi
+brew cask install libreoffice
+brew cask install macdown
+brew cask install openttd
+brew cask install skype
+brew cask install spotify
+brew cask install steam
+brew cask install sublime-text
+brew cask install teamspeak-client
+brew cask install transmission
+brew cask install vlc
+
+brew update && brew upgrade brew-cask && brew cleanup
