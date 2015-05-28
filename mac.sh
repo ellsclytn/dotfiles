@@ -40,6 +40,8 @@ brew cask install sublime-text
 brew cask install teamspeak-client
 brew cask install the-unarchiver
 brew cask install transmission
+brew cask install vagrant
+brew cask install virtualbox
 brew cask install vlc
 brew cask install xld
 
@@ -56,3 +58,9 @@ rbenv install "$rver"
 sudo gem install sass
 
 sudo npm install sails -g
+
+echo "SSH Time!"
+ssh-keygen
+
+pbcopy < ~/.ssh/id_rsa.pub
+echo "Your key is in the clipboard"
