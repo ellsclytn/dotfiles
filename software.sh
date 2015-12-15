@@ -61,7 +61,6 @@ read rver
 rbenv install "$rver"
 
 sudo gem install sass
-sudo npm install sails -g
 
 #Vagrant
 echo "alias vagrant=/opt/vagrant/bin/vagrant" >> ~/.bash_profile
