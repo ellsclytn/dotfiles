@@ -63,6 +63,5 @@ rbenv install "$rver"
 sudo gem install sass
 
 #Vagrant
-echo "alias vagrant=/opt/vagrant/bin/vagrant" >> ~/.bash_profile
 source ~/.bash_profile
 vagrant plugin install vagrant-hostsupdater
