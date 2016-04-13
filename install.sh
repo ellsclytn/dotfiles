@@ -4,6 +4,10 @@
 . defaults.sh
 . dev.sh
 
+# Git files
+cp git/.gitconfig ~
+cp git/.gitignore_global ~
+
 #SSH
 echo "SSH Time!"
 ssh-keygen
