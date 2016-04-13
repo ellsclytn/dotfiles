@@ -4,13 +4,15 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #Brews
-brew tap caskroom/cask
 brew install brew-cask
 brew install git
 brew install node
+brew install platformio
 brew install rbenv
 brew install ruby-build
 brew install wget
+brew tap caskroom/cask
+brew tap caskroom/versions
 
 #Casks
 echo 'export HOMEBREW_CASK_OPTS="--appdir=/Applications"' >> ~/.bash_profile
@@ -28,16 +30,14 @@ brew cask install fritzing
 brew cask install google-chrome
 brew cask install google-hangouts
 brew cask install iterm2
-brew cask install java
-brew cask install kodi
 brew cask install macdown
 brew cask install minecraft
 brew cask install openemu
 brew cask install openttd
 brew cask install sequel-pro
 brew cask install skype
-brew cask install spotify
 brew cask install steam
+brew cask install sublime-text3
 brew cask install teamspeak-client
 brew cask install the-unarchiver
 brew cask install transmission
