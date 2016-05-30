@@ -6,6 +6,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 #Brews
 brew install brew-cask
 brew install git
+brew install hub
 brew install node
 brew install platformio
 brew install rbenv

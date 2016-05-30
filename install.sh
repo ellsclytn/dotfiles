@@ -3,10 +3,12 @@
 . software.sh
 . defaults.sh
 . dev.sh
+. zsh/install.sh
 
-# Git files
 cp git/.gitconfig ~
 cp git/.gitignore_global ~
+cp zsh/.zshrc ~
+cp iterm/com.googlecode.iterm2.plist ~/Library/Preferences/
 
 #SSH
 echo "SSH Time!"
