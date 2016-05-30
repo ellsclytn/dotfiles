@@ -4,7 +4,7 @@
 
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster"
-plugins=(git npm zsh-syntax-highlighting)
+plugins=(git hub npm zsh-syntax-highlighting)
 DEFAULT_USER=Ellis
 
 
