@@ -45,10 +45,3 @@ alias ll="ll -l"
 
 # Homebrew cask install directory
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-
-###
-#   TMUX
-###
-
-DISABLE_AUTO_TITLE="true"
