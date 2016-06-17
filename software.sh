@@ -4,7 +4,6 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #Brews
-brew install brew-cask
 brew install git
 brew install hub
 brew install node
@@ -16,8 +15,7 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 
 #Casks
-echo 'export HOMEBREW_CASK_OPTS="--appdir=/Applications"' >> ~/.bash_profile
-source ~/.bash_profile
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 brew cask install adobe-creative-cloud
 brew cask install alfred
@@ -47,22 +45,20 @@ brew cask install virtualbox
 brew cask install vlc
 brew cask install xld
 
+#NVM
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
+
 #Composer
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/
-echo 'alias composer="php /usr/local/bin/composer.phar"' >> ~/.bash_profile
 
 #Ruby
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-source ~/.bash_profile
+eval "$(rbenv init -)"
 
 rbenv install --list
 echo "Type the desired Ruby version"
 read rver
 rbenv install "$rver"
 
-sudo gem install sass
-
 #Vagrant
-source ~/.bash_profile
 vagrant plugin install vagrant-hostsupdater
