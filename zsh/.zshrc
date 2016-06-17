@@ -31,12 +31,12 @@ source $ZSH/oh-my-zsh.sh
 #   Aliases
 ###
 
-alias zshconfig="nano ~/.zshrc"
-alias zshsource="source ~/.zshrc"
-alias npmi="npm install --no-progress"
+alias composer="php /usr/local/bin/composer.phar"
 alias dev="cd ~/Documents/Development"
 alias git="hub"
-alias ll="ll -l"
+alias npmi="npm install --no-progress"
+alias zshconfig="nano ~/.zshrc"
+alias zshsource="source ~/.zshrc"
 
 
 ###
@@ -45,3 +45,16 @@ alias ll="ll -l"
 
 # Homebrew cask install directory
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+
+###
+#   Autoload nvmrc
+###
+
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    nvm use
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
