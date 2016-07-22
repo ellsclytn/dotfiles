@@ -36,7 +36,7 @@ brew cask install openttd
 brew cask install sequel-pro
 brew cask install skype
 brew cask install steam
-brew cask install sublime-text3
+brew cask install sublime-text
 brew cask install teamspeak-client
 brew cask install the-unarchiver
 brew cask install transmission
