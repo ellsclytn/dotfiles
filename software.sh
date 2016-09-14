@@ -29,7 +29,7 @@ brew cask install flux
 brew cask install fritzing
 brew cask install google-chrome
 brew cask install google-hangouts
-brew cask install iterm2
+brew cask install iterm2-beta
 brew cask install macdown
 brew cask install minecraft
 brew cask install openemu
