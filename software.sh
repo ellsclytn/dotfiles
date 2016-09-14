@@ -46,9 +46,6 @@ brew cask install virtualbox
 brew cask install vlc
 brew cask install xld
 
-#NVM
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
-
 #Composer
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/
