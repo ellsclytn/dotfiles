@@ -7,6 +7,7 @@
 
 cp git/.gitconfig ~
 cp git/.gitignore_global ~
+cp nvim/init.vim ~/.config/nvim/.
 cp zsh/.zshrc ~
 cp iterm/com.googlecode.iterm2.plist ~/Library/Preferences/
 

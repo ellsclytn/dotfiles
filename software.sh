@@ -6,6 +6,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 #Brews
 brew install git
 brew install hub
+brew install neovim/neovim/neovim
 brew install node
 brew install platformio
 brew install rbenv
@@ -62,3 +63,10 @@ rbenv install "$rver"
 
 #Vagrant
 vagrant plugin install vagrant-hostsupdater
+
+#Vim-plug
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+nvim +PlugInstall +qall
+
