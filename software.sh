@@ -4,6 +4,7 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #Brews
+brew install ag
 brew install direnv
 brew install git
 brew install hub
