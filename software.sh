@@ -24,7 +24,6 @@ brew cask install adobe-creative-cloud
 brew cask install alfred
 brew cask install android-file-transfer
 brew cask install appcleaner
-brew cask install bittorrent-sync
 brew cask install filezilla
 brew cask install firefox
 brew cask install flux
@@ -36,6 +35,7 @@ brew cask install macdown
 brew cask install minecraft
 brew cask install openemu
 brew cask install openttd
+brew cask install resilio-sync
 brew cask install sequel-pro
 brew cask install skype
 brew cask install steam
