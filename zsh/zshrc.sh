@@ -21,3 +21,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Init oh my zsh
 source $ZSH/oh-my-zsh.sh
 
+# Editor
+export EDITOR="nvim"
