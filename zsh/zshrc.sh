@@ -30,19 +30,3 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Init oh my zsh
 source $ZSH/oh-my-zsh.sh
 
-###
-#   Aliases
-###
-
-alias dev="cd ~/Documents/Development"
-alias git="hub"
-alias laralog="tail -f storage/logs/laravel.log"
-alias vim="nvim"
-alias vimconfig="vim ~/.config/nvim/init.vim"
-alias zshconfig="vim ~/.zshrc"
-alias zshsource="source ~/.zshrc"
-
-function sub() {
-  echo "Try vim!"
-  subl -a $1
-}
