@@ -1,13 +1,4 @@
 ###
-#   ZSH Setup
-###
-
-export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="muse"
-plugins=(git hub npm zsh-syntax-highlighting)
-DEFAULT_USER=Ellis
-
-###
 #   Environment Variables
 ###
 

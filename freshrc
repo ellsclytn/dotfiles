@@ -11,7 +11,10 @@
 fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
+fresh zsh/oh-my-zsh.sh
+
 # Using my old .zshrc until I fully migrate it across to fresh configs
 fresh zsh/zshrc.sh
 
 fresh config/aliases.sh
+
