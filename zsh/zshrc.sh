@@ -1,15 +1,5 @@
-###
-#   Environment Variables
-###
-
-# Brew/other, main path
-export PATH="/usr/local/bin:$PATH"
-
 # .envrc support
 eval "$(direnv hook $SHELL)"
-
-# Homebrew cask install directory
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 ###
 #   Init managers

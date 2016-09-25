@@ -13,6 +13,8 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
 fresh zsh/oh-my-zsh.sh
 
+fresh env/brew.sh
+
 # Using my old .zshrc until I fully migrate it across to fresh configs
 fresh zsh/zshrc.sh
 
