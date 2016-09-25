@@ -21,5 +21,10 @@ fresh zsh/zshrc.sh
 fresh config/aliases.sh
 
 # Vim
-fresh nvim/init.vim --bin=~/.config/nvim/init.vim
+fresh nvim/plugs.vim --file=~/.config/nvim/init.vim
+fresh-options --file=~/.config/nvim/init.vim
+  fresh nvim/plugins/\*.vim
+  fresh nvim/config/\*.vim
+fresh-options
+fresh nvim/end.vim --file=~/.config/nvim/init.vim
 
