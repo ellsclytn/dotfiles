@@ -22,8 +22,9 @@ Plug 'junegunn/vim-easy-align'
 " Surroundings
 Plug 'tpope/vim-surround'
 
-" Linting
+" Linting/Gutter
 Plug 'scrooloose/syntastic'
+Plug 'airblade/vim-gitgutter'
 
 " Add plugins to &runtimepath
 call plug#end()
