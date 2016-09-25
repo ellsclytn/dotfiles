@@ -1,10 +1,29 @@
 call plug#begin('~/.vim/plugged')
 
 " Syntax Highlighers
-Plug 'mustache/vim-mustache-handlebars'
+Plug 'sheerun/vim-polyglot'
+
+" Emmet
+Plug 'mattn/emmet-vim'
 
 " Fuzzy finder for files
 Plug 'ctrlpvim/ctrlp.vim'
+
+" Colors
+Plug 'chriskempson/vim-tomorrow-theme'
+
+" Commenting
+Plug 'tpope/vim-commentary'
+
+" Whitespace/Alignment
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'junegunn/vim-easy-align'
+
+" Surroundings
+Plug 'tpope/vim-surround'
+
+" Add plugins to &runtimepath
+call plug#end()
 
 " The Silver Searcher
 if executable('ag')
@@ -16,14 +35,8 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-Plug 'tyrannicaltoucan/vim-deep-space'
-
-" Add plugins to &runtimepath
-call plug#end()
-
 " Ignored directories
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard'] " Learn .gitignore somehow
 
 " Search
 set ignorecase " Case insensitive search
@@ -50,11 +63,11 @@ set ruler           " Show cursor position
 set spelllang=en_au " Australian English
 
 " Persistent undo
-set undofile                " Save undo's after file closes
+set undofile                " Save undos after file closes
 set undodir=$HOME/.vim/undo " Where to save histories
 set undolevels=1000         " How many undos
 set undoreload=10000        " Number of lines to save
 
 set background=dark
-colorscheme deep-space
+colorscheme Tomorrow-Night-Bright
 
