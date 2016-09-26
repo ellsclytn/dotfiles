@@ -1,5 +1,4 @@
 alias dev="cd ~/Documents/Development"
-alias git="hub"
 alias laralog="tail -f storage/logs/laravel.log"
 alias vim="nvim"
 alias vi="nvim"
@@ -11,5 +10,9 @@ alias zshsource="source ~/.zshrc"
 function sub() {
   echo "Try vim!"
   subl -a $1
+}
+
+function git() {
+  hub $@
 }
 

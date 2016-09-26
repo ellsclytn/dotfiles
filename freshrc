@@ -17,6 +17,11 @@ fresh-options
   fresh env/\*
 fresh-options
 
+# Git
+fresh-options --file
+  fresh git/\*
+fresh-options
+
 # Vim
 fresh nvim/plugs.vim --file=~/.config/nvim/init.vim
 fresh-options --file=~/.config/nvim/init.vim
