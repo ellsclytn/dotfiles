@@ -11,8 +11,8 @@
 fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
+fresh zsh/zsh.sh
 fresh-options
-  fresh zsh/\*
   fresh config/\*
   fresh env/\*
 fresh-options
