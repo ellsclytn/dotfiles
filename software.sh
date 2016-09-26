@@ -29,6 +29,7 @@ brew cask install firefox
 brew cask install flux
 brew cask install fritzing
 brew cask install google-chrome
+brew cask install google-drive
 brew cask install google-hangouts
 brew cask install iterm2-beta
 brew cask install macdown
