@@ -11,6 +11,8 @@
 fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
+fresh iterm/com.googlecode.iterm2.plist --bin=~/Library/Preferences/com.googlecode.iterm2.plist
+
 fresh zsh/zsh.sh
 fresh-options
   fresh config/\*

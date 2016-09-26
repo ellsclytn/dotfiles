@@ -5,7 +5,6 @@
 . dev.sh
 . zsh/install.sh
 
-cp iterm/com.googlecode.iterm2.plist ~/Library/Preferences/
 fresh
 
 #SSH
