@@ -29,6 +29,7 @@ fresh nvim/plugs.vim --file=~/.config/nvim/init.vim
 fresh-options --file=~/.config/nvim/init.vim
   fresh nvim/plugins/\*.vim
   fresh nvim/config/\*.vim
+  fresh hackling/dotfiles vim/keybindings/visualblockindent.vim
 fresh-options
 fresh nvim/end.vim --file=~/.config/nvim/init.vim
 
