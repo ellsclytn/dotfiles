@@ -9,6 +9,9 @@ Plug 'mattn/emmet-vim'
 " Fuzzy finder for files
 Plug 'ctrlpvim/ctrlp.vim'
 
+" Auto mkdir
+Plug 'travisjeffery/vim-auto-mkdir'
+
 " Colors
 Plug 'chriskempson/vim-tomorrow-theme'
 
