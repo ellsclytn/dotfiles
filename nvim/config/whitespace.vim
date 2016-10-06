@@ -10,3 +10,5 @@ set foldmethod=indent         " Fold based on indentation.
 set foldlevelstart=99         " Expand all folds by default.
 set backspace=2
 
+autocmd BufWritePre * StripWhitespace
+
