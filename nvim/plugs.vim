@@ -29,6 +29,9 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 
+" Words
+Plug 'tpope/vim-abolish'
+
 " Add plugins to &runtimepath
 call plug#end()
 
