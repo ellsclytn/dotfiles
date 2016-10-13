@@ -29,6 +29,11 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 
+" Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+
 " Words
 Plug 'tpope/vim-abolish'
 
