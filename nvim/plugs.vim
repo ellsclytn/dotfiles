@@ -13,7 +13,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'travisjeffery/vim-auto-mkdir'
 
 " Colors
-Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'nanotech/jellybeans.vim'
 
 " Commenting
 Plug 'tpope/vim-commentary'
