@@ -6,8 +6,7 @@ mkdir "~/Documents/Development"
 
 #Fonts
 echo "Installing fonts..."
-wget -q https://github.com/powerline/fonts/raw/master/Hack/Hack-Bold.ttf -P ~/Library/Fonts/
-wget -q https://github.com/powerline/fonts/raw/master/Hack/Hack-BoldItalic.ttf -P ~/Library/Fonts/
-wget -q https://github.com/powerline/fonts/raw/master/Hack/Hack-Italic.ttf -P ~/Library/Fonts/
-wget -q https://github.com/powerline/fonts/raw/master/Hack/Hack-Regular.ttf -P ~/Library/Fonts/
+git clone https://github.com/powerline/fonts.git
+. fonts/install.sh
+rm -rf fonts
 curl https://raw.githubusercontent.com/qrpike/Web-Font-Load/master/install.sh | sh
