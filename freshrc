@@ -22,6 +22,12 @@ fresh-options --file
   fresh git/\*
 fresh-options
 
+fresh-options --file=~/.gitignore_global --marker=#
+  fresh github/gitignore Global/macOS.gitignore
+  fresh github/gitignore Global/Vagrant.gitignore
+  fresh github/gitignore Global/Vim.gitignore
+fresh-options
+
 # Vim
 fresh nvim/plugs.vim --file=~/.config/nvim/init.vim
 fresh-options --file=~/.config/nvim/init.vim
