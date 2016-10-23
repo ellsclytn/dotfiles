@@ -18,7 +18,7 @@
   ca  = commit -a --verbose
   cam = commit -a -m
   cm  = commit -m
-  cmb = "git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"
+  cmb = "!git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d"
   co  = checkout
   cob = checkout -b
   d   = diff
