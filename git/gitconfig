@@ -1,31 +1,31 @@
 [user]
-  name = Ellis Clayton
+  name  = Ellis Clayton
   email = ellis@ellisclayton.info
 [push]
   default = simple
 [color]
-  diff = auto
-  status = auto
-  branch = auto
+  branch      = auto
+  diff        = auto
   interactive = auto
-  ui = auto
+  status      = auto
+  ui          = auto
 [alias]
   # https://gist.github.com/mwhite/6887990
-  l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=short
-  a = add
-  ap = add -p
-  c = commit --verbose
-  ca = commit -a --verbose
-  cm = commit -m
+  a   = add
+  ap  = add -p
+  b   = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+  c   = commit --verbose
+  ca  = commit -a --verbose
   cam = commit -a -m
-  m = commit --amend --verbose
-  d = diff
-  ds = diff --stat
-  dc = diff --cached
-  s = status -s
-  co = checkout
+  cm  = commit -m
+  co  = checkout
   cob = checkout -b
-  b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
-  la = "!git config -l | grep alias | cut -c 7-"
+  d   = diff
+  dc  = diff --cached
+  ds  = diff --stat
+  l   = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=short
+  la  = "!git config -l | grep alias | cut -c 7-"
+  m   = commit --amend --verbose
+  s   = status -s
 [core]
   excludesfile = ~/.gitignore_global
