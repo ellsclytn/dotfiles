@@ -25,9 +25,10 @@ Plug 'junegunn/vim-easy-align'
 " Surroundings
 Plug 'tpope/vim-surround'
 
-" Linting/Gutter
+" Linting/Gutter/Highlighting
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
+Plug 'chrisbra/Colorizer'
 
 " Airline
 Plug 'vim-airline/vim-airline'
