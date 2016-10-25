@@ -11,11 +11,17 @@
 fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
+# Shell
 fresh zsh/zsh.sh
 fresh-options
   fresh config/\*
   fresh env/\*
 fresh-options
+
+# Pure
+fresh jamesottaway/dotfiles lib/pure
+fresh sindresorhus/pure pure.zsh --file=zsh/pure/prompt_pure_setup
+fresh sindresorhus/pure async.zsh --file=zsh/pure/async
 
 # Git
 fresh-options --file
