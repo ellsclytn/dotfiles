@@ -6,7 +6,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 #Brews
 brew install ag
 brew install asciinema
+brew install cowsay
 brew install direnv
+brew install fortune
 brew install git
 brew install hub
 brew install neovim/neovim/neovim
