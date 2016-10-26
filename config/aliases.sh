@@ -8,11 +8,6 @@ alias vimconfig="vim ~/.config/nvim/init.vim"
 alias zshconfig="vim ~/.zshrc"
 alias zshsource="source ~/.zshrc"
 
-function sub() {
-  echo "Try vim!"
-  subl -a $1
-}
-
 function git() {
   hub $@
 }
