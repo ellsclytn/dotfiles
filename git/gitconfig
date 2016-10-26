@@ -26,6 +26,7 @@
   ds  = diff --stat
   l   = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --date=short
   la  = "!git config -l | grep alias | cut -c 7-"
+  lp  = log --graph --decorate --pretty=oneline --abbrev-commit --all
   m   = commit --amend --verbose
   s   = status -s
 [core]
