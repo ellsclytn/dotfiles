@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. software.sh
+. software/install.sh
 . defaults.sh
 . dev.sh
 . zsh/install.sh
