@@ -16,6 +16,7 @@ brew 'rbenv'
 brew 'ruby-build'
 brew 'sl'
 brew 'wget'
+brew 'yarn'
 
 #Casks
 

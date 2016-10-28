@@ -2,8 +2,13 @@
 
 . homebrew.sh
 
+# Nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+nvm install node
+
 # Linters
-npm i eslint -g
+yarn global add eslint
+yarn global add standard
 
 #Composer
 curl -sS https://getcomposer.org/installer | php
