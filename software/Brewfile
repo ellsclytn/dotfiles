@@ -1,6 +1,5 @@
 #Brews
 
-brew 'ag'
 brew 'archey'
 brew 'asciinema'
 brew 'asciiquarium'
@@ -15,6 +14,7 @@ brew 'neovim/neovim/neovim'
 brew 'node'
 brew 'platformio'
 brew 'rbenv'
+brew 'ripgrep'
 brew 'ruby-build'
 brew 'sl'
 brew 'wget'
