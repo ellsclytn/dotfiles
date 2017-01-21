@@ -6,8 +6,9 @@ Plug 'sheerun/vim-polyglot'
 " Emmet
 Plug 'mattn/emmet-vim'
 
-" Fuzzy finder for files
+" Files
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
 
 " Auto mkdir
 Plug 'travisjeffery/vim-auto-mkdir'
