@@ -1,3 +1,13 @@
 #!/bin/bash
 
-curl -s wttr.in/${1:-$CITY}
+while getopts "f" OPTION
+do
+  case $OPTION in
+    f)
+      curl -s wttr.in/${2:-$CITY}
+      exit
+      ;;
+  esac
+done
+
+curl -s wttr.in/${1:-$CITY} | head -n 7
