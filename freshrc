@@ -16,6 +16,7 @@ fresh zsh/init.zsh
 fresh-options
   fresh config/\*
   fresh env/\*
+  fresh robbyrussell/oh-my-zsh lib/history.zsh
 fresh-options
 fresh zsh/zplug.zsh
 
