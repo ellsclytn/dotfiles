@@ -1,7 +1,9 @@
-export ZSH=$HOME/.oh-my-zsh
 DEFAULT_USER=Ellis
-plugins=(git hub npm zsh-syntax-highlighting)
 
-# Init oh my zsh
-source $ZSH/oh-my-zsh.sh
+source ~/.zplug/init.zsh
 
+# Pure
+zplug mafredri/zsh-async, from:github
+zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+
+zplug load
