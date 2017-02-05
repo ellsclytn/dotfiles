@@ -12,21 +12,18 @@ fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
 # Shell
-fresh zsh/zsh.sh
+fresh zsh/init.zsh
 fresh-options
   fresh config/\*
   fresh env/\*
+  fresh robbyrussell/oh-my-zsh lib/history.zsh
 fresh-options
+fresh zsh/zplug.zsh
 
 # Bin
 fresh-options --bin
   fresh bin/\*
 fresh-options
-
-# Pure
-fresh jamesottaway/dotfiles lib/pure
-fresh sindresorhus/pure pure.zsh --file=zsh/pure/prompt_pure_setup
-fresh sindresorhus/pure async.zsh --file=zsh/pure/async
 
 # Git
 fresh-options --file

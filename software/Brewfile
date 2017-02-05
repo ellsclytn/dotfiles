@@ -19,6 +19,7 @@ brew 'ruby-build'
 brew 'sl'
 brew 'wget'
 brew 'yarn'
+brew 'zsh'
 
 #Casks
 
