@@ -27,7 +27,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
 
 " Linting/Gutter/Highlighting
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/Colorizer'
 
