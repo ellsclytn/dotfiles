@@ -6,6 +6,7 @@ alias g="hub"
 alias l='ls -lFh'
 alias la='ls -lAFh'
 alias laralog="tail -f storage/logs/laravel.log"
+alias typora="open -a typora"
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
