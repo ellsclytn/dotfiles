@@ -8,6 +8,7 @@ Plug 'mattn/emmet-vim'
 
 " Files
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mhinz/vim-grepper'
 Plug 'scrooloose/nerdtree'
 
 " Auto mkdir
