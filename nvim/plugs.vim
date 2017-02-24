@@ -24,6 +24,9 @@ Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/vim-easy-align'
 
+" Autocompletions
+Plug 'jiangmiao/auto-pairs'
+
 " Surroundings
 Plug 'tpope/vim-surround'
 
