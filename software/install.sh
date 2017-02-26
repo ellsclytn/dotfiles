@@ -2,6 +2,10 @@
 
 . homebrew.sh
 
+# Mac App Store
+mas signin jirble2@gmail.com
+mas install $(sed -e 's/#.*//' software/Masfile)
+
 # Nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 nvm install node
@@ -38,4 +42,3 @@ vagrant plugin install vagrant-hostsupdater
 #Vim-plug
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
