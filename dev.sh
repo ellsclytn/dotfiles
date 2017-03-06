@@ -1,10 +1,5 @@
 #!/bin/sh
 
-#Dev structure
-echo "Making your dev directory..."
-mkdir "~/Documents"
-mkdir "~/Documents/Development"
-
 #Fonts
 echo "Installing fonts..."
 git clone https://github.com/powerline/fonts.git
