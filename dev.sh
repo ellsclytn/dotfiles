@@ -2,6 +2,7 @@
 
 #Dev structure
 echo "Making your dev directory..."
+mkdir "~/Documents"
 mkdir "~/Documents/Development"
 
 #Fonts

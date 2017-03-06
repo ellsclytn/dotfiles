@@ -1,11 +1,10 @@
 #!/bin/sh
 
-. software/install.sh
+. software.sh
 . defaults.sh
 . dev.sh
-. zsh/install.sh
 
-fresh
+zsh finalize.zsh
 
 #SSH
 echo "SSH Time!"
