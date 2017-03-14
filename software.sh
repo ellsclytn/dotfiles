@@ -36,6 +36,7 @@ ln -s ~/.dotfiles/freshrc ~/.freshrc
 
 # ZSH
 curl -sL zplug.sh/installer | zsh
+echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
 
 #Ruby
 eval "$(rbenv init -)"
