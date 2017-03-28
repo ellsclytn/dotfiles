@@ -24,6 +24,9 @@ Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/vim-easy-align'
 
+" Navigation
+Plug 'bkad/CamelCaseMotion'
+
 " Autocompletions
 Plug 'jiangmiao/auto-pairs'
 
