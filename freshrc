@@ -31,9 +31,10 @@ fresh-options --file
 fresh-options
 
 fresh-options --file=~/.gitignore_global --marker=#
-  fresh github/gitignore Global/macOS.gitignore
   fresh github/gitignore Global/Vagrant.gitignore
   fresh github/gitignore Global/Vim.gitignore
+  fresh github/gitignore Global/macOS.gitignore
+  fresh github/gitignore Node.gitignore
 fresh-options
 
 # Vim
