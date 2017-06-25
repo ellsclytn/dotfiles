@@ -25,10 +25,6 @@ npm install yarn -g
 yarn global add eslint
 yarn global add standard
 
-#Composer
-curl -sS https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/
-
 #Fresh
 bash -c "`curl -sL get.freshshell.com`"
 rm ~/.freshrc

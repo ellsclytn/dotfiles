@@ -1,5 +1,4 @@
 alias ar="asciinema"
-alias composer="php /usr/local/bin/composer.phar"
 alias dev="cd ~/Documents/Development"
 alias dotfiles="cd ~/.dotfiles"
 alias g="hub"
