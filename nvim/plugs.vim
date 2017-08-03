@@ -37,6 +37,7 @@ Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/Colorizer'
+Plug 'editorconfig/editorconfig-vim'
 
 " Airline
 Plug 'vim-airline/vim-airline'
