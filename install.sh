@@ -1,15 +1,37 @@
 #!/bin/sh
 
-. software.sh
-. defaults.sh
-. dev.sh
+is_linux () {
+  if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    return 0
+  else
+    return 1
+  fi
+}
 
-zsh finalize.zsh
+is_mac () {
+  if [ "$(uname)" == "Darwin" ]; then
+    return 0
+  else
+    return 1
+  fi
+}
 
-#SSH
-echo "SSH Time!"
-ssh-keygen
-pbcopy < ~/.ssh/id_rsa.pub
-echo "Your key is in the clipboard"
+if is_linux; then
+  . linux-software.sh
+fi
 
-echo "Some software may require manual installation. Once that is done, run brew cleanup."
+if is_mac; then
+  . software.sh
+  . defaults.sh
+  . dev.sh
+
+  zsh finalize.zsh
+
+  #SSH
+  echo "SSH Time!"
+  ssh-keygen
+  pbcopy < ~/.ssh/id_rsa.pub
+  echo "Your key is in the clipboard"
+
+  echo "Some software may require GUI installation. Once that is done, run brew cleanup."
+fi
