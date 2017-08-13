@@ -18,6 +18,7 @@ is_mac () {
 
 if is_linux; then
   . linux-software.sh
+  zsh linux-finalize.zsh
 fi
 
 if is_mac; then

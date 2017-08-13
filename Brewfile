@@ -1,6 +1,5 @@
 tap 'caskroom/cask'
 tap 'caskroom/versions'
-tap 'neovim/neovim'
 
 #Brews
 
@@ -16,7 +15,7 @@ brew 'git'
 brew 'hub'
 brew 'jq'
 brew 'mas'
-brew 'neovim/neovim/neovim'
+brew 'neovim'
 brew 'platformio'
 brew 'rbenv'
 brew 'ripgrep'

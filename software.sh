@@ -21,10 +21,6 @@ export NVM_DIR="$HOME/.nvm"
 nvm install node
 npm install yarn -g
 
-# Linters
-yarn global add eslint
-yarn global add standard
-
 #Fresh
 bash -c "`curl -sL get.freshshell.com`"
 rm ~/.freshrc
