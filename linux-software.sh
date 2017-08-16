@@ -23,6 +23,10 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 sudo sh -c 'echo "deb http://repo.sinew.in/ stable main" > /etc/apt/sources.list.d/enpass.list'
 wget -O - https://dl.sinew.in/keys/enpass-linux.key | sudo apt-key add -
 
+# Docker prep
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
 sudo apt update
 
 install_exa() {
@@ -99,6 +103,7 @@ apts=(
   'code'
   'cowsay'
   'direnv'
+  'docker-ce'
   'esl-erlang'
   'elixir'
   'enpass'
@@ -124,13 +129,17 @@ for apt in "${apts[@]}"; do
   sudo apt install $apt -y
 done
 
-ME=$("whoami")
-sudo chown ${ME} /usr/local/bin
+sudo chown ${USER} /usr/local/bin
 
 install_exa
 install_hub
 install_platformio
 install_discord
+
+# Docker finalizing
+sudo usermod -aG docker ${USER}
+sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.15.0/docker-compose-$(uname -s)-$(uname -m)"
+sudo chmod +x /usr/local/bin/docker-compose
 
 # Nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
