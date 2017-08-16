@@ -10,6 +10,21 @@ sudo apt install build-essential curl file git python-pip python-setuptools ruby
 # Elixir prep
 wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
 
+# Chrome prep
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+
+# VS Code prep
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
+# Enpass prep
+sudo sh -c 'echo "deb http://repo.sinew.in/ stable main" > /etc/apt/sources.list.d/enpass.list'
+wget -O - https://dl.sinew.in/keys/enpass-linux.key | sudo apt-key add -
+
+sudo apt update
+
 install_exa() {
     START_DIR="$(pwd)"
     # https://github.com/ogham/exa/releases
@@ -63,27 +78,40 @@ install_platformio() {
   sudo pip install -U platformio
 }
 
+install_discord() {
+  wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb
+  sudo gdebi discord.deb -y
+  rm discord.deb
+}
+
 # PPAs
 ppas=(
   'ytvwld/asciiquarium'
   'neovim-ppa/stable'
   'x4121/ripgrep'
+  'atareao/telegram'
 )
 
 # Apt packages
 apts=(
   'asciinema'
   'asciiquarium'
+  'code'
   'cowsay'
   'direnv'
   'esl-erlang'
   'elixir'
+  'enpass'
   'fortune'
+  'gdebi'
   'git'
+  'google-chrome-stable'
   'jq'
   'neovim'
   'ripgrep'
   'sl'
+  'telegram'
+  'vlc'
   'zsh'
 )
 
@@ -101,6 +129,7 @@ sudo chown ${ME} /usr/local/bin
 install_exa
 install_hub
 install_platformio
+install_discord
 
 # Nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
