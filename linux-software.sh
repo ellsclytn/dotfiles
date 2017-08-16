@@ -112,6 +112,7 @@ apts=(
   'sl'
   'telegram'
   'vlc'
+  'xclip'
   'zsh'
 )
 
