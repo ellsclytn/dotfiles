@@ -28,14 +28,7 @@ echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
 
 #Ruby
 eval "$(rbenv init -)"
-
-rbenv install --list
-echo "Type the desired Ruby version"
-read rver
-rbenv install "$rver"
-
-#Vagrant
-vagrant plugin install vagrant-hostsupdater
+rbenv install -l | grep -v - | tail -1 # Latest stable
 
 #Vim-plug
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
