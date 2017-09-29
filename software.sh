@@ -10,10 +10,6 @@ fi
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew bundle
 
-# Mac App Store
-mas signin jirble2@gmail.com
-mas install $(sed -e 's/#.*//' Masfile)
-
 # Nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm"

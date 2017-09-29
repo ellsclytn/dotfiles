@@ -56,3 +56,11 @@ cask 'virtualbox'
 cask 'visual-studio-code'
 cask 'vlc'
 cask 'xld'
+
+# App Store
+
+mas 'Bear', id: 1091189122
+mas 'Disk Doctor', id: 455970963
+mas 'Sip', id: 507257563
+mas 'Spark', id: 1176895641
+mas 'Telegram', id: 747648890
