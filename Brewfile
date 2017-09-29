@@ -1,4 +1,5 @@
 tap 'caskroom/cask'
+tap 'caskroom/fonts'
 tap 'caskroom/versions'
 
 #Brews
@@ -36,6 +37,7 @@ cask 'enpass'
 cask 'filezilla'
 cask 'firefox'
 cask 'flux'
+cask 'font-fira-code'
 cask 'fritzing'
 cask 'google-chrome'
 cask 'google-drive'
