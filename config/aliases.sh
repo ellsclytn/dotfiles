@@ -1,5 +1,5 @@
 alias ar="asciinema"
-alias dev="cd ~/Documents/Development"
+alias dev="cd ~/Code"
 alias dotfiles="cd ~/.dotfiles"
 alias g="hub"
 alias l='exa -hla --group-directories-first'
