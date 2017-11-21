@@ -1,3 +1,4 @@
+alias :q="clear"
 alias ar="asciinema"
 alias dev="cd ~/Code"
 alias dotfiles="cd ~/.dotfiles"
@@ -9,10 +10,6 @@ alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 alias zshsource="source ~/.zshrc"
-
-function git() {
-  hub $@
-}
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   alias pbcopy='xclip -selection clipboard'
