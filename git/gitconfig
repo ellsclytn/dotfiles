@@ -30,6 +30,7 @@
   pn   = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
   rasm = rebase -i --autosquash master
   s    = status -s
+  sm   = "!git checkout master && git pull origin master && git checkout @{-1}"
   sup  = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
 [core]
   excludesfile = ~/.gitignore_global
