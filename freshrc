@@ -46,4 +46,7 @@ fresh-options --file=~/.config/nvim/init.vim
 fresh-options
 fresh nvim/end.vim --file=~/.config/nvim/init.vim
 
+# SSH
+fresh ssh/config --file=~/.ssh/config
+
 fresh config/\*
