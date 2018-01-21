@@ -34,3 +34,5 @@
   sup  = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
 [core]
   excludesfile = ~/.gitignore_global
+[log]
+  mailmap = true
