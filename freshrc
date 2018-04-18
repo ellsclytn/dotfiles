@@ -18,6 +18,7 @@ fresh-options
   fresh robbyrussell/oh-my-zsh lib/history.zsh
 fresh-options
 fresh zsh/zplug.zsh
+fresh kitty/kitty.conf --file=~/.config/kitty/kitty.conf
 
 # Bin
 fresh-options --bin
