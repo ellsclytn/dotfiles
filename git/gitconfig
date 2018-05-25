@@ -37,3 +37,5 @@
   excludesfile = ~/.gitignore_global
 [log]
   mailmap = true
+[commit]
+  template = ~/.gitmessage
