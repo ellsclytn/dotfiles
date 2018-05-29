@@ -1,3 +1,5 @@
+source ~/.zplug/init.zsh
+
 # Support oh-my-zsh plugins
 zplug "plugins/git",   from:oh-my-zsh
 
