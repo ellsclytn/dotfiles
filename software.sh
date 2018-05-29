@@ -26,10 +26,6 @@ ln -s ~/.dotfiles/freshrc ~/.freshrc
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
 
-#Ruby
-eval "$(rbenv init -)"
-rbenv install -l | grep -v - | tail -1 # Latest stable
-
 #Vim-plug
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
