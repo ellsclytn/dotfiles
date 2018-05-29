@@ -8,4 +8,4 @@ My dotfiles are managed by [fresh](http://freshshell.com).
 Requirements
 ------------
 
-1. A computer running macOS Sierra.
+1. A computer running macOS High Sierra.
