@@ -17,7 +17,19 @@ fresh-options
   fresh robbyrussell/oh-my-zsh lib/history.zsh
   fresh zsh/zplug.zsh
 fresh-options
-fresh kitty/kitty.conf --file=~/.config/kitty/kitty.conf
+
+# Kitty
+fresh-options --file=~/.config/kitty/kitty.conf
+  fresh kitty/kitty.conf
+
+  if [[ "$(uname)" == "Darwin" ]]; then
+    fresh kitty/mac.conf
+  fi
+
+  if [[ "$(uname)" == "Linux" ]]; then
+    fresh kitty/linux.conf
+  fi
+fresh-options
 
 # Bin
 fresh-options --bin
