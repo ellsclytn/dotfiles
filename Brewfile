@@ -4,7 +4,6 @@ tap 'caskroom/versions'
 
 #Brews
 
-brew 'archey'
 brew 'asciinema'
 brew 'asciiquarium'
 brew 'cowsay'
@@ -17,6 +16,7 @@ brew 'hub'
 brew 'htop'
 brew 'jq'
 brew 'mas'
+brew 'neofetch'
 brew 'neovim'
 brew 'platformio'
 brew 'ripgrep'
