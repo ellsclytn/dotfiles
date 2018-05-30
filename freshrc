@@ -20,6 +20,7 @@ fresh-options
   if [[ "$(uname)" == "Linux" ]]; then
     fresh env/systems/linux.sh
   fi
+  fresh env/aliases.sh
 fresh-options
 
 # Kitty
