@@ -16,7 +16,7 @@
   b         = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
   c         = commit --verbose
   cm        = commit -m
-  cmb       = "!git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d"
+  cmb       = "!git checkout master && git pull && git branch -vv | grep 'origin/.*: gone]' | sed 's/[*]//g' | awk '{print $1}' | xargs -n 1 git branch -D"
   co        = checkout
   cob       = checkout -b
   d         = diff
