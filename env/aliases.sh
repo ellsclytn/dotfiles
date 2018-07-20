@@ -3,7 +3,8 @@ alias ar="asciinema"
 alias dev="cd ~/Code"
 alias dotfiles="cd ~/.dotfiles"
 alias g="hub"
-alias l='exa -hla --group-directories-first'
+alias l='exa -hl --group-directories-first --time-style=long-iso'
+alias la='l -a'
 alias typora="open -a typora"
 alias v="nvim"
 alias vi="nvim"
