@@ -75,6 +75,7 @@ declare -a gui_apts=(
 
 declare -a snaps=(
   discord
+  google-play-music-desktop-player
   vlc
 )
 
