@@ -22,11 +22,6 @@ snap-install () {
   fi
 }
 
-# Get version of latest release of a GitHub repository
-github-release () {
-  curl -s "https://api.github.com/repos/$1/releases/latest" | jq -r '.tag_name'
-}
-
 # Add Enpass repository
 setup-enpass () {
   echo "Configuring Enpass repository"
@@ -68,11 +63,11 @@ declare -a gui_apts=(
   fonts-firacode
   google-chrome-stable
   steam
-  vlc-bin
 )
 
 declare -a snaps=(
   discord
+  vlc
 )
 
 # Essentials required for installing the rest of the software
@@ -165,3 +160,5 @@ done
 
 echo "Making sure everything is updated"
 sudo apt-get upgrade -y >> ~/.dotfiles.log
+
+sudo chown -R ellis:ellis /usr/local/bin
