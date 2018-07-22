@@ -118,6 +118,8 @@ install-exa () {
 install-kitty () {
   echo "Installing kitty"
   curl -s https://sw.kovidgoyal.net/kitty/installer.sh | bash >> ~/dotfiles.log
+  sudo ln -s ~/.local/kitty.app/bin/kitty /usr/local/bin/kitty
+  sudo cp ./kitty/kitty.desktop /usr/share/applications/kitty.desktop
 }
 
 # Installs ripgrep
