@@ -35,6 +35,12 @@ setup-neovim () {
   sudo apt-add-repository ppa:neovim-ppa/stable -y >> ~/dotfiles.log
 }
 
+# Add Papirus Repository
+setup-papirus () {
+  echo "Configuring Papirus repository"
+  sudo add-apt-repository ppa:papirus/papirus -y >> ~/dotfiles.log
+}
+
 # Add VS Code repository and key
 setup-vscode () {
   echo "Configuring VS Code repository"
@@ -57,11 +63,13 @@ declare -a apts=(
 )
 
 declare -a gui_apts=(
+  arc-theme
   code
   enpass
   firefox
   fonts-firacode
   google-chrome-stable
+  papirus-icon-theme
   steam
 )
 
@@ -138,6 +146,7 @@ done
 
 setup-enpass
 setup-neovim
+setup-papirus
 setup-vscode
 
 sudo apt-get update -y >> ~/.dotfiles.log
@@ -164,3 +173,9 @@ echo "Making sure everything is updated"
 sudo apt-get upgrade -y >> ~/.dotfiles.log
 
 sudo chown -R ellis:ellis /usr/local/bin
+
+gsettings set org.gnome.desktop.interface icon-theme "Papirus"
+gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
+
+# Kill the dock!
+sudo apt-get remove gnome-shell-extension-ubuntu-dock -y >> ~/dotfiles.log
