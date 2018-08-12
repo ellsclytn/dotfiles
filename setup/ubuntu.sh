@@ -103,7 +103,7 @@ install-docker () {
   sudo apt-get --fix-broken install -y >> ~/dotfiles.log
 
   # Docker
-  curl -s https://www.opscode.com/chef/install.sh | sudo bash >> ~/dotfiles.log
+  sh -c "$(curl -sSL https://get.docker.com/)"
 
   # Docker Compose
   COMPOSE_VERSION=$(github-release "docker/compose")
