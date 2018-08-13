@@ -14,9 +14,6 @@ Plug 'scrooloose/nerdtree'
 " Auto mkdir
 Plug 'travisjeffery/vim-auto-mkdir'
 
-" Colors
-Plug 'nanotech/jellybeans.vim'
-
 " Commenting
 Plug 'tpope/vim-commentary'
 
@@ -49,4 +46,3 @@ Plug 'tpope/vim-abolish'
 
 " Add plugins to &runtimepath
 call plug#end()
-

@@ -61,4 +61,4 @@ fresh-options --file=~/.config/nvim/init.vim
   fresh nvim/config/\*.vim
   fresh hackling/dotfiles vim/keybindings/visualblockindent.vim
 fresh-options
-fresh nvim/end.vim --file=~/.config/nvim/init.vim
+fresh nvim/colors.vim --file=~/.config/nvim/init.vim
