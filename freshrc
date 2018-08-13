@@ -25,7 +25,7 @@ fresh-options
 
 # Kitty
 fresh-options --file=~/.config/kitty/kitty.conf
-  fresh kitty/kitty.conf
+  fresh kitty/\*.conf
 
   if [[ "$(uname)" == "Darwin" ]]; then
     fresh kitty/mac.conf
