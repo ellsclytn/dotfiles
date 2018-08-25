@@ -44,6 +44,14 @@ fresh-options
 # Git
 fresh-options --file
   fresh git/\*
+
+  if [[ "$(uname)" == "Darwin" ]]; then
+    fresh zsh/mac/fzf.zsh
+  fi
+
+  if [[ "$(uname)" == "Linux" ]]; then
+    fresh zsh/linux/fzf.zsh
+  fi
 fresh-options
 
 fresh-options --file=~/.gitignore_global --marker=#

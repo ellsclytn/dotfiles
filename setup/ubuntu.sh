@@ -123,6 +123,11 @@ install-exa () {
   rm exa.zip
 }
 
+# Clones fzf to the right place. The rest of the configuration is done with fresh
+install-fzf () {
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+}
+
 # Installs Kitty
 install-kitty () {
   echo "Installing kitty"
@@ -155,6 +160,7 @@ sudo apt-get update -y >> ~/.dotfiles.log
 install-chrome
 install-docker
 install-exa
+install-fzf
 install-kitty
 install-ripgrep
 
