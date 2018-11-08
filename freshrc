@@ -70,3 +70,6 @@ fresh-options --file=~/.config/nvim/init.vim
   fresh hackling/dotfiles vim/keybindings/visualblockindent.vim
 fresh-options
 fresh nvim/colors.vim --file=~/.config/nvim/init.vim
+
+# Ruby Things
+fresh quintrino/dotfiles pryrc --file=~/.pryrc
