@@ -1,9 +1,0 @@
-# Ensure NVM is initialized. Necessary when a lazy loader is in use.
-. ~/.nvm/nvm.sh
-
-OLD_NODE=$(node -v)
-NODE_GLOBALS=$(yarn global ls | sed -n 's/info "\(.*\)\(@.*\)/\1/p' | tr '\n' ' ')
-nvm install node
-nvm uninstall $OLD_NODE
-npm install yarn -g
-yarn global add $NODE_GLOBALS

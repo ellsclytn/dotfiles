@@ -1,8 +1,0 @@
-#!/bin/bash
-
-echo "Updating Brew lists"
-brew update
-echo "Upgrading old Brews"
-brew upgrade
-echo "Some housekeeping"
-brew cleanup
