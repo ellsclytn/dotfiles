@@ -8,14 +8,14 @@ export NVM_DIR="$HOME/.nvm"
 nvm install node
 npm install yarn -g
 
-#Fresh
-bash -c "`curl -sL get.freshshell.com`"
-rm ~/.freshrc
-ln -s ~/.dotfiles/freshrc ~/.freshrc
-
 # ZSH
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 #Vim-plug
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# #Fresh
+bash -c "`curl -sL get.freshshell.com`"
+rm ~/.freshrc
+ln -s ~/.dotfiles/freshrc ~/.freshrc
