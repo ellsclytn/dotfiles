@@ -1,2 +1,5 @@
 systemctl --user import-environment DISPLAY
 exec i3
+
+# Speedy key-repeat rate 💨
+xset r rate 200 100
