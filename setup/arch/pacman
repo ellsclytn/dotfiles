@@ -1,0 +1,67 @@
+alsa-utils
+arc-gtk-theme
+asciinema
+bluez
+bluez-utils
+dkms
+docker
+docker-compose
+exa
+exfat-utils
+fd
+feh
+firefox
+git
+gparted
+htop
+i3-gaps
+i3lock
+i3status
+imagemagick
+jq
+keychain
+kitty
+lxappearance
+neofetch
+neovim
+networkmanager
+network-manager-applet
+networkmanager-openvpn
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+ntfs-3g
+openssh
+openvpn
+otf-fira-code
+papirus-icon-theme
+pavucontrol
+pulseaudio
+pulseaudio-alsa
+ranger
+redshift
+ripgrep
+rofi
+rsync
+sl
+thunar
+traceroute
+ttf-dejavu
+ttf-font-awesome
+udisks2
+vlc
+wget
+xbindkeys
+xclip
+xdg-utils
+xorg
+xorg-xev
+xorg-xinit
+zsh
+
+# Sytem-specific (requires manual install)
+# intel-ucode
+# nvidia
+# nvidia-settings
+# steam
+# steam-native-runtime
