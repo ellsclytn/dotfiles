@@ -1,0 +1,47 @@
+# Inspired by https://github.com/will-stone/plastic
+
+*background: #21252b
+*foreground: #d4d7d9
+*cursorColor: #d4d7d9
+
+*color0: #21252b
+*color8: #5f6672
+*color1: #393843
+*color9: #f0c674
+*color2: #e06c75
+*color10: #e06c75
+*color3: #e06c75
+*color11: #e06c75
+*color4: #b57edc
+*color12: #b57edc
+*color5: #61afef
+*color13: #61afef
+*color6: #f0c674
+*color14: #61afef
+*color7: #d4d7d9
+*color15: #a9b2c3
+
+URxvt.font: xft:Source Code Pro:size=10.5
+URxvt.depth:                      32
+URxvt*scrollBar:                  false
+URxvt*mouseWheelScrollPage:       false
+URxvt*cursorBlink:                true
+URxvt*saveLines:                  5000
+URxvt*internalBorder: 5
+URxvt*geometry: 70x19
+
+rofi.color-enabled: true
+rofi.color-window: #21252b, #e06c75, #e06c75
+rofi.color-normal: #21252b, #d4d7d9, #21252b, #21252b, #b57edc
+rofi.color-active: #21252b, #d4d7d9, #21252b, #21252b, #b57edc
+rofi.color-urgent: #21252b, #d4d7d9, #21252b, #21252b, #b57edc
+
+rofi.separator-style: none
+rofi.sidebar-mode: false
+rofi.lines: 5
+rofi.font: Fira Code 10.5
+rofi.bw: 1
+rofi.columns: 1
+rofi.padding: 5
+rofi.fixed-num-lines: true
+rofi.hide-scrollbar: true

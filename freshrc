@@ -73,3 +73,17 @@ fresh-options --file=~/.config/nvim/init.vim
 fresh-options
 fresh nvim/colors.vim --file=~/.config/nvim/init.vim
 
+# i3wm, etc.
+if [[ -x "$(command -v i3)" ]]; then
+  fresh config/i3/\* --file=~/.config/i3/config --marker=#
+  fresh config/rofi/\* --file=~/.config/rofi/config --marker=#
+  fresh-options --file=~/.config/polybar/config --marker=#
+    fresh config/polybar/\*
+    fresh config/polybar/modules/\*
+  fresh-options
+
+  fresh config/xinitrc --file
+
+  # Rofi
+  fresh config/Xresources --file
+fi
