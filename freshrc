@@ -16,9 +16,10 @@ fresh-options
   fresh env/\*
   fresh robbyrussell/oh-my-zsh lib/history.zsh
 
-  if [[ "$(uname)" == "Linux" ]]; then
-    fresh env/systems/linux.sh
+  if [[ -x "$(command -v pacman)" ]]; then
+    fresh env/arch/\*
   fi
+
   fresh env/aliases.sh
 fresh-options
 
@@ -37,6 +38,10 @@ fresh-options
 
 # Bin
 fresh bin/\* --bin
+
+if [[ -x "$(command -v pacman)" ]]; then
+  fresh config/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
+fi
 
 fresh-options --file
   fresh git/\*
