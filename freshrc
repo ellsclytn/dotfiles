@@ -37,9 +37,7 @@ fresh-options --file=~/.config/kitty/kitty.conf
 fresh-options
 
 # Bin
-fresh-options --bin
-  fresh bin/\*
-fresh-options
+fresh bin/\* --bin
 
 fresh-options --file
   fresh git/\*
