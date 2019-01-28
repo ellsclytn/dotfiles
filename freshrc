@@ -41,16 +41,15 @@ fresh-options --bin
   fresh bin/\*
 fresh-options
 
-# Git
 fresh-options --file
   fresh git/\*
 
   if [[ "$(uname)" == "Darwin" ]]; then
-    fresh zsh/mac/fzf.zsh
+    fresh config/mac/fzf.zsh
   fi
 
   if [[ "$(uname)" == "Linux" ]]; then
-    fresh zsh/linux/fzf.zsh
+    fresh config/linux/fzf.zsh
   fi
 fresh-options
 
