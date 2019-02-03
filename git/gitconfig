@@ -38,4 +38,4 @@
 [log]
   mailmap = true
 [commit]
-  template = ~/.gitmessage
+  template = ~/.commitmessage
