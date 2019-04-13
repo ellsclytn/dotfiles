@@ -1,6 +1,7 @@
 [user]
   name  = Ellis Clayton
   email = ellis@ellisclayton.info
+  signingkey = 15DC7C11791EA77C
 [push]
   default = simple
 [color]
@@ -39,3 +40,4 @@
   mailmap = true
 [commit]
   template = ~/.commitmessage
+  gpgsign = true
