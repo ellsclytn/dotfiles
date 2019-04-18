@@ -41,8 +41,11 @@ fresh bin/\* --bin
 
 if [[ -x "$(command -v pacman)" ]]; then
   fresh bin/arch/\* --bin
-  fresh config/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 fi
+
+# GPG
+fresh config/gnupg/gpg.conf --file=~/.gnupg/gpg.conf
+fresh config/gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
 fresh-options --file
   fresh git/\*
