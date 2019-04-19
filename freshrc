@@ -20,6 +20,14 @@ fresh-options
     fresh env/arch/\*
   fi
 
+  if [[ "$(uname)" == "Darwin" ]]; then
+    fresh env/mac/\*
+  fi
+
+  if [[ "$(uname)" == "Linux" ]]; then
+    fresh env/linux/\*
+  fi
+
   fresh env/aliases.sh
 fresh-options
 
