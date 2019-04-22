@@ -22,13 +22,6 @@ snap-install () {
   fi
 }
 
-# Add Enpass repository
-setup-enpass () {
-  echo "Configuring Enpass repository"
-  echo "deb http://repo.sinew.in/ stable main" | sudo tee /etc/apt/sources.list.d/enpass.list
-  wget -qO - https://dl.sinew.in/keys/enpass-linux.key | sudo apt-key add - > /dev/null 2>&1
-}
-
 # Add Neovim Repository
 setup-neovim () {
   echo "Configuring Neovim repository"
@@ -65,7 +58,6 @@ declare -a apts=(
 declare -a gui_apts=(
   arc-theme
   code
-  enpass
   firefox
   fonts-firacode
   google-chrome-stable
@@ -74,6 +66,7 @@ declare -a gui_apts=(
 )
 
 declare -a snaps=(
+  bitwarden
   discord
   google-play-music-desktop-player
   vlc
@@ -150,7 +143,6 @@ for app in "${essentials[@]}"; do
   apt-install $app
 done
 
-setup-enpass
 setup-neovim
 setup-papirus
 setup-vscode
