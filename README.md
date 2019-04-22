@@ -11,28 +11,35 @@ My dotfiles are managed by [fresh](http://freshshell.com).
 
 ## Post-install
 
-### GPG
+### YubiKey GPG & SSH
 
-You'll need the ID of the key you're working with. You can list keys on a system with:
+My setup is heavily inspired by the amazing https://github.com/drduh/YubiKey-Guide. If my instructions below don't work, there's probably a solution in that repo.
 
-```sh
-gpg --list-secret-keys --keyid-format=LONG
-```
+Plug in your YubiKey and run `gpg --card-status`. Verify that the information shown is correct.
 
-Now, you need to import your key. If you're getting it from another system, you can export it with:
+#### GPG
 
-```sh
-gpg --export-secret-keys <YOUR KEY HERE> > my-private-key.asc
-```
+First, import your public key. You should have this stored all over the place (it's public):
 
 ```sh
-# Import the key
-gpg --import my-private-key.asc
-
-# Give the key an appropriate trust level
-gpg --edit-key <YOUR KEY HERE>
-
-# Configure git to use the key for commit signing
-git config --global gpg.program gpg2
-git config --global user.signingkey <YOUR KEY HERE>
+gpg --import /path/to/key.pub
 ```
+
+Now trust it (assuming the output of the previous command looked good):
+
+```sh
+gpg --edit-key 0xSOMEBIGKEYID
+
+gpg> trust
+Your decision? 5
+Do you really want to set this key to ultimate trust? (y/N) y
+
+gpg> save
+```
+
+#### SSH
+
+Very similar to the GPG process. You import a key, and put it in a place:
+
+1. Check the output of `ssh-add -L`. You should see one (and only one) entry ending in `cardno:000612354678` (those numbers will be specific to your key).
+2. `ssh-add -L | grep "cardno:000612354678" > ~/.ssh/id_rsa_yubikey.pub`
