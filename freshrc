@@ -52,8 +52,8 @@ if [[ -x "$(command -v pacman)" ]]; then
 fi
 
 # GPG
-fresh config/gnupg/gpg.conf --file=~/.gnupg/gpg.conf
-fresh config/gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
+fresh gnupg/gpg.conf --file=~/.gnupg/gpg.conf
+fresh gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
 fresh-options --file
   fresh git/\*
