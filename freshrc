@@ -92,7 +92,15 @@ if [[ -x "$(command -v i3)" ]]; then
   fresh-options
   fresh config/rofi/\* --file=~/.config/rofi/config --marker=#
   fresh-options --file=~/.config/polybar/config --marker=;
-    fresh config/polybar/\*
+    fresh config/polybar/colors
+    fresh config/polybar/config
+    fresh config/polybar/bar
+    if [[ -z ${LAPTOP+x} ]]; then
+      fresh config/polybar/overrides/desktop/bar
+    else
+      fresh config/polybar/overrides/laptop/bar
+    fi
+
     fresh config/polybar/modules/\*
   fresh-options
 

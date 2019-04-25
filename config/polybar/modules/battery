@@ -1,0 +1,35 @@
+[module/battery]
+type = internal/battery
+
+; This is useful in case the battery never reports 100% charge
+; full-at = 99
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = AC
+
+format-charging = <label-charging>
+format-full = <label-full>
+format-discharging = <ramp-capacity>
+
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 5
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+label-charging =  %percentage%%
+
+label-full =  100%
