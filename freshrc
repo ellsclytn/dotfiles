@@ -91,7 +91,7 @@ if [[ -x "$(command -v i3)" ]]; then
     fresh https://gitlab.com/JackCuthbert/dotfiles.git i3/keybindings/multimedia.conf
   fresh-options
   fresh config/rofi/\* --file=~/.config/rofi/config --marker=#
-  fresh-options --file=~/.config/polybar/config --marker=#
+  fresh-options --file=~/.config/polybar/config --marker=;
     fresh config/polybar/\*
     fresh config/polybar/modules/\*
   fresh-options
