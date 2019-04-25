@@ -99,5 +99,5 @@ if [[ -x "$(command -v i3)" ]]; then
   fresh config/xinitrc --file
 
   # Rofi
-  fresh config/Xresources --file
+  fresh config/Xresources --file --marker=!
 fi
