@@ -55,9 +55,8 @@ fi
 fresh gnupg/gpg.conf --file=~/.gnupg/gpg.conf
 fresh gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
-fresh-options --file
-  fresh git/\*
-fresh-options
+# Git
+fresh git/\* --file
 
 fresh-options --file=~/.gitignore_global --marker=#
   fresh github/gitignore Global/Vagrant.gitignore
