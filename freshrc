@@ -57,14 +57,6 @@ fresh config/gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
 fresh-options --file
   fresh git/\*
-
-  if [[ "$(uname)" == "Darwin" ]]; then
-    fresh config/mac/fzf.zsh
-  fi
-
-  if [[ "$(uname)" == "Linux" ]]; then
-    fresh config/linux/fzf.zsh
-  fi
 fresh-options
 
 fresh-options --file=~/.gitignore_global --marker=#
