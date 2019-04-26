@@ -8,6 +8,9 @@ zplugin light zsh-users/zsh-completions
 zplugin ice silent wait"0" atload"_zsh_autosuggest_start"
 zplugin light zsh-users/zsh-autosuggestions
 
+zplugin ice silent wait"0"
+zplugin snippet https://github.com/gantsign/zsh-plugins/blob/master/ctop/_ctop
+
 zplugin ice silent wait"0" atinit"zpcompinit; zpcdreplay"
 zplugin light zdharma/fast-syntax-highlighting
 
