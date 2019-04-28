@@ -20,9 +20,6 @@ zplugin light djui/alias-tips
 zplugin ice silent wait"0"
 zplugin light lukechilds/zsh-nvm
 
-zplugin ice silent wait"0"
-zplugin snippet https://github.com/laurenkt/zsh-vimto/blob/master/zsh-vimto.zsh
-
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
 
 # CLI Emojifier ⭐
