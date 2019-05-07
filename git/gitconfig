@@ -41,3 +41,4 @@
 [commit]
   template = ~/.commitmessage
   gpgsign = true
+  verbose = true
