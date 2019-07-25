@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Kitty
-Comment=Use the command line
-Keywords=shell;prompt;command;commandline;cmd;
-Exec=kitty
-Icon=utilities-terminal
-Type=Application
-Categories=System;TerminalEmulator

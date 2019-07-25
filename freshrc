@@ -31,18 +31,16 @@ fresh-options
   fresh env/aliases.sh
 fresh-options
 
-# Kitty
-fresh-options --file=~/.config/kitty/kitty.conf
-  fresh kitty/\*.conf
+# Alacritty
+fresh-options --file=~/.config/alacritty/alacritty.yml
+  fresh alacritty/alacritty.yml
+  fresh alacritty/keybindings.yml
 
   if [[ "$(uname)" == "Darwin" ]]; then
-    fresh kitty/mac.conf
-  fi
-
-  if [[ "$(uname)" == "Linux" ]]; then
-    fresh kitty/linux.conf
+    fresh alacritty/macos/keybindings.yml
   fi
 fresh-options
+
 
 # Bin
 fresh bin/\* --bin
