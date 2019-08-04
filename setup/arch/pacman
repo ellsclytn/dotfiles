@@ -1,3 +1,4 @@
+alacritty
 alsa-utils
 arc-gtk-theme
 asciinema
@@ -20,7 +21,6 @@ i3status
 imagemagick
 jq
 keychain
-kitty
 lxappearance
 neofetch
 neovim

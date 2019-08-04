@@ -22,6 +22,12 @@ snap-install () {
   fi
 }
 
+# Add Alacritty repository
+setup-alacritty () {
+  echo "Configuring Alacritty repository"
+  sudo add-apt-repository ppa:mmstick76/alacritty -y >> ~/dotfiles.log
+}
+
 # Add Neovim Repository
 setup-neovim () {
   echo "Configuring Neovim repository"
@@ -56,6 +62,7 @@ declare -a apts=(
 )
 
 declare -a gui_apts=(
+  alacritty
   arc-theme
   code
   firefox
@@ -121,14 +128,6 @@ install-fzf () {
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 }
 
-# Installs Kitty
-install-kitty () {
-  echo "Installing kitty"
-  curl -s https://sw.kovidgoyal.net/kitty/installer.sh | bash >> ~/dotfiles.log
-  sudo ln -s ~/.local/kitty.app/bin/kitty /usr/local/bin/kitty
-  sudo cp ./kitty/kitty.desktop /usr/share/applications/kitty.desktop
-}
-
 # Installs ripgrep
 install-ripgrep () {
   RIPGREP_VERSION=$(github-release "BurntSushi/ripgrep")
@@ -143,6 +142,7 @@ for app in "${essentials[@]}"; do
   apt-install $app
 done
 
+setup-alacritty
 setup-neovim
 setup-papirus
 setup-vscode
@@ -153,7 +153,6 @@ install-chrome
 install-docker
 install-exa
 install-fzf
-install-kitty
 install-ripgrep
 
 for app in "${apts[@]}"; do

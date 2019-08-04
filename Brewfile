@@ -29,6 +29,7 @@ brew 'zsh'
 
 #Casks
 
+cask 'alacritty'
 cask 'alfred'
 cask 'appcleaner'
 cask 'bitwarden'
@@ -42,7 +43,6 @@ cask 'fritzing'
 cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'insomnia'
-cask 'kitty'
 cask 'multimc'
 cask 'openemu'
 cask 'signal'
