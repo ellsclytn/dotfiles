@@ -45,5 +45,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-abolish'
 Plug 'junegunn/vim-emoji'
 
+Plug 'jamessan/vim-gnupg'
+
 " Add plugins to &runtimepath
 call plug#end()
