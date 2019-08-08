@@ -65,6 +65,7 @@ fresh-options --file=~/.gitignore_global --marker=#
 fresh-options
 
 # Vim
+fresh nvim/plugins/coc.json --file=~/.config/nvim/coc-settings.json
 fresh nvim/plugs.vim --file=~/.config/nvim/init.vim
 fresh-options --file=~/.config/nvim/init.vim
   fresh nvim/plugins/\*.vim

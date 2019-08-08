@@ -3,6 +3,9 @@ call plug#begin('~/.vim/plugged')
 " Syntax Highlighers
 Plug 'sheerun/vim-polyglot'
 
+" Autocomplete
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
 " Emmet
 Plug 'mattn/emmet-vim'
 
