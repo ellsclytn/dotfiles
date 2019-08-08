@@ -1,7 +1,11 @@
 call plug#begin('~/.vim/plugged')
 
-" Syntax Highlighers
+" Languages
 Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Autocomplete
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
