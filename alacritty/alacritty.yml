@@ -170,21 +170,7 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Tomorrow Night Bright)
 colors:
-  # Default colors
-  primary:
-    background: '0x21252b'
-    foreground: '0xd4d7d9'
-
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    #dim_foreground: '0x9a9a9a'
-    #bright_foreground: '0xffffff'
-
   # Cursor colors
   #
   # Colors which should be used to draw the terminal cursor. If these are unset,
@@ -202,6 +188,11 @@ colors:
   #  text: '0xeaeaea'
   #  background: '0x404040'
 
+  # Default colors
+  primary:
+    background: '0x21252b'
+    foreground: '0xa9b2c3'
+
   # Normal colors
   normal:
     black:   '0x21252b'
@@ -216,7 +207,7 @@ colors:
   # Bright colors
   bright:
     black:   '0x5f6672'
-    red:     '0xe34234'
+    red:     '0xd74e42'
     green:   '0x66ff00'
     yellow:  '0xe5c07b'
     blue:    '0x007fff'
