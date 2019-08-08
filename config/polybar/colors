@@ -1,8 +1,6 @@
-; Inspired by https://github.com/will-stone/plastic
-
 [colors]
-foreground = #d4d7d9
-background = #21252b
+foreground = #ffffff
+background = #282c34
 accent     = #e06c75
-action     = #b57edc
-danger     = #e34234
+action     = #c678dd
+danger     = #e06c75

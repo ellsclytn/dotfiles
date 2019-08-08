@@ -1,25 +1,26 @@
 ! Inspired by https://github.com/will-stone/plastic
 
-*background: #21252b
-*foreground: #d4d7d9
-*cursorColor: #d4d7d9
+*.foreground:     #ABB2BF
+*.background:     #1E2127
+*.cursorColor:    #5C6370
+*.highlightColor: #3A3F4B
 
-*color0: #21252b
-*color8: #5f6672
-*color1: #393843
-*color9: #f0c674
-*color2: #e06c75
-*color10: #e06c75
-*color3: #e06c75
-*color11: #e06c75
-*color4: #b57edc
-*color12: #b57edc
-*color5: #61afef
-*color13: #61afef
-*color6: #f0c674
-*color14: #61afef
-*color7: #d4d7d9
-*color15: #a9b2c3
+*.color0:  #1E2127
+*.color1:  #E06C75
+*.color2:  #98C379
+*.color3:  #D19A66
+*.color4:  #61AFEF
+*.color5:  #C678DD
+*.color6:  #56B6C2
+*.color7:  #ABB2BF
+*.color8:  #5C6370
+*.color9:  #E06C75
+*.color10: #98C379
+*.color11: #D19A66
+*.color12: #61AFEF
+*.color13: #C678DD
+*.color14: #56B6C2
+*.color15: #FFFFFF
 
 URxvt.font: xft:Source Code Pro:size=10.5
 URxvt.depth:                      32
@@ -31,10 +32,10 @@ URxvt*internalBorder: 5
 URxvt*geometry: 70x19
 
 rofi.color-enabled: true
-rofi.color-window: #21252b, #e06c75, #e06c75
-rofi.color-normal: #21252b, #d4d7d9, #21252b, #21252b, #b57edc
-rofi.color-active: #21252b, #d4d7d9, #21252b, #21252b, #b57edc
-rofi.color-urgent: #21252b, #d4d7d9, #21252b, #21252b, #b57edc
+rofi.color-window: #1E2127, #E06C75, #E06C75
+rofi.color-normal: #1E2127, #ABB2BF, #1E2127, #1E2127, #C678DD
+rofi.color-active: #1E2127, #ABB2BF, #1E2127, #1E2127, #C678DD
+rofi.color-urgent: #1E2127, #ABB2BF, #1E2127, #1E2127, #C678DD
 
 rofi.separator-style: none
 rofi.sidebar-mode: false
