@@ -54,5 +54,8 @@ Plug 'junegunn/vim-emoji'
 
 Plug 'jamessan/vim-gnupg'
 
+" Colors
+Plug 'joshdick/onedark.vim'
+
 " Add plugins to &runtimepath
 call plug#end()
