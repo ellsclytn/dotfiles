@@ -66,7 +66,7 @@ declare -a gui_apts=(
   arc-theme
   code
   firefox
-  fonts-firacode
+  fonts-hack
   google-chrome-stable
   papirus-icon-theme
   steam
