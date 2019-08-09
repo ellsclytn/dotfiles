@@ -68,8 +68,8 @@ fresh-options
 fresh nvim/plugins/coc.json --file=~/.config/nvim/coc-settings.json
 fresh nvim/plugs.vim --file=~/.config/nvim/init.vim
 fresh-options --file=~/.config/nvim/init.vim
-  fresh nvim/plugins/\*.vim
   fresh nvim/config/\*.vim
+  fresh nvim/plugins/\*.vim
   fresh hackling/dotfiles vim/keybindings/visualblockindent.vim
 fresh-options
 fresh nvim/colors.vim --file=~/.config/nvim/init.vim
