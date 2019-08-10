@@ -42,18 +42,7 @@ fresh-options
 fresh-options
 
 # Alacritty
-fresh-options --file=~/.config/alacritty/alacritty.yml
-  fresh alacritty/alacritty.yml
-
-  if [[ "$(uname)" == "Darwin" ]]; then
-    fresh alacritty/macos/\*.yml
-  fi
-
-  if [[ "$(uname)" == "Linux" ]]; then
-    fresh alacritty/linux/\*.yml
-  fi
-fresh-options
-
+fresh alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplate
 
 # Bin
 fresh bin/\* --bin
