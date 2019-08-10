@@ -8,8 +8,8 @@ export NVM_DIR="$HOME/.nvm"
 nvm install node
 npm install yarn -g
 
-# ZSH
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+# Zplugin
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
 
 #Vim-plug
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
