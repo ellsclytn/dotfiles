@@ -8,6 +8,16 @@
 #
 # See http://freshshell.com/readme for documentation.
 
+if [[ -x "$(command -v pacman)" ]]; then
+  export OS="arch"
+fi
+if [[ -x "$(command -v apt-get)" ]]; then
+  export OS="ubuntu"
+fi
+if [[ "$(uname)" == "Darwin" ]]; then
+  export OS="macos"
+fi
+
 fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
@@ -54,7 +64,7 @@ fi
 
 # GPG
 fresh gnupg/gpg.conf --file=~/.gnupg/gpg.conf
-fresh gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
+fresh gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf --filter=gomplate
 
 # Git
 fresh git/\* --file
