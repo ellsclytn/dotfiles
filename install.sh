@@ -15,7 +15,7 @@ if [ -x "$(command -v pacman)" ]; then
   ./setup/arch/setup.sh
 fi
 
-if [ -x "$(command -v apt)" ]; then
+if [ -x "$(command -v apt-get)" ]; then
   ./setup/ubuntu.sh
 fi
 
