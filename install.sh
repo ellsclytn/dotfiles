@@ -27,7 +27,3 @@ fi
 . software.sh
 
 zsh finalize.zsh
-
-#SSH
-echo "SSH Time!"
-ssh-keygen
