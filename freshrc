@@ -31,7 +31,11 @@ fresh-options
   fi
 
   if [[ "$(uname)" == "Darwin" ]]; then
-    fresh env/mac/\*
+    fresh env/mac/\*.sh
+    fresh env/mac/\*.zsh
+    if [[ -z ${INITIAL_SETUP+x} ]]; then
+      fresh env/mac/\*.gpg --filter="gpg -dqu ellis@ellisclayton.info"
+    fi
   fi
 
   if [[ "$(uname)" == "Linux" ]]; then
