@@ -42,3 +42,5 @@
   template = ~/.commitmessage
   gpgsign = true
   verbose = true
+[diff "gpg"]
+	textconv = gpg --quiet --no-tty --decrypt
