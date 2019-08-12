@@ -8,6 +8,8 @@ then
 fi
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-brew bundle
+
+# We're still in the repo root execution context, so we have to specify a path
+brew bundle --file="setup/macos/Brewfile"
 
 echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells

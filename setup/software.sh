@@ -23,6 +23,7 @@ if ! [[ "$(uname)" == "Darwin" ]]; then
 fi
 
 # #Fresh
+rm ~/.zshrc
 bash -c "`curl -sL get.freshshell.com`"
 rm ~/.freshrc
 ln -s ~/.dotfiles/freshrc ~/.freshrc

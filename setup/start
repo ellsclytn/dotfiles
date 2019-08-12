@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#
+# Here's where you begin for a brand new OS install :)
+#
+
 export INITIAL_SETUP=1
 
 # Get version of latest release of a GitHub repository
@@ -9,6 +13,9 @@ github_release () {
 
 export -f github_release
 
+git clone "https://gitlab.com/ellsclytn/dotfiles.git" ~/.dotfiles
+cd ~/.dotfiles
+
 if [ -x "$(command -v pacman)" ]; then
   localectl set-locale LANG=en_AU.UTF-8
   export LANG=en_AU.UTF-8
@@ -16,7 +23,7 @@ if [ -x "$(command -v pacman)" ]; then
 fi
 
 if [ -x "$(command -v apt-get)" ]; then
-  ./setup/ubuntu.sh
+  ./setup/ubuntu/setup.sh
 fi
 
 if [[ "$(uname)" == "Darwin" ]]; then
@@ -24,6 +31,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
   ./setup/macos/defaults.sh
 fi
 
-. software.sh
+# Cross platform software
+. setup/software.sh
 
-zsh finalize.zsh
+zsh setup/finalize.zsh

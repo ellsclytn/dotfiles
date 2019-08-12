@@ -8,6 +8,16 @@ My dotfiles are managed by [fresh](http://freshshell.com).
 
 1. A computer running macOS, Arch Linux, or Ubuntu.
 
+## Get started
+
+### macOS
+
+1. `xcode-select --install` (and wait for it to finish)
+2. `./setup/start`
+
+### Everyone else
+
+1. `./setup/start`
 
 ## Post-install
 
