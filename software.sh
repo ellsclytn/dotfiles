@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Nvm
-NVM_VERSION=$(github-release nvm-sh/nvm)
+NVM_VERSION=$(github_release nvm-sh/nvm)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
@@ -17,7 +17,7 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 
 # Gomplate (done via Brew on macOS)
 if ! [[ "$(uname)" == "Darwin" ]]; then
-  GOMPLATE_VERSION=$(github-release hairyhenderson/gomplate)
+  GOMPLATE_VERSION=$(github_release hairyhenderson/gomplate)
   sudo curl -sL https://github.com/hairyhenderson/gomplate/releases/download/$GOMPLATE_VERSION/gomplate_linux-amd64-slim -o /usr/local/bin/gomplate
   sudo chmod +x /usr/local/bin/gomplate
 fi

@@ -48,7 +48,7 @@ install-docker () {
   sh -c "$(curl -sSL https://get.docker.com/)"
 
   # Docker Compose
-  COMPOSE_VERSION=$(github-release "docker/compose")
+  COMPOSE_VERSION=$(github_release "docker/compose")
   echo "Installing docker-compose $COMPOSE_VERSION"
   sudo curl -sL https://github.com/docker/compose/releases/download/$COMPOSE_VERSION/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
   sudo chmod +x /usr/local/bin/docker-compose
@@ -56,7 +56,7 @@ install-docker () {
 
 # Installs Exa
 install-exa () {
-  EXA_VERSION=$(github-release "ogham/exa" | cut -c 2-) # Remove the "v"
+  EXA_VERSION=$(github_release "ogham/exa" | cut -c 2-) # Remove the "v"
   echo "Installing exa $EXA_VERSION"
   wget -q -O exa.zip https://github.com/ogham/exa/releases/download/v$EXA_VERSION/exa-linux-x86_64-$EXA_VERSION.zip
   unzip -qq exa.zip
@@ -72,7 +72,7 @@ install-fzf () {
 
 # Installs ripgrep
 install-ripgrep () {
-  RIPGREP_VERSION=$(github-release "BurntSushi/ripgrep")
+  RIPGREP_VERSION=$(github_release "BurntSushi/ripgrep")
   echo "Installing ripgrep $RIPGREP_VERSION"
   wget -q -O ripgrep.deb https://github.com/BurntSushi/ripgrep/releases/download/$RIPGREP_VERSION/ripgrep_$RIPGREP_VERSION\_amd64.deb
   sudo dpkg -i ripgrep.deb >> ~/dotfiles.log

@@ -3,11 +3,11 @@
 export INITIAL_SETUP=1
 
 # Get version of latest release of a GitHub repository
-github-release () {
+github_release () {
   curl -s "https://api.github.com/repos/$1/releases/latest" | jq -r '.tag_name'
 }
 
-export -f github-release
+export -f github_release
 
 if [ -x "$(command -v pacman)" ]; then
   localectl set-locale LANG=en_AU.UTF-8
