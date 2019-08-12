@@ -11,7 +11,7 @@ npm install yarn -g
 # Zplugin
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
 
-#Vim-plug
+# Vim-plug
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -22,7 +22,7 @@ if ! [[ "$(uname)" == "Darwin" ]]; then
   sudo chmod +x /usr/local/bin/gomplate
 fi
 
-# #Fresh
+# Fresh
 rm ~/.zshrc
 bash -c "`curl -sL get.freshshell.com`"
 rm ~/.freshrc
