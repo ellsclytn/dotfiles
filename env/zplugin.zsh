@@ -20,6 +20,9 @@ zplugin light djui/alias-tips
 zplugin ice silent wait"0"
 zplugin light lukechilds/zsh-nvm
 
+zplugin ice silent wait"0"
+zplugin light lukechilds/zsh-better-npm-completion
+
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
 
 # CLI Emojifier ⭐
