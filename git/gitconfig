@@ -26,7 +26,8 @@
   fix       = "!$EDITOR `git diff --name-only | uniq`"
   fu        = commit --fixup
   hard-pull = "!git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)"
-  l         = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  l         = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%Cred\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --no-merges
+  lb        = l master..HEAD
   la        = "!git config -l | grep alias | cut -c 7-"
   m         = commit --amend --verbose
   pn        = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
