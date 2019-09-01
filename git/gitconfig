@@ -44,4 +44,4 @@
   gpgsign = true
   verbose = true
 [diff "gpg"]
-	textconv = gpg --quiet --no-tty --decrypt
+  textconv = gpg --quiet --no-tty --decrypt
