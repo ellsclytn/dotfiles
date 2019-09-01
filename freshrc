@@ -102,6 +102,9 @@ if [[ -x "$(command -v i3)" ]]; then
 
   fresh config/xinitrc --file
 
+  # Compton
+  fresh config/compton/\*.conf --file=~/.config/compton.conf
+
   # Rofi
   fresh config/Xresources --file --marker=!
 fi
