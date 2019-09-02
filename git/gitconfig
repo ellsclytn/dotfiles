@@ -37,6 +37,8 @@
   sup       = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
 [core]
   excludesfile = ~/.gitignore_global
+  # Use diff-so-fancy for all diffs
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [log]
   mailmap = true
 [commit]
