@@ -4,6 +4,7 @@ direnv
 discord
 fzf-git
 git-fixup-git
+git-open
 gpmdp
 nerd-fonts-hack
 polybar

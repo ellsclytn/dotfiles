@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# diff-so-fancy
-./setup/github-software/diff-so-fancy.sh
-
-# git-open
-./setup/github-software/git-open.sh
-
 # Nvm
 NVM_VERSION=$(github-release nvm-sh/nvm)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | bash
