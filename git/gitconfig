@@ -1,40 +1,40 @@
 [user]
-  name  = Ellis Clayton
+  name = Ellis Clayton
   email = ellis@ellisclayton.info
   signingkey = 0xDEF7E66A739ACB11
 [push]
   default = simple
 [color]
-  branch      = auto
-  diff        = auto
+  branch = auto
+  diff = auto
   interactive = auto
-  status      = auto
-  ui          = auto
+  status = auto
+  ui = auto
 [alias]
   # https://gist.github.com/mwhite/6887990
-  a         = add
-  ap        = add -p
-  b         = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
-  c         = commit --verbose
-  cm        = commit -m
-  cmb       = "!git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
-  co        = checkout
-  cob       = checkout -b
-  d         = diff
-  dc        = diff --cached
-  ds        = diff --stat
-  fix       = "!$EDITOR `git diff --name-only | uniq`"
-  fu        = commit --fixup
+  a = add
+  ap = add -p
+  b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+  c = commit --verbose
+  cm = commit -m
+  cmb = "!git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
+  co = checkout
+  cob = checkout -b
+  d = diff
+  dc = diff --cached
+  ds = diff --stat
+  fix = "!$EDITOR `git diff --name-only | uniq`"
+  fu = commit --fixup
   hard-pull = "!git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)"
-  l         = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%Cred\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --no-merges
-  lb        = l master..HEAD
-  la        = "!git config -l | grep alias | cut -c 7-"
-  m         = commit --amend --verbose
-  pn        = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
-  rasm      = rebase -i --autosquash --autostash master
-  s         = status -s
-  sm        = "!git checkout master && git pull origin master && git checkout @{-1}"
-  sup       = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
+  l = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%Cred\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --no-merges
+  lb = l master..HEAD
+  la = "!git config -l | grep alias | cut -c 7-"
+  m = commit --amend --verbose
+  pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
+  rasm = rebase -i --autosquash --autostash master
+  s = status -s
+  sm = "!git checkout master && git pull origin master && git checkout @{-1}"
+  sup = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
 [core]
   excludesfile = ~/.gitignore_global
   # Use diff-so-fancy for all diffs
