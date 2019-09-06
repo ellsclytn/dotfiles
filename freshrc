@@ -31,11 +31,7 @@ fresh-options
   fi
 
   if [[ "$(uname)" == "Darwin" ]]; then
-    fresh env/mac/\*.sh
-    fresh env/mac/\*.zsh
-    if [[ -z ${INITIAL_SETUP+x} ]]; then
-      fresh env/mac/\*.gpg --filter="gpg -dqu ellis@ellisclayton.info"
-    fi
+    fresh env/mac/\*
   fi
 
   if [[ "$(uname)" == "Linux" ]]; then
@@ -44,6 +40,16 @@ fresh-options
 
   fresh env/aliases.sh
 fresh-options
+
+# Secret Shell Stuff 🤫
+# We can't do decryption operations on machines without a private key!
+if [[ -z ${INITIAL_SETUP+x} ]]; then
+  fresh-options --filter="gpg -dq"
+    if [[ "$(uname)" == "Darwin" ]]; then
+      fresh env/secrets/mac.sh.gpg
+    fi
+  fresh-options
+fi
 
 # Alacritty
 fresh alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplate
