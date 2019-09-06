@@ -46,7 +46,9 @@ if gpg --list-secret-keys $GPG_KEY_ID 2>&1 >/dev/null; then
 fi
 
 # Alacritty
-fresh alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplate
+if ! [[ $OS == "ubuntu" ]]; then
+  fresh alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplate
+fi
 
 # Bin
 fresh bin/\* --bin
@@ -56,8 +58,10 @@ if [[ $OS == "arch" ]]; then
 fi
 
 # GPG
-fresh gnupg/gpg.conf --file=~/.gnupg/gpg.conf
-fresh gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf --filter=gomplate
+if ! [[ $OS == "ubuntu" ]]; then
+  fresh gnupg/gpg.conf --file=~/.gnupg/gpg.conf
+  fresh gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf --filter=gomplate
+fi
 
 # Git
 fresh git/\* --file
