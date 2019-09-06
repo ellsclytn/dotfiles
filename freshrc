@@ -8,6 +8,8 @@
 #
 # See http://freshshell.com/readme for documentation.
 
+export GPG_KEY_ID="${GPG_KEY_ID:-DEF7E66A739ACB11}"
+
 if [[ -x "$(command -v pacman)" ]]; then
   export OS="arch"
 fi
@@ -43,7 +45,7 @@ fresh-options
 
 # Secret Shell Stuff 🤫
 # We can't do decryption operations on machines without a private key!
-if [[ -z ${INITIAL_SETUP+x} ]]; then
+if gpg --list-secret-keys $GPG_KEY_ID 2>&1 >/dev/null; then
   fresh-options --filter="gpg -dq"
     if [[ "$(uname)" == "Darwin" ]]; then
       fresh env/secrets/mac.sh.gpg
