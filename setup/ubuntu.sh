@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# Software I use on Ubuntu Server
+#
 
 # Install an application via apt-get with minimal output.
 # Gracefully fails if the application already exists.
@@ -11,72 +14,19 @@ apt-install () {
   fi
 }
 
-# Install an application via snap with minimal output.
-# Gracefully fails if the application already exists.
-snap-install () {
-  if ! command -v $1 >/dev/null 2>&1; then
-    echo "Installing $1..."
-    sudo snap install $1 >> ~/dotfiles.log
-  else
-    echo "$1 is already installed"
-  fi
-}
-
-# Add Alacritty repository
-setup-alacritty () {
-  echo "Configuring Alacritty repository"
-  sudo add-apt-repository ppa:mmstick76/alacritty -y >> ~/dotfiles.log
-}
-
 # Add Neovim Repository
 setup-neovim () {
   echo "Configuring Neovim repository"
   sudo apt-add-repository ppa:neovim-ppa/stable -y >> ~/dotfiles.log
 }
 
-# Add Papirus Repository
-setup-papirus () {
-  echo "Configuring Papirus repository"
-  sudo add-apt-repository ppa:papirus/papirus -y >> ~/dotfiles.log
-}
-
-# Add VS Code repository and key
-setup-vscode () {
-  echo "Configuring VS Code repository"
-  curl -s https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-  sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-}
-
 declare -a apts=(
-  asciinema
-  direnv
   git
   htop
-  neofetch
   neovim
   ranger
   ripgrep
-  sl
   zsh
-)
-
-declare -a gui_apts=(
-  alacritty
-  arc-theme
-  code
-  firefox
-  fonts-hack
-  google-chrome-stable
-  papirus-icon-theme
-  steam
-)
-
-declare -a snaps=(
-  bitwarden
-  discord
-  google-play-music-desktop-player
-  vlc
 )
 
 # Essentials required for installing the rest of the software
@@ -87,14 +37,6 @@ declare -a essentials=(
   jq
   software-properties-common
 )
-
-# Add Google Chrome
-install-chrome () {
-  echo "Installing Chrome..."
-  curl -s -o chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  sudo dpkg -i chrome.deb >> ~/dotfiles.log
-  rm chrome.deb
-}
 
 # Installs Docker and Docker Compose
 install-docker () {
@@ -142,14 +84,10 @@ for app in "${essentials[@]}"; do
   apt-install $app
 done
 
-setup-alacritty
 setup-neovim
-setup-papirus
-setup-vscode
 
 sudo apt-get update -y >> ~/.dotfiles.log
 
-install-chrome
 install-docker
 install-exa
 install-fzf
@@ -159,21 +97,7 @@ for app in "${apts[@]}"; do
   apt-install $app
 done
 
-for app in "${gui_apts[@]}"; do
-  apt-install $app
-done
-
-for app in "${snaps[@]}"; do
-  snap-install $app
-done
-
 echo "Making sure everything is updated"
 sudo apt-get upgrade -y >> ~/.dotfiles.log
 
 sudo chown -R ellis:ellis /usr/local/bin
-
-gsettings set org.gnome.desktop.interface icon-theme "Papirus"
-gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
-
-# Kill the dock!
-sudo apt-get remove gnome-shell-extension-ubuntu-dock -y >> ~/dotfiles.log
