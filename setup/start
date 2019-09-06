@@ -6,6 +6,8 @@
 
 export INITIAL_SETUP=1
 
+. setup/environment.sh
+
 # Get version of latest release of a GitHub repository
 github_release () {
   curl -s "https://api.github.com/repos/$1/releases/latest" | jq -r '.tag_name'
@@ -16,17 +18,17 @@ export -f github_release
 git clone "https://gitlab.com/ellsclytn/dotfiles.git" ~/.dotfiles
 cd ~/.dotfiles
 
-if [ -x "$(command -v pacman)" ]; then
+if [[ $OS == "arch" ]]; then
   localectl set-locale LANG=en_AU.UTF-8
   export LANG=en_AU.UTF-8
   ./setup/arch/setup.sh
 fi
 
-if [ -x "$(command -v apt-get)" ]; then
+if [[ $OS == "ubuntu" ]]; then
   ./setup/ubuntu/setup.sh
 fi
 
-if [[ "$(uname)" == "Darwin" ]]; then
+if [[ $OS == "macos" ]]; then
   ./setup/macos/software.sh
   ./setup/macos/defaults.sh
 fi

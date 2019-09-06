@@ -16,7 +16,7 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Gomplate (done via Brew on macOS)
-if ! [[ "$(uname)" == "Darwin" ]]; then
+if ! [[ $OS == "macos" ]]; then
   GOMPLATE_VERSION=$(github_release hairyhenderson/gomplate)
   sudo curl -sL https://github.com/hairyhenderson/gomplate/releases/download/$GOMPLATE_VERSION/gomplate_linux-amd64-slim -o /usr/local/bin/gomplate
   sudo chmod +x /usr/local/bin/gomplate

@@ -8,17 +8,7 @@
 #
 # See http://freshshell.com/readme for documentation.
 
-export GPG_KEY_ID="${GPG_KEY_ID:-DEF7E66A739ACB11}"
-
-if [[ -x "$(command -v pacman)" ]]; then
-  export OS="arch"
-fi
-if [[ -x "$(command -v apt-get)" ]]; then
-  export OS="ubuntu"
-fi
-if [[ "$(uname)" == "Darwin" ]]; then
-  export OS="macos"
-fi
+. setup/environment.sh
 
 fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
@@ -28,15 +18,15 @@ fresh-options
   fresh env/\*
   fresh robbyrussell/oh-my-zsh lib/history.zsh
 
-  if [[ -x "$(command -v pacman)" ]]; then
+  if [[ $OS == "arch" ]]; then
     fresh env/arch/\*
   fi
 
-  if [[ "$(uname)" == "Darwin" ]]; then
+  if [[ $OS == "macos" ]]; then
     fresh env/mac/\*
   fi
 
-  if [[ "$(uname)" == "Linux" ]]; then
+  if ! [[ $OS == "macos" ]]; then
     fresh env/linux/\*
   fi
 
@@ -47,7 +37,7 @@ fresh-options
 # We can't do decryption operations on machines without a private key!
 if gpg --list-secret-keys $GPG_KEY_ID 2>&1 >/dev/null; then
   fresh-options --filter="gpg -dq"
-    if [[ "$(uname)" == "Darwin" ]]; then
+    if [[ $OS == "macos" ]]; then
       fresh env/secrets/mac.sh.gpg
     fi
 
@@ -61,7 +51,7 @@ fresh alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplat
 # Bin
 fresh bin/\* --bin
 
-if [[ -x "$(command -v pacman)" ]]; then
+if [[ $OS == "arch" ]]; then
   fresh bin/arch/\* --bin
 fi
 
@@ -91,7 +81,7 @@ fresh-options
 fresh nvim/colors.vim --file=~/.config/nvim/init.vim
 
 # i3wm, etc.
-if [[ -x "$(command -v i3)" ]]; then
+if [[ $OS == "arch" ]]; then
   fresh-options --file=~/.config/i3/config --marker=#
     fresh config/i3/\*
     fresh https://gitlab.com/JackCuthbert/dotfiles.git i3/keybindings/multimedia.conf

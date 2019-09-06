@@ -1,9 +1,9 @@
 source ~/.fresh/build/shell.sh
 
-if [[ "$(uname)" == "Linux" ]]; then
+if ! [[ $OS == "macos" ]]; then
   chsh -s /usr/bin/zsh
 fi
 
-if [[ "$(uname)" == "Darwin" ]]; then
+if [[ $OS == "macos" ]]; then
   chsh -s /usr/local/bin/zsh
 fi
