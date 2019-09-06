@@ -50,6 +50,8 @@ if gpg --list-secret-keys $GPG_KEY_ID 2>&1 >/dev/null; then
     if [[ "$(uname)" == "Darwin" ]]; then
       fresh env/secrets/mac.sh.gpg
     fi
+
+    fresh env/secrets/github-token.gpg
   fresh-options
 fi
 
