@@ -2,12 +2,12 @@
 
 # Send a request to GitHub API with authentication (where available)
 github_request () {
-  headers=""
-  if [ -n ${GITHUB_REPO_READ_TOKEN+x} ]; then
+  if [ -z ${GITHUB_REPO_READ_TOKEN+x} ]; then
+    curl -s "https://api.github.com/$1"
+  else
     headers="Authorization: token $GITHUB_REPO_READ_TOKEN"
+    curl -H "$headers" -s "https://api.github.com/$1"
   fi
-
-  curl -H "$headers" -s "https://api.github.com/$1"
 }
 
 export -f github_request
