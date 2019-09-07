@@ -88,7 +88,7 @@ fresh nvim/colors.vim --file=~/.config/nvim/init.vim
 if [[ $OS == "arch" ]]; then
   fresh-options --file=~/.config/i3/config --marker=#
     fresh config/i3/\*
-    fresh https://gitlab.com/JackCuthbert/dotfiles.git i3/keybindings/multimedia.conf
+    fresh https://gitlab.com/JackCuthbert/dotfiles.git config/i3/keybindings/multimedia.conf
   fresh-options
   fresh config/rofi/\* --file=~/.config/rofi/config --marker=#
   fresh-options --file=~/.config/polybar/config --marker=";"
