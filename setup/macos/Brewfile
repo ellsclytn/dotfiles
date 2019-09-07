@@ -10,7 +10,6 @@ brew 'cowsay'
 brew 'ctop'
 brew 'diff-so-fancy'
 brew 'direnv'
-brew 'elixir'
 brew 'exa'
 brew 'fortune'
 brew 'fzf'
@@ -65,7 +64,5 @@ cask 'xld'
 
 # App Store
 
-mas 'Bear', id: 1091189122
-mas 'Disk Doctor', id: 455970963
 mas 'Sip', id: 507257563
 mas 'Spark', id: 1176895641
