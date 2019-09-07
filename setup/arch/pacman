@@ -54,9 +54,7 @@ vlc
 wget
 xbindkeys
 xclip
-xdg-utils
-xorg
-xorg-xev
+xorg-server
 xorg-xinit
 zsh
 
