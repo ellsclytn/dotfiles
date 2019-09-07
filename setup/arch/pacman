@@ -5,6 +5,7 @@ asciinema
 bluez
 bluez-utils
 diff-so-fancy
+discord
 dkms
 docker
 docker-compose
@@ -25,8 +26,8 @@ keychain
 lxappearance
 neofetch
 neovim
-networkmanager
 network-manager-applet
+networkmanager
 networkmanager-openvpn
 noto-fonts
 noto-fonts-cjk
