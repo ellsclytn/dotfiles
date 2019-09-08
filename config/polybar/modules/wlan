@@ -6,7 +6,7 @@ interval = 3.0
 format-connected = <ramp-signal> <label-connected>
 format-connected-foreground = ${colors.background}
 format-connected-background = ${colors.action}
-format-connected-padding = 2
+format-connected-padding = 4
 label-connected = %essid%
 
 format-disconnected =

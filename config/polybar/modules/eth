@@ -3,7 +3,7 @@ type = internal/network
 interface = enp0s31f6
 interval = 3.0
 
-format-connected-padding = 2
+format-connected-padding = 4
 format-connected-foreground = ${colors.background}
 format-connected-background = ${colors.action}
 format-connected-prefix = " "

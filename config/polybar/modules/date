@@ -9,8 +9,9 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = 
+format-prefix-padding-right = 1
 format-foreground = ${colors.background}
 format-background = ${colors.accent}
-format-padding = 2
+format-padding = 4
 
 label = %date% %time%

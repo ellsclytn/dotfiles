@@ -22,7 +22,7 @@
 *.color14: #56B6C2
 *.color15: #FFFFFF
 
-URxvt.font: xft:Source Code Pro:size=10.5
+URxvt.font: xft:Source Sans Pro:size=10.5
 URxvt.depth:                      32
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
@@ -40,7 +40,7 @@ rofi.color-urgent: #1E2127, #ABB2BF, #1E2127, #1E2127, #C678DD
 rofi.separator-style: none
 rofi.sidebar-mode: false
 rofi.lines: 5
-rofi.font: Fira Code 10.5
+rofi.font: Source Sans Pro 10.5
 rofi.bw: 1
 rofi.columns: 1
 rofi.padding: 5
