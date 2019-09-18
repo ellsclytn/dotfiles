@@ -50,6 +50,9 @@ if ! [[ $OS == "ubuntu" ]]; then
   fresh alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplate
 fi
 
+# Starship Prompt
+fresh config/starship.toml --file=~/.config/starship.toml
+
 # Bin
 fresh bin/\* --bin
 

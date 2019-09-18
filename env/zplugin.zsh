@@ -28,7 +28,3 @@ zplugin snippet OMZ::plugins/git/git.plugin.zsh
 # CLI Emojifier ⭐
 zplugin ice as"program" cp"zemojify -> emojify" pick"emojify"
 zplugin light filipekiss/zemojify
-
-# Pure Shell
-zplugin ice pick"async.zsh" src"pure.zsh"
-zplugin light sindresorhus/pure
