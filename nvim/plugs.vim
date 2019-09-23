@@ -1,10 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
 " Languages
-Plug 'sheerun/vim-polyglot'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Autocomplete
