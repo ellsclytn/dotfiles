@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 " Languages
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'jparise/vim-graphql'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'sheerun/vim-polyglot'
