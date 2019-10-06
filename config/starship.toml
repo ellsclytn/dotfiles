@@ -4,6 +4,9 @@ disabled = true
 [golang]
 disabled = true
 
+[kubernetes]
+disabled = true
+
 [nodejs]
 disabled = true
 
