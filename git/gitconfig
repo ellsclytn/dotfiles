@@ -1,6 +1,6 @@
 [user]
   name = Ellis Clayton
-  email = ellis@ellisclayton.info
+  email = ellis@ellis.codes
   signingkey = 0xDEF7E66A739ACB11
 [push]
   default = simple
