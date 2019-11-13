@@ -1,12 +1,14 @@
 let g:ale_linters = {
 \  'html': [],
 \  'javascript': ['eslint'],
-\  'typescript': ['tslint']
+\  'typescript': ['tslint'],
+\  'typescriptreact': ['tslint']
 \}
 
 let g:ale_fixers = {
 \  'javascript': ['prettier', 'eslint'],
-\  'typescript': ['prettier', 'tslint']
+\  'typescript': ['prettier', 'tslint'],
+\  'typescriptreact': ['prettier', 'tslint']
 \}
 
 let g:ale_fix_on_save = 1
