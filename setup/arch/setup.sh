@@ -19,4 +19,3 @@ rm -rf aura-bin
 echo "Istalling packages..."
 sudo aura -S $(grep -v '^#' ~/.dotfiles/setup/arch/pacman)
 sudo aura -Aa $(grep -v '^#' ~/.dotfiles/setup/arch/aur)
-setup/software/wire.sh

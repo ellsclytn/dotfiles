@@ -60,7 +60,6 @@ cask 'transmission'
 cask 'viscosity'
 cask 'visual-studio-code'
 cask 'vlc'
-cask 'wire'
 cask 'xld'
 
 # App Store
