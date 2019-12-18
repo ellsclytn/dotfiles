@@ -17,4 +17,4 @@ endif
 
 syntax on
 " Set color scheme last
-colorscheme onedark
+silent! colorscheme onedark
