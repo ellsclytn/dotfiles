@@ -28,6 +28,7 @@
   d = diff
   dc = diff --cached
   ds = diff --stat
+  ffm = merge --ff-only
   fix = "!$EDITOR `git diff --name-only | uniq`"
   fu = commit --fixup
   hard-pull = "!git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)"
