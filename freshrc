@@ -26,6 +26,10 @@ fresh-options
     fresh env/mac/\*
   fi
 
+  if [[ $OS == "ubuntu" ]]; then
+    fresh env/ubuntu/\*
+  fi
+
   if ! [[ $OS == "macos" ]]; then
     fresh env/linux/\*
   fi
