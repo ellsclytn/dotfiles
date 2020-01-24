@@ -1,30 +1,30 @@
-source "${HOME}/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
+source "${HOME}/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-zplugin ice silent wait"0" blockf
-zplugin light zsh-users/zsh-completions
+zinit ice silent wait"0" blockf
+zinit light zsh-users/zsh-completions
 
-zplugin ice silent wait"0" atload"_zsh_autosuggest_start"
-zplugin light zsh-users/zsh-autosuggestions
+zinit ice silent wait"0" atload"_zsh_autosuggest_start"
+zinit light zsh-users/zsh-autosuggestions
 
-zplugin ice silent wait"0"
-zplugin snippet https://github.com/gantsign/zsh-plugins/blob/master/ctop/_ctop
+zinit ice silent wait"0"
+zinit snippet https://github.com/gantsign/zsh-plugins/blob/master/ctop/_ctop
 
-zplugin ice silent wait"0" atinit"zpcompinit; zpcdreplay"
-zplugin light zdharma/fast-syntax-highlighting
+zinit ice silent wait"0" atinit"zpcompinit; zpcdreplay"
+zinit light zdharma/fast-syntax-highlighting
 
-zplugin ice silent wait"0"
-zplugin light djui/alias-tips
+zinit ice silent wait"0"
+zinit light djui/alias-tips
 
-zplugin ice silent wait"0"
-zplugin light lukechilds/zsh-nvm
+zinit ice silent wait"0"
+zinit light lukechilds/zsh-nvm
 
-zplugin ice silent wait"0"
-zplugin light lukechilds/zsh-better-npm-completion
+zinit ice silent wait"0"
+zinit light lukechilds/zsh-better-npm-completion
 
-zplugin snippet OMZ::plugins/git/git.plugin.zsh
+zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 # CLI Emojifier ⭐
-zplugin ice as"program" cp"zemojify -> emojify" pick"emojify"
-zplugin light filipekiss/zemojify
+zinit ice as"program" cp"zemojify -> emojify" pick"emojify"
+zinit light filipekiss/zemojify
