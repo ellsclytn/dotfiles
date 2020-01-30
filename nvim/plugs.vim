@@ -15,9 +15,10 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'mattn/emmet-vim'
 
 " Files
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'scrooloose/nerdtree'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Auto mkdir
 Plug 'travisjeffery/vim-auto-mkdir'
