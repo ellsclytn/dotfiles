@@ -2,7 +2,8 @@ let g:ale_linters = {
 \  'html': [],
 \  'javascript': ['eslint'],
 \  'typescript': ['tslint'],
-\  'typescriptreact': ['tslint']
+\  'typescriptreact': ['tslint'],
+\  'yaml': ['yamllint'],
 \}
 
 let g:ale_fixers = {

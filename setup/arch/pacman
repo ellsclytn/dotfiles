@@ -60,6 +60,7 @@ xbindkeys
 xclip
 xorg-server
 xorg-xinit
+yamllint
 zsh
 
 # Sytem-specific (requires manual install)
