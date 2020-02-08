@@ -21,6 +21,8 @@
   ap = add -p
   b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
   c = commit --verbose
+  ca = commit --amend
+  can = commit --amend --no-edit
   cm = commit -m
   cmb = "!git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
   co = checkout
