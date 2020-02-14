@@ -33,6 +33,7 @@ brew 'wget'
 brew 'yamllint'
 brew 'ykman'
 brew 'yubikey-personalization'
+brew 'z'
 brew 'zsh'
 
 #Casks

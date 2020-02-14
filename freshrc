@@ -15,9 +15,6 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
 # Shell
 fresh-options
-  fresh env/\*
-  fresh robbyrussell/oh-my-zsh lib/history.zsh
-
   if [[ $OS == "arch" ]]; then
     fresh env/arch/\*
   fi
@@ -33,6 +30,9 @@ fresh-options
   if ! [[ $OS == "macos" ]]; then
     fresh env/linux/\*
   fi
+
+  fresh env/\*
+  fresh robbyrussell/oh-my-zsh lib/history.zsh
 
   fresh env/aliases.sh
 fresh-options
