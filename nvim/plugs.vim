@@ -35,6 +35,7 @@ Plug 'jiangmiao/auto-pairs'
 
 " Surroundings
 Plug 'tpope/vim-surround'
+Plug 'AndrewRadev/splitjoin.vim'
 
 " Linting/Gutter/Highlighting
 Plug 'w0rp/ale'
