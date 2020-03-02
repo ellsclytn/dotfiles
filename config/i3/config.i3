@@ -3,7 +3,7 @@ set $mod Mod1
 new_window pixel 1
 new_float normal
 
-hide_edge_borders none
+hide_edge_borders smart_no_gaps
 
 bindsym $mod+u border none
 bindsym $mod+y border pixel 1
