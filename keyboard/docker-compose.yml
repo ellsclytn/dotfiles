@@ -1,0 +1,12 @@
+---
+version: '3.7'
+
+services:
+  qmk:
+    image: qmkfm/qmk_firmware
+    privileged: true
+    volumes:
+      - /dev:/dev
+      - ./:/qmk_firmware/keyboards/keebio/iris/keymaps/custom
+      - ./.build/:/qmk_firmware/.build
+    command: "make keebio/iris/rev4:custom:flash"
