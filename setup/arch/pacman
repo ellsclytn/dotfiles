@@ -61,6 +61,7 @@ xclip
 xorg-server
 xorg-xinit
 yamllint
+z
 zsh
 
 # Sytem-specific (requires manual install)
