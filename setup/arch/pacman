@@ -5,6 +5,7 @@ arc-gtk-theme
 asciinema
 bluez
 bluez-utils
+ccid
 diff-so-fancy
 discord
 dkms
@@ -18,6 +19,7 @@ firefox
 flameshot
 fzf
 git
+gnupg
 gparted
 htop
 i3-gaps
@@ -40,6 +42,7 @@ openssh
 openvpn
 papirus-icon-theme
 pavucontrol
+pcsclite
 piper
 pulseaudio
 pulseaudio-alsa
