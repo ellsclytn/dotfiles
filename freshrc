@@ -113,8 +113,8 @@ if [[ $OS == "arch" ]]; then
 
   fresh config/xinitrc --file
 
-  # Compton
-  fresh config/compton/\*.conf --file=~/.config/compton.conf
+  # Picom
+  fresh config/picom/\*.conf --file=~/.config/picom.conf
 
   # Rofi
   fresh config/Xresources --file --marker=!
