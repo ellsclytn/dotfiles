@@ -65,6 +65,8 @@ xclip
 xorg-server
 xorg-xinit
 yamllint
+zathura
+zathura-pdf-mupdf
 zsh
 
 # Sytem-specific (requires manual install)
