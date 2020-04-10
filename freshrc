@@ -39,14 +39,10 @@ fresh-options
 
 # Secret Shell Stuff 🤫
 # We can't do decryption operations on machines without a private key!
-if gpg --list-secret-keys $GPG_KEY_ID 2>&1 >/dev/null; then
-  fresh-options --filter="gpg -dq"
-    if [[ $OS == "macos" ]]; then
-      fresh env/secrets/mac.sh.gpg
-    fi
-
-    fresh env/secrets/github-token.gpg
-  fresh-options
+if [[ $OS == "macos" ]]; then
+  if gpg --list-secret-keys $GPG_KEY_ID 2>&1 >/dev/null; then
+    fresh env/secrets/mac.sh.gpg --filter="gpg -dq"
+  fi
 fi
 
 # Alacritty
