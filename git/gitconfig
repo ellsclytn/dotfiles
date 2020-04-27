@@ -43,8 +43,9 @@
   s = status -s
 [core]
   excludesfile = ~/.gitignore_global
-  # Use diff-so-fancy for all diffs
-  pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = delta --dark --theme="ansi-dark"
+[interactive]
+  diffFilter = delta --color-only
 [log]
   mailmap = true
 [commit]

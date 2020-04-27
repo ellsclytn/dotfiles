@@ -2,6 +2,7 @@ aws-vault
 bitwarden-bin
 ctop
 direnv
+git-delta-bin
 git-fixup-git
 git-open
 nerd-fonts-hack
