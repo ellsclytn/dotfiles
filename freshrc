@@ -48,6 +48,7 @@ fi
 # Alacritty
 if ! [[ $OS == "ubuntu" ]]; then
   fresh alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplate
+  fresh config/redshift.conf --file=~/.config/redshift.conf
 fi
 
 # Starship Prompt
