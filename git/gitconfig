@@ -61,3 +61,5 @@
   whitespace = "red reverse"
 [diff "gpg"]
   textconv = gpg --quiet --no-tty --decrypt
+[pull]
+  ff = only
