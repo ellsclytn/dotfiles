@@ -52,6 +52,7 @@ Plug 'tpope/vim-fugitive'
 " Words
 Plug 'tpope/vim-abolish'
 Plug 'junegunn/vim-emoji'
+Plug 'christoomey/vim-sort-motion'
 
 Plug 'jamessan/vim-gnupg'
 
