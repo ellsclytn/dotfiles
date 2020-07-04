@@ -10,6 +10,3 @@ fi
 if [[ -x "$(command -v apt-get)" ]]; then
   export OS="ubuntu"
 fi
-if [[ "$(uname)" == "Darwin" ]]; then
-  export OS="macos"
-fi

@@ -19,16 +19,8 @@ fresh-options
     fresh env/arch/\*
   fi
 
-  if [[ $OS == "macos" ]]; then
-    fresh env/mac/\*
-  fi
-
   if [[ $OS == "ubuntu" ]]; then
     fresh env/ubuntu/\*
-  fi
-
-  if ! [[ $OS == "macos" ]]; then
-    fresh env/linux/\*
   fi
 
   fresh env/\*
@@ -36,14 +28,6 @@ fresh-options
 
   fresh env/aliases.sh
 fresh-options
-
-# Secret Shell Stuff 🤫
-# We can't do decryption operations on machines without a private key!
-if [[ $OS == "macos" ]]; then
-  if gpg --list-secret-keys $GPG_KEY_ID 2>&1 >/dev/null; then
-    fresh env/secrets/mac.sh.gpg --filter="gpg -dq"
-  fi
-fi
 
 # Alacritty
 if ! [[ $OS == "ubuntu" ]]; then
@@ -64,7 +48,7 @@ fi
 # GPG
 if ! [[ $OS == "ubuntu" ]]; then
   fresh gnupg/gpg.conf --file=~/.gnupg/gpg.conf
-  fresh gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf --filter=gomplate
+  fresh gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 fi
 
 # Git
@@ -73,7 +57,6 @@ fresh git/\* --file
 fresh-options --file=~/.gitignore_global --marker=#
   fresh github/gitignore Global/Vagrant.gitignore
   fresh github/gitignore Global/Vim.gitignore
-  fresh github/gitignore Global/macOS.gitignore
   fresh github/gitignore Node.gitignore
   fresh git/gitignore
 fresh-options

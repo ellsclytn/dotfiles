@@ -28,11 +28,6 @@ if [[ $OS == "ubuntu" ]]; then
   ./setup/ubuntu/setup.sh
 fi
 
-if [[ $OS == "macos" ]]; then
-  ./setup/macos/software.sh
-  ./setup/macos/defaults.sh
-fi
-
 # Cross platform software
 . setup/software.sh
 

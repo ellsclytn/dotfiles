@@ -1,21 +1,14 @@
 # dotfiles
 
-dotfiles is a set of scripts and configurations to set up macOS, Arch, or Ubuntu Server with the applications I develop with, and programs I use most.
+dotfiles is a set of scripts and configurations to set up Arch Linux or Ubuntu Server with the applications I develop with, and programs I use most.
 
 My dotfiles are managed by [fresh](http://freshshell.com).
 
 ## Requirements
 
-1. A computer running macOS, Arch Linux, or Ubuntu Server.
+1. A computer running Arch Linux, or Ubuntu Server.
 
 ## Get started
-
-### macOS
-
-1. `xcode-select --install` (and wait for it to finish)
-2. `./setup/start`
-
-### Everyone else
 
 1. `./setup/start`
 
