@@ -36,7 +36,7 @@ font:
     style: Italic
 
   # Point size
-  size: {{with env.Getenv "OS"}}{{if eq . "macos" -}} 20.0 {{- else -}} 16.0 {{- end}}{{end}}
+  size: {{with env.Getenv "LAPTOP"}}{{if eq . "1" -}} 12.0 {{- else -}} 16.0 {{- end}}{{end}}
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
