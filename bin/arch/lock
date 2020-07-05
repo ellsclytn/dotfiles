@@ -4,4 +4,4 @@ lockimg="/tmp/lockscreen.png"
 
 convert -resize $(xdpyinfo | grep dimensions | cut -d\  -f7 | cut -dx -f1) /usr/share/backgrounds/lock.png "$lockimg"
 i3lock -i "$lockimg"
-rm $tmpbg
+rm "$lockimg"
