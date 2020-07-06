@@ -60,7 +60,6 @@ ttf-dejavu
 ttf-font-awesome
 udisks2
 wget
-xbindkeys
 xclip
 xorg-server
 xorg-xinit
