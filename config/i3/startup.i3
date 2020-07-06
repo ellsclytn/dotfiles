@@ -8,6 +8,7 @@ exec --no-startup-id redshift
 exec --no-startup-id syncthing -no-browser
 exec --no-startup-id xbindkeys
 exec --no-startup-id xfce4-power-manager
+exec --no-startup-id xss-lock -l /home/ellis/bin/lock &
 
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id ff-theme-util

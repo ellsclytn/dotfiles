@@ -64,6 +64,7 @@ xbindkeys
 xclip
 xorg-server
 xorg-xinit
+xss-lock
 yamllint
 zathura
 zathura-pdf-mupdf
