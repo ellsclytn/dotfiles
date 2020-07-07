@@ -1,8 +1,10 @@
 adobe-source-sans-pro-fonts
 alacritty
 alsa-utils
+arandr
 arc-gtk-theme
 asciinema
+autorandr
 bluez
 bluez-utils
 ccid
@@ -63,6 +65,7 @@ wget
 xclip
 xorg-server
 xorg-xinit
+xorg-xrandr
 xss-lock
 yamllint
 zathura
