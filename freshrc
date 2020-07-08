@@ -29,9 +29,8 @@ fresh-options
   fresh env/aliases.sh
 fresh-options
 
-# Alacritty
 if ! [[ $OS == "ubuntu" ]]; then
-  fresh alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplate
+  fresh config/alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplate
   fresh config/redshift.conf --file=~/.config/redshift/redshift.conf
 fi
 
