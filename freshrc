@@ -73,8 +73,8 @@ fresh-options
 # i3wm, etc.
 if [[ $OS == "arch" ]]; then
   fresh-options --file=~/.config/i3/config --marker=#
+    fresh config/i3/keybindings/\* --filter=gomplate
     fresh config/i3/\*
-    fresh https://gitlab.com/JackCuthbert/dotfiles.git config/i3/keybindings/multimedia.conf
   fresh-options
   fresh config/rofi/\* --file=~/.config/rofi/config --marker=#
   fresh-options --file=~/.config/polybar/config --marker=";"
