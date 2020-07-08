@@ -46,3 +46,18 @@ Very similar to the GPG process. You import a key, and put it in a place:
 
 1. Check the output of `ssh-add -L`. You should see one (and only one) entry ending in `cardno:000612354678` (those numbers will be specific to your key).
 2. `ssh-add -L | grep "cardno:000612354678" > ~/.ssh/id_rsa_yubikey.pub`
+
+### System-level files
+
+#### Keyboard
+
+**`/etc/X11/xorg.conf.d/30-keyboard.conf`**
+
+```
+Section "InputClass"
+  Identifier "keyboard0"
+  MatchIsKeyboard "on"
+
+  Option "XkbOptions" "ctrl:nocaps"
+EndSection
+```
