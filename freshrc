@@ -61,14 +61,14 @@ fresh-options --file=~/.gitignore_global --marker=#
 fresh-options
 
 # Vim
-fresh nvim/plugins/coc.json --file=~/.config/nvim/coc-settings.json
-fresh nvim/plugs.vim --file=~/.config/nvim/init.vim
+fresh config/nvim/plugins/coc.json --file=~/.config/nvim/coc-settings.json
 fresh-options --file=~/.config/nvim/init.vim
-  fresh nvim/config/\*.vim
-  fresh nvim/plugins/\*.vim
+  fresh config/nvim/plugs.vim
+  fresh config/nvim/config/\*.vim
+  fresh config/nvim/plugins/\*.vim
   fresh hackling/dotfiles vim/keybindings/visualblockindent.vim
+  fresh config/nvim/colors.vim
 fresh-options
-fresh nvim/colors.vim --file=~/.config/nvim/init.vim
 
 # i3wm, etc.
 if [[ $OS == "arch" ]]; then
