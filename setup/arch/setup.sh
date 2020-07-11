@@ -1,4 +1,4 @@
-sudo pacman -S base-devel
+sudo pacman -S base-devel jq
 
 # libc++ {{✊}}
 gpg --keyserver hkp://pgp.mit.edu:80 --receive-keys A2C794A986419D8A
