@@ -1,4 +1,4 @@
-sudo pacman -S base-devel jq
+sudo pacman -S base-devel jq ansible
 
 # libc++ {{✊}}
 gpg --keyserver hkp://pgp.mit.edu:80 --receive-keys A2C794A986419D8A
@@ -13,9 +13,7 @@ sudo pacman -U aura-bin-*
 cd ~/.dotfiles
 rm -rf aura-bin
 
-#
-# Pacman, AUR and AppImages
-#
-echo "Istalling packages..."
-sudo aura -S $(grep -v '^#' ~/.dotfiles/setup/arch/pacman)
+sudo -E ansible-playbook ansible/playbook.yml
+
+echo "Istalling AUR packages..."
 sudo aura -Aa $(grep -v '^#' ~/.dotfiles/setup/arch/aur)

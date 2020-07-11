@@ -1,4 +1,5 @@
 alias :q="clear"
+alias ansible-system="cd ~/.dotfiles; sudo -E ansible-playbook ansible/playbook.yml; cd -"
 alias ar="asciinema"
 alias dev="cd ~/Code"
 alias dotfiles="cd ~/.dotfiles"

@@ -1,0 +1,52 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  vars:
+    laptop: "{{ lookup('env', 'LAPTOP') | bool }}"
+  tasks:
+    - name: Intel graphics configuration
+      template:
+        src: ./templates/10-intel.conf
+        dest: /etc/X11/xorg.conf.d/10-intel.conf
+        owner: root
+        group: root
+        mode: '0644'
+      become: true
+      when: laptop
+    - name: Mouse/trackpad configuration
+      template:
+        src: ./templates/20-mouse.conf
+        dest: /etc/X11/xorg.conf.d/20-mouse.conf
+        owner: root
+        group: root
+        mode: '0644'
+      become: true
+    - name: Keyboard configuration
+      template:
+        src: ./templates/30-keyboard.conf
+        dest: /etc/X11/xorg.conf.d/30-keyboard.conf
+        owner: root
+        group: root
+        mode: '0644'
+      become: true
+    - name: Install Pacman packages
+      pacman:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ lookup('file', '../setup/arch/pacman').splitlines() }}"
+      become: true
+    - name: Install laptop-specific Pacman packages
+      pacman:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - intel-ucode
+      when: laptop
+    - name: Install desktop-specific Pacman packages
+      pacman:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - nvidia
+        - nvidia-settings
+      when: not laptop

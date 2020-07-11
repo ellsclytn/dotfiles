@@ -49,15 +49,4 @@ Very similar to the GPG process. You import a key, and put it in a place:
 
 ### System-level files
 
-#### Keyboard
-
-**`/etc/X11/xorg.conf.d/30-keyboard.conf`**
-
-```
-Section "InputClass"
-  Identifier "keyboard0"
-  MatchIsKeyboard "on"
-
-  Option "XkbOptions" "ctrl:nocaps"
-EndSection
-```
+Managed with Ansible. `ansible-playbook ansible/playbook.yml -K`

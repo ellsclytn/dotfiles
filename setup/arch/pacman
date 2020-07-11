@@ -1,6 +1,7 @@
 adobe-source-sans-pro-fonts
 alacritty
 alsa-utils
+ansible
 arandr
 arc-gtk-theme
 asciinema
@@ -71,10 +72,3 @@ yamllint
 zathura
 zathura-pdf-mupdf
 zsh
-
-# Sytem-specific (requires manual install)
-# intel-ucode
-# nvidia
-# nvidia-settings
-# steam
-# steam-native-runtime
