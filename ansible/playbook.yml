@@ -29,6 +29,14 @@
         group: root
         mode: '0644'
       become: true
+    - name: Auto login configuration
+      template:
+        src: ./templates/systemd/system/getty@tty1.service.d/override.conf
+        dest: /etc/systemd/system/getty@tty1.service.d/override.conf
+        owner: root
+        group: root
+        mode: '0644'
+      become: true
     - name: Install Pacman packages
       pacman:
         name: "{{ item }}"
