@@ -6,8 +6,6 @@
 
 export INITIAL_SETUP=1
 
-. setup/environment.sh
-
 # Get version of latest release of a GitHub repository
 github_release () {
   curl -s "https://api.github.com/repos/$1/releases/latest" | jq -r '.tag_name'
@@ -17,6 +15,8 @@ export -f github_release
 
 git clone "https://gitlab.com/ellsclytn/dotfiles.git" ~/.dotfiles
 cd ~/.dotfiles
+
+. setup/environment.sh
 
 if [[ $OS == "arch" ]]; then
   localectl set-locale LANG=en_AU.UTF-8
