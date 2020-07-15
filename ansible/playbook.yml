@@ -39,22 +39,19 @@
       become: true
     - name: Install Pacman packages
       pacman:
-        name: "{{ item }}"
+        name: "{{ lookup('file', '../setup/arch/pacman').splitlines() }}"
         state: present
-      loop: "{{ lookup('file', '../setup/arch/pacman').splitlines() }}"
       become: true
     - name: Install laptop-specific Pacman packages
       pacman:
-        name: "{{ item }}"
+        name:
+          - intel-ucode
         state: present
-      loop:
-        - intel-ucode
       when: laptop
     - name: Install desktop-specific Pacman packages
       pacman:
-        name: "{{ item }}"
+        name:
+          - nvidia
+          - nvidia-settings
         state: present
-      loop:
-        - nvidia
-        - nvidia-settings
       when: not laptop
