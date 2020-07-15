@@ -46,7 +46,6 @@
       pacman:
         name:
           - fprint
-          - intel-ucode
         state: present
       when: laptop
     - name: Install desktop-specific Pacman packages
