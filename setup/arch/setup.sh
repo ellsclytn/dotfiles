@@ -12,7 +12,7 @@ makepkg
 sudo pacman -U --noconfirm /tmp/aura-bin/*.pkg.tar.zst
 cd -
 
-sudo -E ansible-playbook ansible/playbook.yml
+ansible-playbook ansible/playbook.yml -K
 
 echo "Istalling AUR packages..."
 sudo aura -Aa $(grep -v '^#' ~/.dotfiles/setup/arch/aur)
