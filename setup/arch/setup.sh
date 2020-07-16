@@ -1,4 +1,4 @@
-sudo pacman -S base-devel jq ansible
+sudo pacman -S --noconfirm base-devel jq ansible
 
 # libc++ {{✊}}
 gpg --keyserver hkp://pgp.mit.edu:80 --receive-keys A2C794A986419D8A
@@ -9,7 +9,7 @@ gpg --keyserver hkp://pgp.mit.edu:80 --receive-keys A2C794A986419D8A
 git clone https://aur.archlinux.org/aura-bin.git
 cd aura-bin
 makepkg
-sudo pacman -U aura-bin-*
+sudo pacman -U --noconfirm aura-bin-*
 cd ~/.dotfiles
 rm -rf aura-bin
 
