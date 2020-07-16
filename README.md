@@ -10,7 +10,8 @@ My dotfiles are managed by [fresh](http://freshshell.com).
 
 ## Get started
 
-1. `./setup/start`
+1. Clone this repo
+2. `./setup/start`
 
 ## Post-install
 

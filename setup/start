@@ -13,9 +13,6 @@ github_release () {
 
 export -f github_release
 
-git clone "https://gitlab.com/ellsclytn/dotfiles.git" ~/.dotfiles
-cd ~/.dotfiles
-
 . setup/environment.sh
 
 if [[ $OS == "arch" ]]; then
