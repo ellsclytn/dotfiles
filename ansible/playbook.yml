@@ -4,6 +4,14 @@
   vars:
     laptop: "{{ lookup('env', 'LAPTOP') | bool }}"
   tasks:
+    - name: /etc/X11/xorg.conf.d
+      file:
+        path: /etc/X11/xorg.conf.d
+        owner: root
+        group: root
+        mode: '0755'
+        state: directory
+      become: true
     - name: Intel graphics configuration
       template:
         src: ./templates/10-intel.conf
@@ -28,6 +36,14 @@
         owner: root
         group: root
         mode: '0644'
+      become: true
+    - name: /etc/systemd/system/getty@tty1.service.d
+      file:
+        path: /etc/systemd/system/getty@tty1.service.d
+        owner: root
+        group: root
+        mode: '0755'
+        state: directory
       become: true
     - name: Auto login configuration
       template:
