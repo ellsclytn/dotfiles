@@ -1,7 +1,7 @@
 sudo pacman -S --noconfirm base-devel jq ansible
 
 # libc++ {{✊}}
-gpg --keyserver hkp://pgp.mit.edu:80 --receive-keys A2C794A986419D8A
+gpg --keyserver hkp://keyserver.ubuntu.com:80 --receive-keys A2C794A986419D8A
 
 #
 # Aura
