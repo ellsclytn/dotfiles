@@ -74,7 +74,7 @@ fresh-options
 if [[ $OS == "arch" ]]; then
   fresh-options --file=~/.config/i3/config --marker=#
     fresh config/i3/keybindings/\* --filter=gomplate
-    fresh config/i3/\*
+    fresh config/i3/\* --filter=gomplate
   fresh-options
   fresh config/rofi/\* --file=~/.config/rofi/config --marker=#
   fresh-options --file=~/.config/polybar/config --marker=";"
@@ -93,7 +93,9 @@ if [[ $OS == "arch" ]]; then
   fresh config/xinitrc --file
 
   # Picom
-  fresh config/picom/\*.conf --file=~/.config/picom.conf
+  if [[ -z ${LAPTOP+x} ]]; then
+    fresh config/picom/\*.conf --file=~/.config/picom.conf
+  fi
 
   # Rofi
   fresh config/Xresources --file --marker=!

@@ -69,6 +69,7 @@
         name:
           - nvidia
           - nvidia-settings
+          - picom
         state: present
       when: not laptop
       become: true
