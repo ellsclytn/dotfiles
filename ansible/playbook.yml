@@ -62,6 +62,8 @@
       pacman:
         name:
           - fprint
+          - mesa
+          - xf86-video-intel
         state: present
       when: laptop
     - name: Install desktop-specific Pacman packages
