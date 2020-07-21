@@ -21,6 +21,7 @@ bindsym $mod+Shift+q kill
 # start program launcher
 bindsym $mod+space exec --no-startup-id rofi -show combi
 bindsym $mod+period exec rofi -show emoji -modi emoji
+bindsym $mod+Shift+period exec rofi-kaomoji
 
 # change focus
 bindsym $mod+h focus left

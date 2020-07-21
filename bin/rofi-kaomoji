@@ -1,0 +1,21 @@
+#!/bin/bash
+set -euo pipefail
+
+presets="happy
+sad
+angry
+tableflip
+"
+
+kaomoji_type=$(echo "$presets" | rofi -show -dmenu -p "kaomoji type")
+results=()
+
+function get_kaomoji {
+  results+=("$(curl -s "https://api.kaomoji.moe/web/search?search=$kaomoji_type")")
+}
+
+for _i in {1..5}; do
+  get_kaomoji
+done
+
+printf '%s\n' "${results[@]}" | rofi -show -dmenu -p "results" | xclip -selection c
