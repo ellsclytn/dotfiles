@@ -8,14 +8,7 @@ tableflip
 "
 
 kaomoji_type=$(echo "$presets" | rofi -show -dmenu -p "kaomoji type")
-results=()
 
-function get_kaomoji {
-  results+=("$(curl -s "https://api.kaomoji.moe/web/search?search=$kaomoji_type")")
-}
+results=$(curl -s "https://kaomoji-moe-sfcbpsdxqq-an.a.run.app/api/v1/search?q=$kaomoji_type" | jq -r '.data[]')
 
-for _i in {1..5}; do
-  get_kaomoji
-done
-
-printf '%s\n' "${results[@]}" | rofi -show -dmenu -p "results" | xclip -selection c
+echo "$results" | rofi -show -dmenu -p "results" | xclip -selection c
