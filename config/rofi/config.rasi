@@ -4,7 +4,8 @@ configuration {
   display-run: " ";
   display-drun: " ";
   display-window: " ";
-  modi: "window,run,drun";
+  modi: "combi";
+  combi-modi: "window,drun,run";
 }
 
 * {
