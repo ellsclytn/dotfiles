@@ -1,0 +1,47 @@
+configuration {
+  font: "Source Sans Pro 14";
+  drun-display-format: "{name}";
+  display-run: " ";
+  display-drun: " ";
+  display-window: " ";
+  modi: "window,run,drun";
+}
+
+* {
+  background-color: #353b45;
+  fg: #abb2bf;
+  focus-fg: #c678dd;
+  focus-bg: #3e4451;
+  prompt-fg: #56b6c2;
+
+  border: 0;
+  lines: 12;
+  padding: 0;
+  margin: 0;
+  spacing: 0;
+}
+
+window {
+  width: 30%;
+}
+
+element {
+  padding: 12;
+  text-color: @fg;
+}
+
+element selected {
+  background-color: @focus-bg;
+  text-color: @focus-fg;
+}
+
+prompt {
+  enabled: true;
+  padding: 12 0 0 12;
+  text-color: @prompt-fg;
+}
+
+entry {
+  padding: 12;
+  text-color: @prompt-fg;
+}

@@ -76,7 +76,7 @@ if [[ $OS == "arch" ]]; then
     fresh config/i3/keybindings/\* --filter=gomplate
     fresh config/i3/\* --filter=gomplate
   fresh-options
-  fresh config/rofi/\* --file=~/.config/rofi/config --marker=#
+  fresh config/rofi/config.rasi --file=~/.config/rofi/config.rasi
   fresh-options --file=~/.config/polybar/config --marker=";"
     fresh config/polybar/colors
     fresh config/polybar/config
