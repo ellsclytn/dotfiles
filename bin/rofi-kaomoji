@@ -1,14 +1,26 @@
 #!/bin/bash
 set -euo pipefail
 
-presets="happy
-sad
-angry
+static_presets="happy
+shrug
 tableflip
+celebrate
 "
 
-kaomoji_type=$(echo "$presets" | rofi -show -dmenu -p "kaomoji type")
+search_presets="angry
+sad
+"
 
-results=$(curl -s "https://kaomoji-moe-sfcbpsdxqq-an.a.run.app/api/v1/search?q=$kaomoji_type" | jq -r '.data[]')
+sorted_presets=$(echo -n "$static_presets$search_presets" | sort)
+
+base_url="https://kaomoji-moe-sfcbpsdxqq-an.a.run.app/api/v1/"
+kaomoji_type=$(echo "$sorted_presets" | rofi -show -dmenu -p "kaomoji type")
+query="search?q=$kaomoji_type"
+
+if [[ "$static_presets" == *"$kaomoji_type"* ]]; then
+  query="$kaomoji_type"
+fi
+
+results=$(curl -s "$base_url$query" | jq -r '.data[]')
 
 echo "$results" | rofi -show -dmenu -p "results" | xclip -selection c
