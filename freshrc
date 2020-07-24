@@ -101,5 +101,8 @@ if [[ $OS == "arch" ]]; then
   fresh config/rofi/config.rasi --file=~/.config/rofi/config.rasi
 
   # Xresources
-  fresh config/Xresources --file --marker=!
+  fresh-options --file=~/.Xresources --marker=!
+    fresh config/Xresources
+    fresh pinpox/base16-xresources xresources/base16-onedark-256.Xresources
+  fresh-options
 fi
