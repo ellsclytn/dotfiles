@@ -30,7 +30,12 @@ fresh-options
 fresh-options
 
 if ! [[ $OS == "ubuntu" ]]; then
-  fresh config/alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplate
+  # Alacritty
+  fresh-options --file=~/.config/alacritty/alacritty.yml
+    fresh config/alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplate
+    fresh aaron-williamson/base16-alacritty colors/base16-onedark-256.yml
+  fresh-options
+
   fresh config/redshift.conf --file=~/.config/redshift/redshift.conf
 fi
 
