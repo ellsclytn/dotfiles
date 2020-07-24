@@ -55,7 +55,7 @@
       become: true
     - name: Install Pacman packages
       pacman:
-        name: "{{ lookup('file', '../setup/arch/pacman').splitlines() }}"
+        name: "{{ lookup('file', '../setup/pacman').splitlines() }}"
         state: present
       become: true
     - name: Install laptop-specific Pacman packages

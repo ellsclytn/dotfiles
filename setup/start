@@ -5,6 +5,7 @@
 #
 
 export INITIAL_SETUP=1
+export GPG_KEY_ID="${GPG_KEY_ID:-DEF7E66A739ACB11}"
 
 # Get version of latest release of a GitHub repository
 github_release () {
@@ -13,19 +14,9 @@ github_release () {
 
 export -f github_release
 
-. setup/environment.sh
+localectl set-locale LANG=en_AU.UTF-8
+export LANG=en_AU.UTF-8
 
-if [[ $OS == "arch" ]]; then
-  localectl set-locale LANG=en_AU.UTF-8
-  export LANG=en_AU.UTF-8
-  ./setup/arch/setup.sh
-fi
-
-if [[ $OS == "ubuntu" ]]; then
-  ./setup/ubuntu/setup.sh
-fi
-
-# Cross platform software
 . setup/software.sh
 
 zsh setup/finalize.zsh

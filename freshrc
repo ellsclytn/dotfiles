@@ -8,37 +8,22 @@
 #
 # See http://freshshell.com/readme for documentation.
 
-. ~/.dotfiles/setup/environment.sh
-
 fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
 # Shell
-fresh-options
-  if [[ $OS == "arch" ]]; then
-    fresh env/arch/\*
-  fi
+fresh env/\*
+fresh robbyrussell/oh-my-zsh lib/history.zsh
+fresh env/aliases.sh
 
-  if [[ $OS == "ubuntu" ]]; then
-    fresh env/ubuntu/\*
-  fi
-
-  fresh env/\*
-  fresh robbyrussell/oh-my-zsh lib/history.zsh
-
-  fresh env/aliases.sh
+# Alacritty
+fresh-options --file=~/.config/alacritty/alacritty.yml
+  fresh config/alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplate
+  fresh aaron-williamson/base16-alacritty colors/base16-onedark-256.yml
 fresh-options
 
-if ! [[ $OS == "ubuntu" ]]; then
-  # Alacritty
-  fresh-options --file=~/.config/alacritty/alacritty.yml
-    fresh config/alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter=gomplate
-    fresh aaron-williamson/base16-alacritty colors/base16-onedark-256.yml
-  fresh-options
-
-  fresh config/redshift.conf --file=~/.config/redshift/redshift.conf
-  fresh HaoZeke/base16-zathura build_schemes/base16-onedark.config --file=~/.config/zathura/zathurarc
-fi
+fresh config/redshift.conf --file=~/.config/redshift/redshift.conf
+fresh HaoZeke/base16-zathura build_schemes/base16-onedark.config --file=~/.config/zathura/zathurarc
 
 # Starship Prompt
 fresh config/starship.toml --file=~/.config/starship.toml
@@ -46,19 +31,12 @@ fresh config/starship.toml --file=~/.config/starship.toml
 # Bin
 fresh bin/\* --bin
 
-if [[ $OS == "arch" ]]; then
-  fresh bin/arch/\* --bin
-fi
-
 # GPG
-if ! [[ $OS == "ubuntu" ]]; then
-  fresh gnupg/gpg.conf --file=~/.gnupg/gpg.conf
-  fresh gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
-fi
+fresh gnupg/gpg.conf --file=~/.gnupg/gpg.conf
+fresh gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
 # Git
 fresh git/\* --file
-
 fresh-options --file=~/.gitignore_global --marker=#
   fresh github/gitignore Global/Vagrant.gitignore
   fresh github/gitignore Global/Vim.gitignore
@@ -77,40 +55,38 @@ fresh-options --file=~/.config/nvim/init.vim
 fresh-options
 
 # i3wm, etc.
-if [[ $OS == "arch" ]]; then
-  fresh-options --file=~/.config/i3/config --marker=#
-    fresh khamer/base16-i3 colors/base16-onedark.config
-    fresh khamer/base16-i3 client-properties/base16-onedark.config
-    fresh config/i3/keybindings/\* --filter=gomplate
-    fresh config/i3/\* --filter=gomplate
-  fresh-options
+fresh-options --file=~/.config/i3/config --marker=#
+  fresh khamer/base16-i3 colors/base16-onedark.config
+  fresh khamer/base16-i3 client-properties/base16-onedark.config
+  fresh config/i3/keybindings/\* --filter=gomplate
+  fresh config/i3/\* --filter=gomplate
+fresh-options
 
-  fresh-options --file=~/.config/polybar/config --marker=";"
-    fresh config/polybar/colors
-    fresh config/polybar/config
-    fresh config/polybar/bar
-    if [[ -z ${LAPTOP+x} ]]; then
-      fresh config/polybar/overrides/desktop/bar
-    else
-      fresh config/polybar/overrides/laptop/bar
-    fi
-
-    fresh config/polybar/modules/\*
-  fresh-options
-
-  fresh config/xinitrc --file
-
-  # Picom
+fresh-options --file=~/.config/polybar/config --marker=";"
+  fresh config/polybar/colors
+  fresh config/polybar/config
+  fresh config/polybar/bar
   if [[ -z ${LAPTOP+x} ]]; then
-    fresh config/picom/\*.conf --file=~/.config/picom.conf
+    fresh config/polybar/overrides/desktop/bar
+  else
+    fresh config/polybar/overrides/laptop/bar
   fi
 
-  # Rofi
-  fresh config/rofi/config.rasi --file=~/.config/rofi/config.rasi
+  fresh config/polybar/modules/\*
+fresh-options
 
-  # Xresources
-  fresh-options --file=~/.Xresources --marker=!
-    fresh config/Xresources
-    fresh pinpox/base16-xresources xresources/base16-onedark-256.Xresources
-  fresh-options
+fresh config/xinitrc --file
+
+# Picom
+if [[ -z ${LAPTOP+x} ]]; then
+  fresh config/picom/\*.conf --file=~/.config/picom.conf
 fi
+
+# Rofi
+fresh config/rofi/config.rasi --file=~/.config/rofi/config.rasi
+
+# Xresources
+fresh-options --file=~/.Xresources --marker=!
+  fresh config/Xresources
+  fresh pinpox/base16-xresources xresources/base16-onedark-256.Xresources
+fresh-options
