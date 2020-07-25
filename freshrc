@@ -28,6 +28,9 @@ fresh HaoZeke/base16-zathura build_schemes/base16-onedark.config --file=~/.confi
 # Starship Prompt
 fresh config/starship.toml --file=~/.config/starship.toml
 
+# Flameshot
+fresh config/flameshot.ini --file=~/.config/Dharkael/flameshot.ini
+
 # Bin
 fresh bin/\* --bin
 
