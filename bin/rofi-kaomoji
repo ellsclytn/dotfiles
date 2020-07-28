@@ -13,7 +13,7 @@ sad
 
 sorted_presets=$(echo -n "$static_presets$search_presets" | sort)
 
-base_url="https://kaomoji-moe-sfcbpsdxqq-an.a.run.app/api/v1/"
+base_url="https://kaomoji-moe-adbxgizrya-an.a.run.app/api/v1/"
 kaomoji_type=$(echo "$sorted_presets" | rofi -show -dmenu -p "kaomoji type")
 query="search?q=$kaomoji_type"
 
