@@ -35,12 +35,12 @@
   fu = commit --fixup
   hard-pull = "!git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)"
   l = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%Cred\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --no-merges
-  lb = l master..HEAD
+  lb = l origin/HEAD..HEAD
   la = "!git config -l | grep alias | cut -c 7-"
   m = commit --amend --verbose
   pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
   ras = rebase -i --autosquash --autostash
-  rasm = rebase -i --autosquash --autostash origin/master
+  rasm = rebase -i --autosquash --autostash origin/HEAD
   s = status -s
 [core]
   excludesfile = ~/.gitignore_global
