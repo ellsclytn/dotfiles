@@ -2,6 +2,7 @@ aws-vault
 bitwarden-bin
 ctop
 direnv
+dust
 git-delta-bin
 git-fixup-git
 git-open

@@ -3,6 +3,7 @@ alias ansible-system="cd ~/.dotfiles; sudo -E ansible-playbook ansible/playbook.
 alias ar="asciinema"
 alias dev="cd ~/Code"
 alias dotfiles="cd ~/.dotfiles"
+alias du="dust"
 alias f="zi"
 alias g='git'
 alias gpf='echo -e "\033[1;31m!!!Forcing!!!\033[0m" && sleep 3 && git push --force-with-lease'
