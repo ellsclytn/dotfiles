@@ -7,6 +7,7 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Autocomplete
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
