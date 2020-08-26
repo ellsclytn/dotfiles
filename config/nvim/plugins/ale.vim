@@ -9,7 +9,8 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \  'javascript': ['prettier', 'eslint'],
 \  'typescript': ['prettier', 'eslint'],
-\  'typescriptreact': ['prettier', 'eslint']
+\  'rust': ['rustfmt'],
+\  'typescriptreact': ['prettier', 'eslint'],
 \}
 
 let g:ale_fix_on_save = 1
