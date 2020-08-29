@@ -1,0 +1,13 @@
+[Unit]
+Description=Turn the monitor glow light on and off with the system
+After=NetworkManager-wait-online.service
+Wants=NetworkManager-wait-online.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/bin/monitor-glow on
+ExecStop=/bin/monitor-glow off
+
+[Install]
+WantedBy=multi-user.target
