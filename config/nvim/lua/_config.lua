@@ -8,8 +8,6 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 -- Show cursor position
 vim.opt.ruler = true
--- Australian English for spell checking
-vim.opt.spelllang = 'en_au'
 
 -- Use spaces instead of tabs
 vim.opt.expandtab = true
