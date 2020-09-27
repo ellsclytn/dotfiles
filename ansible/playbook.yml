@@ -53,18 +53,6 @@
         group: root
         mode: '0644'
       become: true
-    - name: Monitor glow light application
-      file:
-        path: /bin/monitor-glow
-        state: absent
-      become: true
-      when: not laptop
-    - name: Monitor glow light startup/shutdown service
-      file:
-        path: /etc/systemd/system/monitor-glow.service
-        state: absent
-      become: true
-      when: not laptop
     - name: Reload systemd
       systemd:
         daemon_reload: true
