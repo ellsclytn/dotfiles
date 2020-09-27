@@ -1,9 +1,0 @@
-#!/bin/bash
-
-token="{{ hass_api_token }}"
-
-curl -X POST \
-  -H "Authorization: Bearer $token" \
-  -H "Content-Type: application/json" \
-  --data '{"entity_id": "light.monitor_led"}' \
-  "http://hass.yox/api/services/light/turn_$1"
