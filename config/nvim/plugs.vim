@@ -12,9 +12,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Autocomplete
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
-" Emmet
-Plug 'mattn/emmet-vim'
-
 " Files
 Plug 'mhinz/vim-grepper'
 Plug 'scrooloose/nerdtree'
@@ -42,7 +39,6 @@ Plug 'vim-scripts/blockle.vim' " Ruby blocks
 " Linting/Gutter/Highlighting
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
-Plug 'chrisbra/Colorizer'
 Plug 'editorconfig/editorconfig-vim'
 
 " Airline
@@ -52,7 +48,6 @@ Plug 'tpope/vim-fugitive'
 
 " Words
 Plug 'tpope/vim-abolish'
-Plug 'junegunn/vim-emoji'
 Plug 'christoomey/vim-sort-motion'
 
 Plug 'jamessan/vim-gnupg'

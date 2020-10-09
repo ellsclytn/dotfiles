@@ -24,7 +24,3 @@ zinit ice silent wait'!0'
 zinit light lukechilds/zsh-better-npm-completion
 
 zinit snippet OMZ::plugins/git/git.plugin.zsh
-
-# CLI Emojifier ⭐
-zinit ice silent wait'!0' as"program" cp"zemojify -> emojify" pick"emojify"
-zinit light filipekiss/zemojify
