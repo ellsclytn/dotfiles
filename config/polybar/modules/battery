@@ -11,7 +11,7 @@ adapter = AC
 
 format-charging = <label-charging>
 format-full = <label-full>
-format-discharging = <ramp-capacity>
+format-discharging = <label-discharging>
 
 ; If an inotify event haven't been reported in this many
 ; seconds, manually poll for new values.
@@ -24,12 +24,7 @@ format-discharging = <ramp-capacity>
 ; Default: 5
 poll-interval = 5
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-
 label-charging =  %percentage%%
+label-discharging = %percentage%%
 
-label-full =  100%
+label-full = 
