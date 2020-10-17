@@ -2,6 +2,9 @@ source "${HOME}/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
+# Use zsh process as window title
+zinit light trystan2k/zsh-tab-title
+
 zinit ice silent wait'!0' blockf
 zinit light zsh-users/zsh-completions
 
