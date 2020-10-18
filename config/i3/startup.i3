@@ -8,4 +8,3 @@ exec --no-startup-id xss-lock -l /home/ellis/bin/lock &
 {{with env.Getenv "LAPTOP" "0"}}{{if eq . "0" -}}
 exec_always --no-startup-id picom -b
 {{- end}}{{end}}
-exec_always --no-startup-id polybar-launch

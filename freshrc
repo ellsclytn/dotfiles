@@ -53,6 +53,7 @@ fresh-options
 # Vim
 fresh config/nvim/plugins/coc.json --file=~/.config/nvim/coc-settings.json
 fresh-options --file=~/.config/nvim/init.vim
+  fresh config/nvim/plugins/polyglot.vim # Polyglot likes its settings defined early
   fresh config/nvim/plugs.vim
   fresh config/nvim/config/\*.vim
   fresh config/nvim/plugins/\*.vim
@@ -68,18 +69,8 @@ fresh-options --file=~/.config/i3/config --marker=#
   fresh config/i3/\* --filter=gomplate
 fresh-options
 
-fresh-options --file=~/.config/polybar/config --marker=";"
-  fresh config/polybar/colors
-  fresh config/polybar/config
-  fresh config/polybar/bar
-  if [[ -z ${LAPTOP+x} ]]; then
-    fresh config/polybar/overrides/desktop/bar
-  else
-    fresh config/polybar/overrides/laptop/bar
-  fi
-
-  fresh config/polybar/modules/\*
-fresh-options
+fresh config/i3status-rust/config.toml --file=~/.config/i3status-rust/config.toml
+fresh config/i3status-rust/onedark.toml --file=~/.config/i3status-rust/themes/onedark.toml
 
 fresh config/xinitrc --file
 

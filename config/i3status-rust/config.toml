@@ -1,0 +1,9 @@
+[theme]
+file = "onedark.toml"
+
+[icons]
+name = "awesome"
+
+[[block]]
+block = "time"
+format = "%a %d/%m %R"
