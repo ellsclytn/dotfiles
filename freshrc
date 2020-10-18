@@ -81,6 +81,7 @@ fi
 
 # Rofi
 fresh config/rofi/config.rasi --file=~/.config/rofi/config.rasi
+fresh jluttine/rofi-power-menu rofi-power-menu --bin
 
 # Xresources
 fresh-options --file=~/.Xresources --marker=!

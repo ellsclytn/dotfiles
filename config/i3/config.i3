@@ -22,6 +22,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+space exec --no-startup-id rofi -show combi
 bindsym $mod+period exec rofi -show emoji -modi emoji
 bindsym $mod+Shift+period exec rofi-kaomoji
+bindsym $mod+Shift+w exec rofi -show power-menu -modi "power-menu:rofi-power-menu --no-symbols"
 
 # change focus
 bindsym $mod+h focus left
