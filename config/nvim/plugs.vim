@@ -9,6 +9,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'aliou/bats.vim'
+Plug 'mboughaba/i3config.vim'
 
 " Autocomplete
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
