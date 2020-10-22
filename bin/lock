@@ -1,7 +1,14 @@
 #!/bin/bash
 
 lockimg="/tmp/lockscreen.png"
+screen_width=$(xdpyinfo | grep dimensions | cut -d\  -f7 | cut -dx -f1)
 
-convert -resize $(xdpyinfo | grep dimensions | cut -d\  -f7 | cut -dx -f1) /usr/share/backgrounds/lock.png "$lockimg"
+if [[ ! -f "$lockimg" || $(identify -format '%w' $lockimg) != "$screen_width" ]]; then
+  if [[ ! -f "$lockimg" ]]; then
+    rm $lockimg
+  fi
+
+  convert -resize "$screen_width" /usr/share/backgrounds/lock.png "$lockimg"
+fi
+
 i3lock -i "$lockimg"
-rm "$lockimg"
