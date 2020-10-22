@@ -44,12 +44,12 @@ fresh config/gnupg/gpg.conf --file=~/.gnupg/gpg.conf
 fresh config/gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
 # Git
-fresh git/\* --file
+fresh config/git/\* --file
 fresh-options --file=~/.gitignore_global --marker=#
   fresh github/gitignore Global/Vagrant.gitignore
   fresh github/gitignore Global/Vim.gitignore
   fresh github/gitignore Node.gitignore
-  fresh git/gitignore
+  fresh config/git/gitignore
 fresh-options
 
 # Vim
