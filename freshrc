@@ -40,8 +40,8 @@ fresh config/flameshot.ini --file=~/.config/Dharkael/flameshot.ini
 fresh bin/\* --bin
 
 # GPG
-fresh gnupg/gpg.conf --file=~/.gnupg/gpg.conf
-fresh gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
+fresh config/gnupg/gpg.conf --file=~/.gnupg/gpg.conf
+fresh config/gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
 
 # Git
 fresh git/\* --file
