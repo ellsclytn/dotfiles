@@ -1,5 +1,7 @@
 set $mod Mod1
 
+font pango:Source Sans Pro 10
+
 new_window pixel 1
 new_float normal
 

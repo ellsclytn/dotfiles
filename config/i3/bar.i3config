@@ -1,7 +1,6 @@
 bar {
   position top
   status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
-  font pango:Source Sans Pro 10
   colors {
     background #282c34
     statusline #dddddd
