@@ -71,7 +71,7 @@ fresh-options --file=~/.config/i3/config --marker=#
   fresh config/i3/\* --filter="dot-templater devices/$device.conf"
 fresh-options
 
-fresh config/i3status-rust/config.toml --file=~/.config/i3status-rust/config.toml
+fresh config/i3status-rust/config.toml --file=~/.config/i3status-rust/config.toml --filter="dot-templater devices/$device.conf"
 fresh config/i3status-rust/onedark.toml --file=~/.config/i3status-rust/themes/onedark.toml
 
 fresh config/xinitrc --file

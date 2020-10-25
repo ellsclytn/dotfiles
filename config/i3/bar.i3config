@@ -4,7 +4,7 @@ bar {
   font pango:Source Sans Pro 10
   colors {
     background #282c34
-    statusline #dddddd
+    statusline #282c34
     focused_workspace #e06c75 #e06c75 #c8ccd4
     active_workspace #e06c75 #e06c75 #c8ccd4
     inactive_workspace #353b45 #353b45 #282c34
