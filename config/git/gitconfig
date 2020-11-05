@@ -64,3 +64,5 @@
   textconv = gpg --quiet --no-tty --decrypt
 [pull]
   ff = only
+[merge]
+  conflictstyle = diff3
