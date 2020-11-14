@@ -34,7 +34,7 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # dot-templater
-cargo install --git https://github.com/ellsclytn/dot-templater.git
+cargo install --git https://github.com/kesslern/dot-templater.git
 
 # Fresh
 rm ~/.zshrc
