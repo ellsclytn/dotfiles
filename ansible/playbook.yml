@@ -66,6 +66,7 @@
       pacman:
         name:
           - fprint
+          - intel-ucode
           - mesa
           - xf86-video-intel
         state: present
@@ -73,6 +74,7 @@
     - name: Install desktop-specific Pacman packages
       pacman:
         name:
+          - amd-ucode
           - nvidia
           - nvidia-settings
           - picom
