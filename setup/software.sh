@@ -15,6 +15,9 @@ cd -
 
 ansible-playbook ansible/playbook.yml -K
 
+rustup install stable
+rustup default stable
+
 echo "Istalling AUR packages..."
 sudo aura -Aa $(grep -v '^#' ~/.dotfiles/setup/aur)
 
