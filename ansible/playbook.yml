@@ -53,10 +53,26 @@
         group: root
         mode: '0644'
       become: true
+    - name: Liquid cooler configuration file
+      template:
+        src: ./templates/systemd/system/liquidcfg.service
+        dest: /etc/systemd/system/liquidcfg.service
+        owner: root
+        group: root
+        mode: '0644'
+      become: true
+      when: not laptop
     - name: Reload systemd
       systemd:
         daemon_reload: true
       become: true
+    - name: Liquid cooler configuration service
+      service:
+        name: liquidcfg
+        state: started
+        enabled: true
+      become: true
+      when: not laptop
     - name: Install Pacman packages
       pacman:
         name: "{{ lookup('file', '../setup/pacman').splitlines() }}"
