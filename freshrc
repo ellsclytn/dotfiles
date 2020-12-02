@@ -76,11 +76,6 @@ fresh config/i3status-rust/onedark.toml --file=~/.config/i3status-rust/themes/on
 
 fresh config/xinitrc --file
 
-# Picom
-if [[ -z ${LAPTOP+x} ]]; then
-  fresh config/picom/\*.conf --file=~/.config/picom.conf
-fi
-
 # Rofi
 fresh config/rofi/config.rasi --file=~/.config/rofi/config.rasi
 fresh jluttine/rofi-power-menu rofi-power-menu --bin
