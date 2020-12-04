@@ -1,4 +1,5 @@
 bindsym $mod+space exec --no-startup-id rofi -show combi
 bindsym $mod+period exec rofi -show emoji -modi emoji
 bindsym $mod+Shift+period exec rofi-kaomoji
+bindsym $mod+comma exec unipicker --command "rofi -p char -dmenu" --copy
 bindsym $mod+Shift+w exec rofi -show power-menu -modi "power-menu:rofi-power-menu --no-symbols"
