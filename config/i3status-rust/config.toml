@@ -1,5 +1,4 @@
-[theme]
-file = "onedark.toml"
+theme = "semi-native"
 
 ### LAPTOP
 [[block]]
