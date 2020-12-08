@@ -33,6 +33,7 @@
   ffm = merge --ff-only
   fix = "!$EDITOR `git diff --name-only | uniq`"
   fu = commit --fixup
+  ful = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
   hard-pull = "!git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)"
   l = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%Cred\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --no-merges
   lb = l origin/HEAD..HEAD
