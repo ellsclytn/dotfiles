@@ -1,6 +1,7 @@
 let g:ale_linters = {
 \  'html': [],
 \  'javascript': ['eslint'],
+\  'terraform': ['tflint'],
 \  'typescript': ['eslint'],
 \  'typescriptreact': ['eslint'],
 \  'yaml': ['yamllint'],
@@ -10,6 +11,7 @@ let g:ale_fixers = {
 \  'javascript': ['prettier', 'eslint'],
 \  'typescript': ['prettier', 'eslint'],
 \  'rust': ['rustfmt'],
+\  'terraform': ['terraform'],
 \  'typescriptreact': ['prettier', 'eslint'],
 \}
 
