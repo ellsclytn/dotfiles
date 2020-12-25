@@ -4,6 +4,14 @@
   vars:
     laptop: "{{ lookup('env', 'LAPTOP') | bool }}"
   tasks:
+    - name: Remove unused packages
+      pacman:
+        name:
+          - network-manager-applet
+          - networkmanager
+          - networkmanager-openvpn
+        state: absent
+      become: true
     - name: /etc/X11/xorg.conf.d
       file:
         path: /etc/X11/xorg.conf.d
@@ -73,6 +81,74 @@
         enabled: true
       become: true
       when: not laptop
+    - name: Start & enable systemd-networkd
+      service:
+        name: systemd-networkd
+        state: started
+        enabled: true
+      become: true
+    - name: Start & enable systemd-resolved
+      service:
+        name: systemd-resolved
+        state: started
+        enabled: true
+      become: true
+    - name: Use systemd-resolved DNS config stub
+      file:
+        src: /run/systemd/resolve/stub-resolv.conf
+        dest: /etc/resolv.conf
+        owner: root
+        group: root
+        state: link
+      become: true
+    - name: Create resolved.conf.d directory
+      file:
+        path: /etc/systemd/resolved.conf.d
+        state: directory
+        mode: '0755'
+      become: true
+    - name: Fallback DNS configuration
+      template:
+        src: ./templates/systemd/resolved.conf.d/fallback_dns.conf
+        dest: /etc/systemd/resolved.conf.d/fallback_dns.conf
+        owner: root
+        group: root
+        mode: '0644'
+      become: true
+    - name: Create systemd/network directory
+      file:
+        path: /etc/systemd/network
+        state: directory
+        mode: '0755'
+      become: true
+    - name: Wired network configuration
+      template:
+        src: ./templates/systemd/network/20-wired.network
+        dest: /etc/systemd/network/20-wired.network
+        owner: root
+        group: root
+        mode: '0644'
+      become: true
+    - name: Create iwd directory
+      file:
+        path: /etc/iwd
+        state: directory
+        mode: '0755'
+      become: true
+    - name: Wireless network configuration
+      template:
+        src: ./templates/iwd/main.conf
+        dest: /etc/iwd/main.conf
+        owner: root
+        group: root
+        mode: '0644'
+      become: true
+    - name: Start & enable iwd
+      service:
+        name: iwd
+        state: started
+        enabled: true
+      become: true
     - name: Install Pacman packages
       pacman:
         name: "{{ lookup('file', '../setup/pacman').splitlines() }}"

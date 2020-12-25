@@ -31,6 +31,7 @@ i3-gaps
 i3lock
 i3status-rust
 imagemagick
+iwd
 jq
 keychain
 libratbag
@@ -38,9 +39,6 @@ lxappearance
 mpv
 neofetch
 neovim
-network-manager-applet
-networkmanager
-networkmanager-openvpn
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -61,6 +59,7 @@ rsync
 rustup
 signal-desktop
 sl
+systemd-resolvconf
 task
 terraform
 thunar
