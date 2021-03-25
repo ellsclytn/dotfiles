@@ -27,12 +27,10 @@ Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/vim-easy-align'
 
-" Autocompletions
-Plug 'jiangmiao/auto-pairs'
-
 " Surroundings
-Plug 'tpope/vim-surround'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'rstacruz/vim-closer'
+Plug 'tpope/vim-surround'
 Plug 'vim-scripts/blockle.vim' " Ruby blocks
 
 " Linting/Gutter/Highlighting
