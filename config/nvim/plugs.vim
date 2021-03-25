@@ -30,6 +30,7 @@ Plug 'junegunn/vim-easy-align'
 " Surroundings
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'rstacruz/vim-closer'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/blockle.vim' " Ruby blocks
 
