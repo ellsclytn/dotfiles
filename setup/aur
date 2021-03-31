@@ -4,6 +4,7 @@ bitwarden-bin
 ctop-bin
 direnv
 dust
+fisher
 git-delta-bin
 git-fixup-git
 git-open

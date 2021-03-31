@@ -11,12 +11,6 @@
 device=$([[ -z ${LAPTOP+x} ]] && echo "desktop" || echo "laptop")
 
 fresh freshshell/fresh bin/fresh --bin
-fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
-
-# Shell
-fresh env/\*
-fresh robbyrussell/oh-my-zsh lib/history.zsh
-fresh env/aliases.sh
 
 # Alacritty
 fresh-options --file=~/.config/alacritty/alacritty.yml
@@ -84,3 +78,8 @@ fresh-options --file=~/.Xresources --marker=!
   fresh config/Xresources
   fresh pinpox/base16-xresources xresources/base16-onedark-256.Xresources
 fresh-options
+
+# Fish
+fresh config/fish/\*.fish --file=~/.config/fish/config.fish
+
+fresh config/fish/fish_plugins --file=~/.config/fish/fish_plugins

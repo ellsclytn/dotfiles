@@ -21,6 +21,7 @@ exfat-utils
 fd
 feh
 firefox
+fish
 flameshot
 fzf
 git
@@ -77,4 +78,3 @@ xss-lock
 yamllint
 zathura
 zathura-pdf-mupdf
-zsh
