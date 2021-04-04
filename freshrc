@@ -14,7 +14,7 @@ fresh freshshell/fresh bin/fresh --bin
 
 # Alacritty
 fresh-options --file=~/.config/alacritty/alacritty.yml
-  fresh config/alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter="dot-templater devices/$device.conf"
+  fresh config/alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter="dot-templater ~/.dotfiles/devices/$device.conf"
   fresh aaron-williamson/base16-alacritty colors/base16-onedark-256.yml
 fresh-options
 
@@ -61,11 +61,11 @@ fresh-options
 fresh-options --file=~/.config/i3/config --marker=#
   fresh khamer/base16-i3 colors/base16-onedark.config
   fresh khamer/base16-i3 client-properties/base16-onedark.config
-  fresh config/i3/keybindings/\* --filter="dot-templater devices/$device.conf"
-  fresh config/i3/\* --filter="dot-templater devices/$device.conf"
+  fresh config/i3/keybindings/\* --filter="dot-templater ~/.dotfiles/devices/$device.conf"
+  fresh config/i3/\* --filter="dot-templater ~/.dotfiles/devices/$device.conf"
 fresh-options
 
-fresh config/i3status-rust/config.toml --file=~/.config/i3status-rust/config.toml --filter="dot-templater devices/$device.conf"
+fresh config/i3status-rust/config.toml --file=~/.config/i3status-rust/config.toml --filter="dot-templater ~/.dotfiles/devices/$device.conf"
 
 fresh config/xinitrc --file
 
