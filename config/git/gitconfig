@@ -41,6 +41,7 @@
   lb = lg origin/HEAD..HEAD
   lg = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%Cred\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --no-merges
   m = commit --amend --verbose
+  p = push
   pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
   ras = rebase -i --autosquash --autostash
   rasm = rebase -i --autosquash --autostash origin/HEAD
