@@ -82,4 +82,6 @@ fresh-options
 # Fish
 fresh config/fish/\*.fish --file=~/.config/fish/config.fish
 
-fresh config/fish/fish_plugins --file=~/.config/fish/fish_plugins
+# Fisher is pretty intent on being able to write to this file, so we just
+# symlink so it can be tracked in Git
+ln -sf ~/.dotfiles/config/fish/fish_plugins ~/.config/fish/fish_plugins
