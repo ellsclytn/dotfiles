@@ -27,3 +27,4 @@ bindsym $mod+8 workspace $ws8
 
 # focus the parent container
 bindsym $mod+a focus parent
+bindsym $mod+z focus child
