@@ -18,3 +18,7 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.backspace = 'indent,eol,start'
+
+-- Avoid case-sensitive search (except when explictly set, or when using mixed case queries)
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
