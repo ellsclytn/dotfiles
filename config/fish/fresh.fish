@@ -1,1 +1,1 @@
-set PATH "$HOME/bin" "$PATH"
+fish_add_path "$HOME/bin"
