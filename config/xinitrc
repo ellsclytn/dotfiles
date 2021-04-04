@@ -1,11 +1,9 @@
 systemctl --user import-environment DISPLAY
-exec i3
 
 # Bind Caps lock to be Ctrl
 setxkbmap -option caps:ctrl_modifier
 
-# Speedy key-repeat rate 💨
-xset r rate 200 100
-
 # Load nvidia settings if they exist
 [[ -f ~/.nvidia-settings-rc ]] && nvidia-settings --load-config-only
+
+exec i3
