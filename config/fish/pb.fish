@@ -1,3 +1,5 @@
 # Copy/paste clipboard - functions identically to macOS
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+if status --is-interactive
+  abbr --add --global pbcopy 'xclip -selection clipboard'
+  abbr --add --global pbpaste 'xclip -selection clipboard -o'
+end

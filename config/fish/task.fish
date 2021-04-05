@@ -1,5 +1,7 @@
-alias t="task"
-alias ta="task add"
-alias td="task done"
-alias tl="task list"
-alias ts="task sync"
+if status --is-interactive
+  abbr --add --global t "task"
+  abbr --add --global ta "task add"
+  abbr --add --global td "task done"
+  abbr --add --global tl "task list"
+  abbr --add --global ts "task sync"
+end
