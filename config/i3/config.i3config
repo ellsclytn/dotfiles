@@ -5,8 +5,6 @@ font pango:Source Sans Pro 10
 new_window pixel 1
 new_float normal
 
-hide_edge_borders smart_no_gaps
-
 floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
