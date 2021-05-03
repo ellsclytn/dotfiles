@@ -1,0 +1,3 @@
+#!/bin/sh
+
+feh --scale-down --image-bg black --sort name --no-menus --conversion-timeout 1 --title '[%u/%l] %n (%wx%h)' "$@"
