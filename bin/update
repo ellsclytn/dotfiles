@@ -11,7 +11,7 @@ if type -q aura
   sudo aura -Syu
 
   inform "Updating AUR packages"
-  sudo aura -Au
+  sudo aura -Aua
 end
 
 if type -q nvim
