@@ -38,11 +38,10 @@ Plug 'vim-scripts/blockle.vim' " Ruby blocks
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
-
-" Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+
+" Status bar
+Plug 'itchyny/lightline.vim'
 
 " Words
 Plug 'tpope/vim-abolish'
