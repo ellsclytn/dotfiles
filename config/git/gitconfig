@@ -43,8 +43,8 @@
   m = commit --amend --verbose
   p = push
   pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
-  ras = rebase -i --autosquash --autostash
-  rasm = rebase -i --autosquash --autostash origin/HEAD
+  ras = rebase -i
+  rasm = rebase -i
   s = status -s
   sh = show
 [core]
@@ -71,3 +71,6 @@
   ff = only
 [merge]
   conflictstyle = diff3
+[rebase]
+  autosquash = true
+  autostash = true
