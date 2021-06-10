@@ -44,7 +44,7 @@
   p = push
   pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
   ras = rebase -i
-  rasm = rebase -i
+  rasm = rebase -i origin/HEAD
   s = status -s
   sh = show
 [core]
