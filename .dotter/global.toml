@@ -6,3 +6,6 @@
 "config/i3/config.i3config" = "~/.config/i3/config"
 "config/i3status-rust/config.toml" = "~/.config/i3status-rust/config.toml"
 "config/rofi/config.rasi" = "~/.config/rofi/config.rasi"
+
+[alacritty.files]
+"config/alacritty/config.yml" = "~/.config/alacritty/alacritty.yml"

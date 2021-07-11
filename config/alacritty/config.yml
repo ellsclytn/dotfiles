@@ -297,3 +297,5 @@ debug:
 #   - AppCursor
 #   - ~AppKeypad
 #   - AppKeypad
+{{ include_template "config/alacritty/colors.yml" }}
+{{ include_template "config/alacritty/font.yml" }}
