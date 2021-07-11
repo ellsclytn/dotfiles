@@ -36,3 +36,11 @@ bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+{{ include_template "config/i3/bar.i3config" }}
+{{ include_template "config/i3/startup.i3config" }}
+{{ include_template "config/i3/keybindings/launchers.i3config" }}
+{{ include_template "config/i3/keybindings/layout.i3config" }}
+{{ include_template "config/i3/keybindings/multimedia.i3config" }}
+{{ include_template "config/i3/keybindings/navigation.i3config" }}
+{{ include_template "config/i3/keybindings/screenshot.i3config" }}

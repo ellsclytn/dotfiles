@@ -1,2 +1,6 @@
 .DS_Store
 env/secrets.sh
+
+.dotter/local.toml
+.dotter/cache.toml
+.dotter/cache

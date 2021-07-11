@@ -3,6 +3,7 @@ bibata-cursor-theme-bin
 bitwarden-bin
 ctop-bin
 direnv
+dotter-rs-bin
 dust
 fisher
 git-delta-bin
@@ -10,6 +11,7 @@ git-fixup-git
 git-open
 nerd-fonts-hack
 rofi-emoji
+rofi-power-menu
 starship-bin
 tflint-bin
 ttf-ms-fonts

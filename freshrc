@@ -57,28 +57,6 @@ fresh-options --file=~/.config/nvim/init.vim
   fresh config/nvim/colors.vim
 fresh-options
 
-# i3wm, etc.
-fresh-options --file=~/.config/i3/config --marker=#
-  fresh khamer/base16-i3 colors/base16-onedark.config
-  fresh khamer/base16-i3 client-properties/base16-onedark.config
-  fresh config/i3/keybindings/\* --filter="dot-templater ~/.dotfiles/devices/$device.conf"
-  fresh config/i3/\* --filter="dot-templater ~/.dotfiles/devices/$device.conf"
-fresh-options
-
-fresh config/i3status-rust/config.toml --file=~/.config/i3status-rust/config.toml --filter="dot-templater ~/.dotfiles/devices/$device.conf"
-
-fresh config/xinitrc --file
-
-# Rofi
-fresh config/rofi/config.rasi --file=~/.config/rofi/config.rasi
-fresh jluttine/rofi-power-menu rofi-power-menu --bin
-
-# Xresources
-fresh-options --file=~/.Xresources --marker=!
-  fresh config/Xresources
-  fresh pinpox/base16-xresources xresources/base16-onedark-256.Xresources
-fresh-options
-
 # Fish
 fresh config/fish/\*.fish --file=~/.config/fish/config.fish
 

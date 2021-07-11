@@ -1,10 +1,10 @@
 theme = "semi-native"
 
-### LAPTOP
+{{#if laptop}}
 [[block]]
 block = "battery"
 format = "{percentage}%"
-### LAPTOP
+{{/if}}
 
 [[block]]
 block = "time"
