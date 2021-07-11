@@ -9,3 +9,6 @@
 
 [alacritty.files]
 "config/alacritty/config.yml" = "~/.config/alacritty/alacritty.yml"
+
+[fd.files]
+"config/fdignore" = "~/.fdignore"
