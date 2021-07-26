@@ -167,6 +167,7 @@
       pacman:
         name:
           - amd-ucode
+          - liquidctl
           - nvidia
           - nvidia-settings
         state: present

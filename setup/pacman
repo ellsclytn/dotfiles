@@ -25,6 +25,7 @@ fish
 flameshot
 fzf
 git
+git-delta
 gnupg
 gparted
 htop
@@ -34,6 +35,7 @@ i3status-rust
 imagemagick
 iwd
 jq
+libqalculate
 libratbag
 lxappearance
 mpv
@@ -68,6 +70,7 @@ thunar
 traceroute
 ttf-dejavu
 udisks2
+unzip
 wget
 xclip
 xh
