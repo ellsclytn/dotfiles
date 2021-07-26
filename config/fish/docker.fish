@@ -5,3 +5,6 @@ if status --is-interactive
   abbr --add --global drmi "docker images -a | fzf --header-lines=1 -m | awk \"{print \$3}\" | xargs docker rmi"
   abbr --add --global drmc "docker ps -a | fzf --header-lines=1 -m | awk \"{print \$1}\" | xargs docker rm -v"
 end
+
+set -gx DOCKER_BUILDKIT 1
+set -gx COMPOSE_DOCKER_CLI_BUILD 1
