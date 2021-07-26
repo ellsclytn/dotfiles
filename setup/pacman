@@ -16,6 +16,7 @@ dkms
 docker
 docker-compose
 dog
+dust
 exa
 exfat-utils
 fd
