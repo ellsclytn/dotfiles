@@ -21,12 +21,9 @@ rustup default stable
 echo "Istalling AUR packages..."
 sudo aura -Aa $(grep -v '^#' ~/.dotfiles/setup/aur)
 
-# Nvm
-NVM_VERSION=$(github_release nvm-sh/nvm)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-nvm install node
+# Node
+asdf install nodejs latest
+asdf global nodejs latest
 npm install yarn -g
 
 # Vim-plug
