@@ -6,16 +6,20 @@ My dotfiles are managed by [fresh](http://freshshell.com).
 
 ## Requirements
 
-1. A computer running Arch Linux
+1. A computer capable of running Arch Linux
 
 ## Get started
 
-1. Clone this repo
-2. `./setup/start`
+1. Boot into an Arch Live boot
+2. Download `setup/live`
+3. Run it
+4. Reboot into the newly installed system, and log in.
+5. Clone this repo into `~/.dotfiles`
+6. From `~/.dotfiles`, run `./setup/software`
 
 ## Post-install
 
-### YubiKey GPG & SSH
+### YubiKey
 
 My setup is heavily inspired by the amazing https://github.com/drduh/YubiKey-Guide. If my instructions below don't work, there's probably a solution in that repo.
 
@@ -40,13 +44,6 @@ Do you really want to set this key to ultimate trust? (y/N) y
 
 gpg> save
 ```
-
-#### SSH
-
-Very similar to the GPG process. You import a key, and put it in a place:
-
-1. Check the output of `ssh-add -L`. You should see one (and only one) entry ending in `cardno:000612354678` (those numbers will be specific to your key).
-2. `ssh-add -L | grep "cardno:000612354678" > ~/.ssh/id_rsa_yubikey.pub`
 
 ### System-level files
 

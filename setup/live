@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+#
+# Run this from an Arch Live boot to get Arch installed on a fully encrypted btrfs partition
+#
 
 set -euo pipefail
 
@@ -167,6 +170,8 @@ EnableNetworkConfiguration=true
 NameResolvingService=systemd
 EOF
 
+sudo rm -f /mnt/etc/resolv.conf
+
 inform "Setting up root and user accounts. You will be prompted to supply passwords for both."
 
 cat <<EOF > /mnt/root/chroot-setup.sh
@@ -177,6 +182,8 @@ set -euo pipefail
 passwd
 useradd -m -g users -G wheel -s /bin/fish $new_username
 passwd $new_username
+
+ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
 rm -f /etc/localtime
 ln -s /usr/share/zoneinfo/Australia/Melbourne /etc/localtime

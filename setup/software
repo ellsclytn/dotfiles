@@ -1,8 +1,14 @@
 #!/bin/bash
+#
+# Run this one after you've got an OS installed, and you're logged in as a user
+#
+
+localectl set-locale LANG=en_AU.UTF-8
+export LANG=en_AU.UTF-8
 sudo pacman -S --noconfirm base-devel jq ansible
 
-# libc++ {{✊}}
-gpg --keyserver hkp://keyserver.ubuntu.com:80 --receive-keys A2C794A986419D8A
+# libc++ and Spotify
+gpg --keyserver hkp://keyserver.ubuntu.com:80 --receive-keys A2C794A986419D8A D1742AD60D811D58
 
 #
 # Aura
@@ -15,13 +21,17 @@ cd -
 
 ansible-playbook ansible/playbook.yml -K
 
+export PATH="$PATH:$HOME/.cargo/bin"
+
 rustup install stable
 rustup default stable
 
 echo "Istalling AUR packages..."
 sudo aura -Aa $(grep -v '^#' ~/.dotfiles/setup/aur)
 
-# Node
+# asdf & Node
+. /opt/asdf-vm/asdf.sh
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf install nodejs latest
 asdf global nodejs latest
 npm install yarn -g
@@ -30,13 +40,12 @@ npm install yarn -g
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# dot-templater
-cargo install --git https://github.com/kesslern/dot-templater.git
-
 # Fresh
-rm ~/.zshrc
+rm -f ~/.config/fish/config.fish
 bash -c "`curl -sL get.freshshell.com`"
-rm ~/.freshrc
+rm -f ~/.freshrc
 ln -s ~/.dotfiles/freshrc ~/.freshrc
 
 nvim +PlugInstall +qall
+
+echo "Done. Time to log out and in again!"

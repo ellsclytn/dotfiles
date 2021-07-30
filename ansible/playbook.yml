@@ -3,6 +3,7 @@
   connection: local
   vars:
     laptop: "{{ lookup('env', 'LAPTOP') | bool }}"
+    vm: "{{ lookup('env', 'VM_TEST') | bool }}"
   tasks:
     - name: Remove unused packages
       pacman:
@@ -11,6 +12,29 @@
           - networkmanager
           - networkmanager-openvpn
         state: absent
+      become: true
+    - name: Install laptop-specific Pacman packages
+      pacman:
+        name:
+          - fprint
+          - intel-ucode
+          - mesa
+          - xf86-video-intel
+        state: present
+      when:
+        - laptop
+        - not vm
+    - name: Install desktop-specific Pacman packages
+      pacman:
+        name:
+          - amd-ucode
+          - liquidctl
+          - nvidia
+          - nvidia-settings
+        state: present
+      when:
+        - not laptop
+        - not vm
       become: true
     - name: /etc/X11/xorg.conf.d
       file:
@@ -28,7 +52,9 @@
         group: root
         mode: '0644'
       become: true
-      when: laptop
+      when:
+        - laptop
+        - not vm
     - name: Mouse/trackpad configuration
       template:
         src: ./templates/20-mouse.conf
@@ -69,7 +95,9 @@
         group: root
         mode: '0644'
       become: true
-      when: not laptop
+      when:
+        - not laptop
+        - not vm
     - name: Reload systemd
       systemd:
         daemon_reload: true
@@ -80,7 +108,9 @@
         state: started
         enabled: true
       become: true
-      when: not laptop
+      when:
+        - not laptop
+        - not vm
     - name: Start & enable systemd-networkd
       service:
         name: systemd-networkd
@@ -149,27 +179,9 @@
         state: started
         enabled: true
       become: true
+      when: not vm
     - name: Install Pacman packages
       pacman:
         name: "{{ lookup('file', '../setup/pacman').splitlines() }}"
         state: present
-      become: true
-    - name: Install laptop-specific Pacman packages
-      pacman:
-        name:
-          - fprint
-          - intel-ucode
-          - mesa
-          - xf86-video-intel
-        state: present
-      when: laptop
-    - name: Install desktop-specific Pacman packages
-      pacman:
-        name:
-          - amd-ucode
-          - liquidctl
-          - nvidia
-          - nvidia-settings
-        state: present
-      when: not laptop
       become: true

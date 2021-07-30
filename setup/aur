@@ -6,6 +6,7 @@ bitwarden-bin
 ctop-bin
 direnv
 docker-credential-pass-bin
+dot-templater
 fisher
 git-fixup-git
 git-open
