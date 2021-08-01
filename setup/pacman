@@ -39,6 +39,7 @@ jq
 libqalculate
 libratbag
 lxappearance
+lxsession-gtk3
 mpv
 neofetch
 neovim
