@@ -21,6 +21,7 @@
           - mesa
           - xf86-video-intel
         state: present
+      become: true
       when:
         - laptop
         - not vm
