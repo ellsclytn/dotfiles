@@ -19,7 +19,10 @@
           - fprint
           - intel-ucode
           - mesa
+          - sof-firmware
+          - tlp
           - xf86-video-intel
+          - xorg-xbacklight
         state: present
       become: true
       when:
