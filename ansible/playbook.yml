@@ -194,3 +194,18 @@
         name: "{{ lookup('file', '../setup/pacman').splitlines() }}"
         state: present
       become: true
+    - name: Fingerprint for sudo
+      blockinfile:
+        insertafter: "#"
+        path: "/etc/pam.d/{{ item }}"
+        block: |
+          auth sufficient pam_unix.so try_first_pass likeauth nullok
+          auth sufficient pam_fprintd.so
+      become: true
+      loop:
+        - sudo
+        - login
+        - i3lock
+      when:
+        - laptop
+        - not vm
