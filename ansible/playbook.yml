@@ -192,7 +192,7 @@
         name: "{{ lookup('file', '../setup/pacman').splitlines() }}"
         state: present
       become: true
-    - name: Fingerprint for sudo
+    - name: Allow fingerprint auth for desired actions
       blockinfile:
         insertafter: "#"
         path: "/etc/pam.d/{{ item }}"
