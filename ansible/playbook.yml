@@ -11,17 +11,18 @@
           - network-manager-applet
           - networkmanager
           - networkmanager-openvpn
+          - xf86-video-intel
         state: absent
       become: true
     - name: Install laptop-specific Pacman packages
       pacman:
         name:
           - fprint
+          - intel-media-driver
           - intel-ucode
           - mesa
           - sof-firmware
           - tlp
-          - xf86-video-intel
           - xorg-xbacklight
         state: present
       become: true
@@ -48,13 +49,10 @@
         mode: '0755'
         state: directory
       become: true
-    - name: Intel graphics configuration
-      template:
-        src: ./templates/10-intel.conf
-        dest: /etc/X11/xorg.conf.d/10-intel.conf
-        owner: root
-        group: root
-        mode: '0644'
+    - name: Remove old Intel Graphics configuration
+      ansible.builtin.file:
+        path: /etc/X11/xorg.conf.d/10-intel.conf
+        state: absent
       become: true
       when:
         - laptop
