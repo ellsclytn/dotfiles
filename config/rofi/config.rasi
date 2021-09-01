@@ -9,40 +9,98 @@ configuration {
 }
 
 * {
-  background-color: #353b45;
-  fg: #abb2bf;
-  focus-fg: #c678dd;
-  focus-bg: #3e4451;
-  prompt-fg: #56b6c2;
+  background: #353b45;
+  foreground: #abb2bf;
+  placeholder-foreground: #565c64;
+  focus-background: #3e4451;
+  focus-foreground: #c678dd;
+}
 
+window {
+  width: 30%;
   border: 0;
-  lines: 12;
   padding: 0;
   margin: 0;
   spacing: 0;
 }
 
-window {
-  width: 30%;
+listview {
+  scrollbar: false;
+  border: none;
+  lines: 12;
 }
 
 element {
   padding: 12;
-  text-color: @fg;
-}
-
-element selected {
-  background-color: @focus-bg;
-  text-color: @focus-fg;
 }
 
 prompt {
   enabled: true;
   padding: 12 0 0 12;
-  text-color: @prompt-fg;
+}
+
+/* Results count */
+num-rows, textbox-num-sep, num-filtered-rows {
+  enabled: false;
+}
+
+textbox-prompt-colon {
+  enabled: false;
 }
 
 entry {
   padding: 12;
-  text-color: @prompt-fg;
+  text-color: var(foreground);
+  placeholder-color: var(placeholder-foreground);
+}
+
+element {
+  background-color: var(background);
+  text-color: var(foreground);
+}
+
+
+element normal.normal {
+    background-color: var(background);
+    text-color: var(foreground);
+}
+
+element normal.urgent {
+    background-color: var(background);
+    text-color: var(foreground);
+}
+
+element normal.active {
+    background-color: var(background);
+    text-color: var(foreground);
+}
+
+element selected.normal {
+    background-color: var(focus-background);
+    text-color: var(focus-foreground);
+}
+
+element selected.urgent {
+    background-color: var(focus-background);
+    text-color: var(focus-foreground);
+}
+
+element selected.active {
+    background-color: var(focus-background);
+    text-color: var(focus-foreground);
+}
+
+element alternate.normal {
+    background-color: var(background);
+    text-color: var(foreground);
+}
+
+element alternate.urgent {
+    background-color: var(background);
+    text-color: var(foreground);
+}
+
+element alternate.active {
+    background-color: var(background);
+    text-color: var(foreground);
 }
