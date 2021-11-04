@@ -1,9 +1,14 @@
 theme = "semi-native"
 
+[icons]
+name = "awesome5"
+[icons.overrides]
+time = ""
+
 ### LAPTOP
 [[block]]
 block = "battery"
-format = "{percentage}%"
+format = "{percentage}"
 ### LAPTOP
 
 [[block]]
