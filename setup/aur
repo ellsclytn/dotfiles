@@ -7,15 +7,12 @@ ctop-bin
 direnv
 docker-credential-pass-bin
 dot-templater
-fisher
 git-fixup-git
 git-open
 insomnia-bin
 menu-qalc
 nerd-fonts-hack
 spotify
-starship-bin
 tflint-bin
 ttf-ms-fonts
 unipicker
-zoxide-bin

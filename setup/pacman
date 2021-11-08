@@ -23,6 +23,7 @@ fd
 feh
 firefox
 fish
+fisher
 flameshot
 fzf
 git
@@ -67,6 +68,7 @@ rustup
 sd
 signal-desktop
 sl
+starship
 systemd-resolvconf
 task
 terraform
@@ -86,3 +88,4 @@ xss-lock
 yamllint
 zathura
 zathura-pdf-mupdf
+zoxide
