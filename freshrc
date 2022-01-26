@@ -67,15 +67,15 @@ fresh-options
 
 fresh config/i3status-rust/config.toml --file=~/.config/i3status-rust/config.toml --filter="dot-templater ~/.dotfiles/devices/$device.conf"
 
-fresh config/xinitrc --file
+fresh config/xorg/xinitrc --file
 
 # Rofi
 fresh config/rofi/config.rasi --file=~/.config/rofi/config.rasi
 fresh jluttine/rofi-power-menu rofi-power-menu --bin
 
 # Xresources
-fresh-options --file=~/.Xresources --marker=!
-  fresh config/Xresources
+fresh-options --file=~/.config/xorg/Xresources --marker=!
+  fresh config/xorg/Xresources
   fresh pinpox/base16-xresources xresources/base16-onedark-256.Xresources
 fresh-options
 
