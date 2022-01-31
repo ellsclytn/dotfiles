@@ -187,6 +187,21 @@
         enabled: true
       become: true
       when: not vm
+    - name: Configure timesyncd
+      blockinfile:
+        insertafter: "[Time]"
+        path: "/etc/systemd/timesyncd.conf"
+        mode: "0644"
+        block: |
+          NTP=au.pool.ntp.org
+          FallbackNTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org
+      become: true
+    - name: Start & enable timesyncd
+      service:
+        name: systemd-timesyncd
+        state: started
+        enabled: true
+      become: true
     - name: Install Pacman packages
       pacman:
         name: "{{ lookup('file', '../setup/pacman').splitlines() }}"
