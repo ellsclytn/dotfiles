@@ -10,3 +10,13 @@ vim.opt.relativenumber = true
 vim.opt.ruler = true
 -- Australian English for spell checking
 vim.opt.spelllang = 'en_au'
+
+-- Use spaces instead of tabs
+vim.opt.expandtab = true
+-- Be smart when using tabs ;-)
+vim.opt.smarttab = true
+-- 1 tab is 2 spaces
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.backspace = 'indent,eol,start'
