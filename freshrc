@@ -46,6 +46,9 @@ fresh-options --file=~/.gitignore_global --marker=#
   fresh config/git/gitignore
 fresh-options
 
+# Neovim
+fresh config/nvim/lua --file=~/.config/nvim/lua/ --marker=--
+fresh config/nvim/init.lua --file=~/.config/nvim/init.lua --marker=--
 
 # i3wm, etc.
 fresh-options --file=~/.config/i3/config --marker=#

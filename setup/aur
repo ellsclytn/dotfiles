@@ -12,6 +12,7 @@ git-open
 insomnia-bin
 menu-qalc
 nerd-fonts-hack
+nvim-packer-git
 spotify
 tflint-bin
 ttf-ms-fonts
