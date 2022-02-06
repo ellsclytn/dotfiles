@@ -46,16 +46,6 @@ fresh-options --file=~/.gitignore_global --marker=#
   fresh config/git/gitignore
 fresh-options
 
-# Vim
-fresh config/nvim/plugins/coc.json --file=~/.config/nvim/coc-settings.json
-fresh-options --file=~/.config/nvim/init.vim
-  fresh config/nvim/plugins/polyglot.vim # Polyglot likes its settings defined early
-  fresh config/nvim/plugs.vim
-  fresh config/nvim/config/\*.vim
-  fresh config/nvim/plugins/\*.vim
-  fresh hackling/dotfiles vim/keybindings/visualblockindent.vim
-  fresh config/nvim/colors.vim
-fresh-options
 
 # i3wm, etc.
 fresh-options --file=~/.config/i3/config --marker=#

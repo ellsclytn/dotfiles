@@ -1,2 +1,0 @@
-set ignorecase
-set smartcase
