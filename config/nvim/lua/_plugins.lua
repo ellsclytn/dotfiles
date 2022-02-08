@@ -8,4 +8,11 @@ return require('packer').startup(function()
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
     use {'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'}}
     use {'echasnovski/mini.nvim', branch = 'stable'}
+
+    -- Text operations
+    use 'AndrewRadev/splitjoin.vim'
+    use 'rstacruz/vim-closer'
+    use 'tpope/vim-commentary'
+    use 'tpope/vim-endwise'
+    use 'tpope/vim-surround'
 end)
