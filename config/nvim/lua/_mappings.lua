@@ -18,3 +18,9 @@ nmap('<C-P>', ':Telescope find_files<CR>')
 nmap('<C-G>', ':Telescope live_grep<CR>')
 nmap('<C-B>', ':Telescope buffers<CR>')
 nmap('<leader>fh', '<CMD>Telescope help_tags<CR>') -- Search help topics. Mnemonic: "fh for Find Help"
+
+-- Window nav similar to i3 navigation
+nmap('<C-J>', '<C-W><C-J>')
+nmap('<C-K>', '<C-W><C-K>')
+nmap('<C-L>', '<C-W><C-L>')
+nmap('<C-H>', '<C-W><C-H>')
