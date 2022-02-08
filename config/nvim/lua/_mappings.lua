@@ -6,6 +6,9 @@ function vmap(keys, command)
     vim.api.nvim_set_keymap('v', keys, command, {noremap = true, silent = true})
 end
 
+-- Leader key
+vim.g.mapleader = ';'
+
 -- NvimTree
 nmap('<C-N>', ':NvimTreeToggle<CR>')
 nmap('<C-F>', ':NvimTreeFindFile<CR>')
