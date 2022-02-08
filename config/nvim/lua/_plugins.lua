@@ -17,4 +17,14 @@ return require('packer').startup(function()
     use 'tpope/vim-commentary'
     use 'tpope/vim-endwise'
     use 'tpope/vim-surround'
+
+    -- Completion engine
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/nvim-cmp'
+    use 'neovim/nvim-lspconfig'
+    use 'onsails/lspkind-nvim'
+    use 'williamboman/nvim-lsp-installer'
 end)

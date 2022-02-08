@@ -30,3 +30,12 @@ nmap('<C-J>', '<C-W><C-J>')
 nmap('<C-K>', '<C-W><C-K>')
 nmap('<C-L>', '<C-W><C-L>')
 nmap('<C-H>', '<C-W><C-H>')
+
+-- LSP
+nmap('gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+nmap('gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
+nmap('gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+nmap('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+nmap('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+nmap('<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+nmap('<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')

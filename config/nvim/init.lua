@@ -5,7 +5,8 @@ local modules = {
     '_gitsigns',
     '_nvim-tree',
     '_onedark',
-    '_statusline'
+    '_statusline',
+    '_lsp',
 }
 
 for _, module_name in ipairs(modules) do
