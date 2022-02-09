@@ -9,6 +9,9 @@ end
 -- Leader key
 vim.g.mapleader = ';'
 
+-- Copy to system clipboard
+vmap('<leader>y', '"+y')
+
 -- NvimTree
 nmap('<C-N>', ':NvimTreeToggle<CR>')
 nmap('<C-F>', ':NvimTreeFindFile<CR>')
