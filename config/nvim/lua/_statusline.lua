@@ -1,4 +1,16 @@
-local present, statusline = pcall(require, 'mini.statusline')
+local present, lualine = pcall(require, 'lualine')
 if present then
-    statusline.setup {}
+    local gps = require('nvim-gps')
+    gps.setup()
+
+    lualine.setup {
+        sections = {
+            lualine_b = {
+                'branch',
+                'diff',
+                'diagnostics',
+                { gps.get_location, cond = gps.is_available },
+            },
+        },
+    }
 end

@@ -8,8 +8,9 @@ return require('packer').startup(function()
     use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'}}
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
     use {'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'}}
-    use {'echasnovski/mini.nvim', branch = 'stable'}
     use 'editorconfig/editorconfig-vim'
+    use {'SmiteshP/nvim-gps'}
+    use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons'}}
 
     -- Text operations
     use 'AndrewRadev/splitjoin.vim'
