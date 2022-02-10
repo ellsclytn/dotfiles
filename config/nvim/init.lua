@@ -6,6 +6,7 @@ local modules = {
     '_nvim-tree',
     '_onedark',
     '_statusline',
+    '_treesitter',
     '_lsp',
 }
 
