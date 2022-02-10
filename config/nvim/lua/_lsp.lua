@@ -22,7 +22,13 @@ lsp_installer.on_server_ready(function(server)
 end)
 
 local cmp = require('cmp')
+local lspkind = require('lspkind')
 cmp.setup {
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'symbol', -- show only symbol annotations
+    })
+  },
   mapping = {
     ['<Tab>'] = cmp.mapping.select_prev_item(),
     ['<S-Tab>'] = cmp.mapping.select_next_item(),
