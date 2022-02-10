@@ -16,7 +16,6 @@ return require('packer').startup(function()
     use 'christoomey/vim-sort-motion'
     use 'rstacruz/vim-closer'
     use 'tpope/vim-commentary'
-    use 'tpope/vim-endwise'
     use 'tpope/vim-surround'
 
     -- Completion engine
