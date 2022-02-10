@@ -39,3 +39,8 @@ nmap('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
 nmap('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 nmap('<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
 nmap('<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+
+nmap('<leader>S', "<cmd>lua require('spectre').open()<CR>")
+nmap('<leader>sw', "<cmd>lua require('spectre').open_visual({select_word=true})<CR>")
+vmap('<leader>s', "<cmd>lua require('spectre').open_visual()<CR>")
+nmap('<leader>sp', "<cmd>lua require('spectre').open_file_search()<cr>")
