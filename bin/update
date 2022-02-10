@@ -16,7 +16,7 @@ end
 
 if type -q nvim
   inform "Updating Vim plugins"
-  nvim +PlugInstall +PlugUpdate +PlugClean +qall
+  nvim +PackerUpdate +qall
 end
 
 if type -q cargo-install-update
