@@ -3,6 +3,7 @@ return require('packer').startup(function()
 
     -- UI & Syntax
     use('editorconfig/editorconfig-vim')
+    use('lukas-reineke/indent-blankline.nvim')
     use('navarasu/onedark.nvim')
     use('nvim-treesitter/nvim-treesitter')
     use('tpope/vim-fugitive') -- Git
