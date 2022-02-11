@@ -1,9 +1,9 @@
 function nmap(keys, command)
-    vim.api.nvim_set_keymap('n', keys, command, {noremap = true, silent = true})
+    vim.api.nvim_set_keymap('n', keys, command, { noremap = true, silent = true })
 end
 
 function vmap(keys, command)
-    vim.api.nvim_set_keymap('v', keys, command, {noremap = true, silent = true})
+    vim.api.nvim_set_keymap('v', keys, command, { noremap = true, silent = true })
 end
 
 -- Leader key

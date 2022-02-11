@@ -3,7 +3,7 @@ if present then
     local gps = require('nvim-gps')
     gps.setup()
 
-    lualine.setup {
+    lualine.setup({
         sections = {
             lualine_b = {
                 'branch',
@@ -12,5 +12,5 @@ if present then
                 { gps.get_location, cond = gps.is_available },
             },
         },
-    }
+    })
 end

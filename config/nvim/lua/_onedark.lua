@@ -1,14 +1,14 @@
 local present, onedark = pcall(require, 'onedark')
 if present then
-    onedark.setup {
+    onedark.setup({
         style = 'dark',
         code_style = {
             comments = 'italic',
-            keywords = 'none', 
+            keywords = 'none',
             functions = 'bold',
             strings = 'none',
-            variables = 'none'
-        }
-    }
+            variables = 'none',
+        },
+    })
     require('onedark').load()
 end
