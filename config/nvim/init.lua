@@ -8,6 +8,7 @@ local modules = {
     '_statusline',
     '_treesitter',
     '_lsp',
+    '_vim-better-whitespace',
 }
 
 for _, module_name in ipairs(modules) do

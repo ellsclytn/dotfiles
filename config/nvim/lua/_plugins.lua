@@ -17,6 +17,7 @@ return require('packer').startup(function()
     -- Text operations
     use('AndrewRadev/splitjoin.vim')
     use('christoomey/vim-sort-motion')
+    use('ntpeters/vim-better-whitespace')
     use('rstacruz/vim-closer')
     use('tpope/vim-commentary')
     use('tpope/vim-surround')
