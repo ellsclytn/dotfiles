@@ -19,6 +19,7 @@ return require('packer').startup(function()
     use('christoomey/vim-sort-motion')
     use('ntpeters/vim-better-whitespace')
     use('rstacruz/vim-closer')
+    use('tpope/vim-abolish')
     use('tpope/vim-commentary')
     use('tpope/vim-surround')
 
