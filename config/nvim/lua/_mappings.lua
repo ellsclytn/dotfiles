@@ -31,6 +31,11 @@ nmap('<C-K>', '<C-W><C-K>')
 nmap('<C-L>', '<C-W><C-L>')
 nmap('<C-H>', '<C-W><C-H>')
 
+-- Double space over word to Subvert
+nmap('<Space><Space>', ':%S/<C-r>=expand("<cword>")<CR>/')
+-- Leader + space over word to find and replace
+nmap('<leader><Space>', ':%s/<C-r>=expand("<cword>")<CR>/')
+
 -- LSP
 nmap('gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
 nmap('gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
