@@ -1,4 +1,5 @@
 local modules = {
+    '_filetypes',
     '_config',
     '_mappings',
     '_plugins',
