@@ -96,10 +96,8 @@ fi
 mkdir /mnt/boot
 mount "$boot_partition" /mnt/boot
 
-# curl "https://archlinux.org/mirrorlist/?country=AU&protocol=http&protocol=https&ip_version=4" | \
-#   sed '/#Server/s/#//g' > /etc/pacman.d/mirrorlist
-
-echo "Server = http://yox.lan:7878/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
+curl "https://archlinux.org/mirrorlist/?country=AU&protocol=http&protocol=https&ip_version=4" | \
+  sed '/#Server/s/#//g' > /etc/pacman.d/mirrorlist
 
 pacstrap /mnt base base-devel linux linux-firmware btrfs-progs fish neovim git sudo efibootmgr systemd-resolvconf wpa_supplicant dialog iw iwd
 
