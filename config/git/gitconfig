@@ -49,7 +49,7 @@
   sh = show
 [core]
   excludesfile = ~/.gitignore_global
-  pager = delta --dark --syntax-theme="ansi-dark"
+  pager = delta --dark --syntax-theme="ansi"
 [interactive]
   diffFilter = delta --color-only
 [log]
