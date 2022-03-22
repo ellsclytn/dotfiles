@@ -6,5 +6,3 @@ export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
 
 set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_COMPLETE 2
-
-fzf_configure_bindings --git_log=\cg --git_status=\cs --directory=\cf
