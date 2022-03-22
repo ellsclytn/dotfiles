@@ -74,6 +74,7 @@ fresh-options
 
 # Fish
 fresh config/fish/\*.fish --file=~/.config/fish/config.fish
+fresh git://git.zx2c4.com/password-store src/completion/pass.fish-completion --file=~/.config/fish/completions/pass.fish
 
 # Fisher is pretty intent on being able to write to this file, so we just
 # symlink so it can be tracked in Git
