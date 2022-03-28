@@ -11,6 +11,9 @@
           - network-manager-applet
           - networkmanager
           - networkmanager-openvpn
+          - pulseaudio
+          - pulseaudio-bluetooth
+          - pulseaudio-alsa
           - xf86-video-intel
         state: absent
       become: true
@@ -40,6 +43,11 @@
       when:
         - not laptop
         - not vm
+      become: true
+    - name: Install Pacman packages
+      pacman:
+        name: "{{ lookup('file', '../setup/pacman').splitlines() }}"
+        state: present
       become: true
     - name: /etc/X11/xorg.conf.d
       file:
@@ -113,6 +121,12 @@
       when:
         - not laptop
         - not vm
+    - name: Start & enable pipewire-pulse
+      service:
+        name: pipewire-pulse
+        state: started
+        enabled: true
+        scope: user
     - name: Start & enable systemd-networkd
       service:
         name: systemd-networkd
@@ -201,11 +215,6 @@
         name: systemd-timesyncd
         state: started
         enabled: true
-      become: true
-    - name: Install Pacman packages
-      pacman:
-        name: "{{ lookup('file', '../setup/pacman').splitlines() }}"
-        state: present
       become: true
     - name: Allow fingerprint auth for desired actions
       blockinfile:

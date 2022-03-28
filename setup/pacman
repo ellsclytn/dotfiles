@@ -56,8 +56,8 @@ pcsclite
 peek
 piper
 playerctl
-pulseaudio
-pulseaudio-alsa
+pipewire
+pipewire-pulse
 ranger
 redshift
 ripgrep
