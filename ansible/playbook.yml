@@ -12,21 +12,22 @@
           - networkmanager
           - networkmanager-openvpn
           - pulseaudio
-          - pulseaudio-bluetooth
           - pulseaudio-alsa
+          - pulseaudio-bluetooth
+          - xbacklight
           - xf86-video-intel
         state: absent
       become: true
     - name: Install laptop-specific Pacman packages
       pacman:
         name:
+          - acpilight
           - fprint
           - intel-media-driver
           - intel-ucode
           - mesa
           - sof-firmware
           - tlp
-          - xorg-xbacklight
         state: present
       become: true
       when:
@@ -57,17 +58,29 @@
         mode: '0755'
         state: directory
       become: true
-    - name: Remove old Intel Graphics configuration
-      ansible.builtin.file:
-        path: /etc/X11/xorg.conf.d/10-intel.conf
-        state: absent
+    - name: Ensure group "video" exists
+      ansible.builtin.group:
+        name: video
+        state: present
+    - name: Add self to video group
+      ansible.builtin.user:
+        name: ellis
+        groups: video
+        append: yes
+    - name: Backlight configuration
+      template:
+        src: ./templates/udev/rules.d/90-backlight.rules
+        dest: /etc/udev/rules.d/90-backlight.rules
+        owner: root
+        group: root
+        mode: '0644'
       become: true
       when:
         - laptop
         - not vm
     - name: Mouse/trackpad configuration
       template:
-        src: ./templates/20-mouse.conf
+        src: ./templates/X11/xorg.conf.d/20-mouse.conf
         dest: /etc/X11/xorg.conf.d/20-mouse.conf
         owner: root
         group: root
@@ -75,7 +88,7 @@
       become: true
     - name: Keyboard configuration
       template:
-        src: ./templates/30-keyboard.conf
+        src: ./templates/X11/xorg.conf.d/30-keyboard.conf
         dest: /etc/X11/xorg.conf.d/30-keyboard.conf
         owner: root
         group: root
