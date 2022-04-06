@@ -70,7 +70,6 @@ signal-desktop
 sl
 starship
 systemd-resolvconf
-task
 terraform
 thunar
 traceroute

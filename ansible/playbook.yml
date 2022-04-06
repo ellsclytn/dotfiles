@@ -14,6 +14,7 @@
           - pulseaudio
           - pulseaudio-alsa
           - pulseaudio-bluetooth
+          - task
           - xbacklight
           - xf86-video-intel
         state: absent
