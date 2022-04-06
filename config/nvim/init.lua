@@ -10,6 +10,7 @@ local modules = {
     '_treesitter',
     '_lsp',
     '_vim-better-whitespace',
+    '_telescope',
 }
 
 for _, module_name in ipairs(modules) do
