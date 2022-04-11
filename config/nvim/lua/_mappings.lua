@@ -36,6 +36,10 @@ nmap('<Space><Space>', ':%S/<C-r>=expand("<cword>")<CR>/')
 -- Leader + space over word to find and replace
 nmap('<leader><Space>', ':%s/<C-r>=expand("<cword>")<CR>/')
 
+-- Reselect visual block after indent
+vmap('<', '<gv')
+vmap('>', '>gv')
+
 -- LSP
 nmap('gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
 nmap('gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
