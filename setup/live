@@ -193,6 +193,8 @@ systemctl enable systemd-resolved
 systemctl enable systemd-networkd
 
 bootctl --path=/boot install
+
+mkinitcpio -p linux
 EOF
 
 chmod +x /mnt/root/chroot-setup.sh
