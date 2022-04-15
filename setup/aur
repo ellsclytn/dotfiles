@@ -13,6 +13,7 @@ insomnia-bin
 menu-qalc
 nerd-fonts-hack
 nvim-packer-git
+shellcheck-bin
 spotify
 stylua-bin
 tflint-bin
