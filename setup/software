@@ -27,7 +27,7 @@ rustup install stable
 rustup default stable
 
 echo "Istalling AUR packages..."
-sudo aura -Aa $(grep -v '^#' ~/.dotfiles/setup/aur)
+sudo aura -Aa "$(grep -v '^#' ~/.dotfiles/setup/aur)"
 
 # asdf & Node
 . /opt/asdf-vm/asdf.sh
@@ -38,7 +38,7 @@ npm install yarn -g
 
 # Fresh
 rm -f ~/.config/fish/config.fish
-bash -c "`curl -sL get.freshshell.com`"
+bash -c "$(curl -sL get.freshshell.com)"
 rm -f ~/.freshrc
 ln -s ~/.dotfiles/freshrc ~/.freshrc
 
