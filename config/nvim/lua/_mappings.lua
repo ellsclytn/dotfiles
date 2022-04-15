@@ -6,6 +6,16 @@ function vmap(keys, command)
     vim.api.nvim_set_keymap('v', keys, command, { noremap = true, silent = true })
 end
 
+function _G.toggle_format_on_save()
+    if vim.b.format_on_save then
+        vim.b.format_on_save = false
+        print('Format on save disabled')
+    else
+        vim.b.format_on_save = true
+        print('Format on save enabled')
+    end
+end
+
 -- Leader key
 vim.g.mapleader = ';'
 
@@ -48,6 +58,7 @@ nmap('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
 nmap('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 nmap('<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
 nmap('<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+nmap('<leader>fos', '<cmd>lua toggle_format_on_save()<CR>')
 
 nmap('<leader>S', "<cmd>lua require('spectre').open()<CR>")
 nmap('<leader>sw', "<cmd>lua require('spectre').open_visual({select_word=true})<CR>")
