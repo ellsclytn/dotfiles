@@ -70,6 +70,7 @@ shfmt
 signal-desktop
 sl
 starship
+stylua
 systemd-resolvconf
 terraform
 thunar
