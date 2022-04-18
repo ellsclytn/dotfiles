@@ -124,7 +124,7 @@ echo "$new_hostname" >/mnt/etc/hostname
 echo 'LANG=en_AU.UTF-8' >/mnt/etc/locale.conf
 echo -e "en_US.UTF-8 UTF-8\nen_AU.UTF-8 UTF-8" >>/mnt/etc/locale.gen
 echo 'KEYMAP=us' >/mnt/etc/vconsole.conf
-sed -i '/# %wheel ALL=(ALL) ALL/s/^# *//' /mnt/etc/sudoers
+sed -i '/# %wheel ALL=(ALL:ALL) ALL/s/^# *//' /mnt/etc/sudoers
 
 luks_uuid=$(cryptsetup luksUUID "$root_partition")
 
