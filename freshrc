@@ -55,7 +55,7 @@ fresh-options --file=~/.config/i3/config --marker=#
   fresh khamer/base16-i3 colors/base16-onedark.config
   fresh khamer/base16-i3 client-properties/base16-onedark.config
   fresh config/i3/keybindings/\* --filter="dot-templater ~/.dotfiles/devices/$device.conf"
-  fresh config/i3/\* --filter="dot-templater ~/.dotfiles/devices/$device.conf"
+  fresh config/i3/\*
 fresh-options
 
 fresh config/i3status-rust/config.toml --file=~/.config/i3status-rust/config.toml --filter="dot-templater ~/.dotfiles/devices/$device.conf"
