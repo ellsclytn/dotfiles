@@ -3,13 +3,18 @@ theme = "semi-native"
 [icons]
 name = "awesome5"
 [icons.overrides]
-time = ""
+time = ""
 
 ### LAPTOP
 [[block]]
 block = "battery"
 format = "{percentage}"
 ### LAPTOP
+
+[[block]]
+block = "time"
+format = "%R UTC"
+timezone = "UTC"
 
 [[block]]
 block = "time"
