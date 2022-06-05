@@ -8,6 +8,7 @@ return require('packer').startup(function()
     use('navarasu/onedark.nvim')
     use('nvim-treesitter/nvim-treesitter')
     use('tpope/vim-fugitive') -- Git
+    use('tpope/vim-rhubarb')
     use({ 'SmiteshP/nvim-gps' })
     use({ 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } })
     use({ 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } })
