@@ -4,6 +4,9 @@ if present then
     gps.setup()
 
     lualine.setup({
+        options = {
+            globalstatus = true,
+        },
         sections = {
             lualine_b = {
                 'branch',
