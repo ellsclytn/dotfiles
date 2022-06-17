@@ -195,6 +195,12 @@
         group: root
         mode: '0644'
       become: true
+    - name: Network online wait configuration
+      lineinfile:
+        path: /etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service
+        regexp: '^ExecStart='
+        line: 'ExecStart=/usr/lib/systemd/systemd-networkd-wait-online --any'
+      become: true
     - name: Create iwd directory
       file:
         path: /etc/iwd
