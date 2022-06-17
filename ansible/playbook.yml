@@ -68,6 +68,7 @@
         name: ellis
         groups: video
         append: yes
+      become: true
     - name: Backlight configuration
       template:
         src: ./templates/udev/rules.d/90-backlight.rules
