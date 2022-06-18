@@ -20,10 +20,15 @@ return require('packer').startup(function()
     use('AndrewRadev/splitjoin.vim')
     use('christoomey/vim-sort-motion')
     use('ntpeters/vim-better-whitespace')
-    use('rstacruz/vim-closer')
     use('tpope/vim-abolish')
     use('tpope/vim-commentary')
     use('tpope/vim-surround')
+    use({
+        'windwp/nvim-autopairs',
+        config = function()
+            require('nvim-autopairs').setup({})
+        end,
+    })
 
     -- Completion engine
     use('L3MON4D3/LuaSnip')
