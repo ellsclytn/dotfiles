@@ -4,8 +4,7 @@ if present then
         view = { width = 30, side = 'left', hide_root_folder = true },
         disable_netrw = true,
         hijack_cursor = true,
-        update_cwd = true,
-        update_to_buf_dir = { auto_open = false },
+        sync_root_with_cwd = true,
     })
     vim.g.nvim_tree_indent_markers = 1
 end
