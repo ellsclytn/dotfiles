@@ -4,6 +4,8 @@
   signingkey = 0xDEF7E66A739ACB11
 [push]
   default = simple
+[init]
+  defaultBranch = main
 [color]
   branch = auto
   diff = auto
