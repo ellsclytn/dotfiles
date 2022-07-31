@@ -8,9 +8,11 @@ asciinema
 autorandr
 aws-vault
 bat
+bitwarden
 bluez
 bluez-utils
 ccid
+direnv
 discord
 dkms
 docker
@@ -55,9 +57,9 @@ pavucontrol
 pcsclite
 peek
 piper
-playerctl
 pipewire
 pipewire-pulse
+playerctl
 ranger
 redshift
 ripgrep
