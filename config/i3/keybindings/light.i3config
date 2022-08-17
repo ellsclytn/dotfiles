@@ -1,3 +1,0 @@
-bindsym $mod+KP_Home exec --no-startup-id curl "http://192.168.1.65/cm?cmnd=CT+-"
-bindsym $mod+KP_Left exec --no-startup-id curl "http://192.168.1.65/cm?cmnd=Power+2"
-bindsym $mod+KP_End exec --no-startup-id curl "http://192.168.1.65/cm?cmnd=CT+%2B"
