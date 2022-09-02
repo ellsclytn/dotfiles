@@ -29,6 +29,13 @@ return require('packer').startup(function()
             require('nvim-autopairs').setup({})
         end,
     })
+    use({
+        'folke/trouble.nvim',
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = function()
+            require('trouble').setup({})
+        end,
+    })
 
     -- Completion engine
     use('L3MON4D3/LuaSnip')
