@@ -14,7 +14,7 @@ return require('packer').startup(function()
     use({ 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } })
     use({ 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons' } })
     use({ 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } })
-    use({ 'windwp/nvim-spectre', requires = { 'nvim-lua/plenary.nvim' } }) -- Search UI
+    use({ 'nvim-pack/nvim-spectre', requires = { 'nvim-lua/plenary.nvim' } }) -- Search UI
 
     -- Text operations
     use('AndrewRadev/splitjoin.vim')
