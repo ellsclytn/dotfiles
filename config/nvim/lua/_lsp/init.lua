@@ -14,8 +14,8 @@ lsp_installer.setup({
 lspconfig.tsserver.setup({
     on_attach = function(client)
         -- Formatting is handled by null-ls (eslint and prettier)
-        client.resolved_capabilities.document_formatting = false
-        client.resolved_capabilities.document_range_formatting = false
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
     end,
 })
 

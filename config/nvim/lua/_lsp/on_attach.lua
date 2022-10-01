@@ -1,7 +1,7 @@
 return function(client)
     -- autoformat on save
     -- FormattingOptions https://microsoft.github.io/language-server-protocol/specification
-    if client.resolved_capabilities.document_formatting then
+    if client.server_capabilities.documentFormattingProvider then
         vim.b.format_on_save = true
 
         vim.cmd([[
