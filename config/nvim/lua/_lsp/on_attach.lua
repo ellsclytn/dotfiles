@@ -7,7 +7,7 @@ return function(client)
         vim.cmd([[
         augroup LspFormatting
             autocmd! * <buffer>
-            autocmd BufWritePre <buffer> lua if vim.b.format_on_save then vim.lsp.buf.formatting_seq_sync() end
+            autocmd BufWritePre <buffer> lua if vim.b.format_on_save then vim.lsp.buf.format() end
         augroup END
         ]])
     end
