@@ -1,8 +1,11 @@
 local lspconfig = require('lspconfig')
-local lsp_installer = require('nvim-lsp-installer')
 local lsp_on_attach = require('_lsp.on_attach')
+local mason = require('mason')
+local mason_lspconfig = require('mason-lspconfig')
 
-lsp_installer.setup({
+mason.setup()
+
+mason_lspconfig.setup({
     ensure_installed = {
         'rust_analyzer',
         'tsserver',

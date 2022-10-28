@@ -48,5 +48,11 @@ return require('packer').startup(function()
     use('neovim/nvim-lspconfig')
     use('onsails/lspkind-nvim')
     use('saadparwaiz1/cmp_luasnip')
-    use('williamboman/nvim-lsp-installer')
+    use({
+        'williamboman/mason.nvim',
+        requires = {
+            'neovim/nvim-lspconfig',
+            'williamboman/mason-lspconfig.nvim',
+        },
+    })
 end)
