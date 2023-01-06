@@ -1,14 +1,19 @@
-return function(client)
-    -- autoformat on save
-    -- FormattingOptions https://microsoft.github.io/language-server-protocol/specification
-    if client.server_capabilities.documentFormattingProvider then
+local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
+
+return function(client, bufnr)
+    if client.supports_method('textDocument/formatting') then
+        -- Enable format on save for new buffers (can be toggled)
         vim.b.format_on_save = true
 
-        vim.cmd([[
-        augroup LspFormatting
-            autocmd! * <buffer>
-            autocmd BufWritePre <buffer> lua if vim.b.format_on_save then vim.lsp.buf.format() end
-        augroup END
-        ]])
+        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+        vim.api.nvim_create_autocmd('BufWritePre', {
+            group = augroup,
+            buffer = bufnr,
+            callback = function()
+                if vim.b.format_on_save then
+                    vim.lsp.buf.format({ bufnr = bufnr })
+                end
+            end,
+        })
     end
 end
