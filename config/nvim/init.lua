@@ -11,6 +11,7 @@ local modules = {
     '_lsp',
     '_vim-better-whitespace',
     '_telescope',
+    '_spelling',
 }
 
 for _, module_name in ipairs(modules) do
