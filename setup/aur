@@ -7,6 +7,7 @@ dot-templater
 git-fixup-git
 git-open
 insomnia-bin
+libsane-dsseries
 menu-qalc
 nvim-packer-git
 pacman-cleanup-hook
