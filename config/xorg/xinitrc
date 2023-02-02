@@ -6,7 +6,4 @@ setxkbmap -option caps:ctrl_modifier
 # Setup Xresources for term if they exist
 [[ -f ~/.config/xorg/Xresources ]] && xrdb -merge ~/.config/xorg/Xresources
 
-# Load nvidia settings if they exist
-[[ -f ~/.nvidia-settings-rc ]] && nvidia-settings --load-config-only
-
 exec i3
