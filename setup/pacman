@@ -44,6 +44,7 @@ libqalculate
 libratbag
 lxappearance
 lxsession-gtk3
+man-db
 mesa
 mpv
 neofetch
