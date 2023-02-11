@@ -11,23 +11,33 @@ return {
 
     'editorconfig/editorconfig-vim',
     'lukas-reineke/indent-blankline.nvim',
-    'tpope/vim-fugitive', -- Git
-    'tpope/vim-rhubarb',
-
+    {
+        'tpope/vim-fugitive', -- Git
+        event = 'BufReadPost',
+    },
+    {
+        'tpope/vim-rhubarb',
+        event = 'BufReadPost',
+    },
     {
         'nvim-treesitter/nvim-treesitter',
         config = require('_treesitter'),
+        event = { 'BufReadPost', 'BufWritePost' },
     },
     {
         'nvim-tree/nvim-tree.lua',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
-        lazy = false,
+        keys = {
+            { '<C-N>', ':NvimTreeToggle<CR>' },
+            { '<C-F>', ':NvimTreeFindFile<CR>' },
+        },
         config = require('_nvim-tree'),
     },
     {
         'lewis6991/gitsigns.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' },
         config = require('_gitsigns'),
+        event = 'BufReadPost',
     },
     {
         'nvim-lualine/lualine.nvim',
@@ -44,10 +54,43 @@ return {
             'natecraddock/telescope-zf-native.nvim',
         },
         config = require('_telescope'),
+        keys = {
+            { '<C-P>', ':Telescope find_files hidden=true<CR>' },
+            { '<C-G>', ':Telescope live_grep<CR>' },
+            { '<C-B>', ':Telescope buffers<CR>' },
+            { '<leader>fh', '<CMD>Telescope help_tags<CR>' }, -- Search help topics. Mnemonic: "fh for Find Help
+        },
     },
     { -- Search UI
         'nvim-pack/nvim-spectre',
         dependencies = { 'nvim-lua/plenary.nvim' },
+        keys = {
+            {
+                '<leader>S',
+                function()
+                    require('spectre').open()
+                end,
+            },
+            {
+                '<leader>sw',
+                function()
+                    require('spectre').open_visual({ select_word = true })
+                end,
+            },
+            {
+                '<leader>s',
+                function()
+                    require('spectre').open_visual()
+                end,
+                mode = 'v',
+            },
+            {
+                '<leader>sp',
+                function()
+                    require('spectre').open_file_search()
+                end,
+            },
+        },
     },
 
     -- Text operations
@@ -55,7 +98,7 @@ return {
     'christoomey/vim-sort-motion',
     {
         'ntpeters/vim-better-whitespace',
-        event = 'BufEnter',
+        event = 'InsertEnter',
         config = require('_vim-better-whitespace'),
     },
     'tpope/vim-abolish',
@@ -66,6 +109,7 @@ return {
         config = function()
             require('nvim-autopairs').setup({})
         end,
+        event = { 'BufReadPost', 'BufModifiedSet' },
     },
     {
         'folke/trouble.nvim',
@@ -77,7 +121,7 @@ return {
 
     {
         'hrsh7th/nvim-cmp',
-        event = 'BufEnter',
+        event = { 'BufReadPost', 'BufWritePost' },
         dependencies = {
             'L3MON4D3/LuaSnip',
             'hrsh7th/cmp-buffer',
