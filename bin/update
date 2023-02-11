@@ -14,11 +14,6 @@ if type -q aura
   sudo aura -Aua
 end
 
-if type -q nvim
-  inform "Updating Vim plugins"
-  nvim +PackerUpdate +TSUpdate
-end
-
 if type -q cargo-install-update
   inform "Updating Rust (cargo) binaries"
   cargo-install-update install-update -a

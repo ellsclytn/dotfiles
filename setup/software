@@ -42,6 +42,4 @@ bash -c "$(curl -sL get.freshshell.com)"
 rm -f ~/.freshrc
 ln -s ~/.dotfiles/freshrc ~/.freshrc
 
-nvim +PackerInstall +qall
-
 echo "Done. Time to log out and in again!"

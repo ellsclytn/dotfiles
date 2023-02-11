@@ -1,6 +1,5 @@
-local present, gitsigns = pcall(require, 'gitsigns')
-if present then
-    gitsigns.setup({
+return function()
+    require('gitsigns').setup({
         signs = {
             add = { hl = 'DiffAdd', text = ' ', numhl = 'GitSignsAddNr' },
             change = { hl = 'DiffChange', text = ' ', numhl = 'GitSignsChangeNr' },

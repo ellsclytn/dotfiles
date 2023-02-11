@@ -1,5 +1,5 @@
-local present, lualine = pcall(require, 'lualine')
-if present then
+return function()
+    local lualine = require('lualine')
     local gps = require('nvim-gps')
     gps.setup()
 

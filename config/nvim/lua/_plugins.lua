@@ -1,58 +1,96 @@
-return require('packer').startup(function()
-    use('wbthomason/packer.nvim')
-
+return {
+    --
     -- UI & Syntax
-    use('editorconfig/editorconfig-vim')
-    use('lukas-reineke/indent-blankline.nvim')
-    use('natecraddock/telescope-zf-native.nvim')
-    use('navarasu/onedark.nvim')
-    use('nvim-treesitter/nvim-treesitter')
-    use('tpope/vim-fugitive') -- Git
-    use('tpope/vim-rhubarb')
-    use({ 'SmiteshP/nvim-gps' })
-    use({ 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } })
-    use({ 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } })
-    use({ 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons' } })
-    use({ 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } })
-    use({ 'nvim-pack/nvim-spectre', requires = { 'nvim-lua/plenary.nvim' } }) -- Search UI
+    --
+    {
+        'navarasu/onedark.nvim',
+        lazy = false, -- the colorscheme should be available when starting Neovim
+        priority = 1000, -- make sure to load this before all the other start plugins
+        config = require('_onedark'),
+    },
+
+    'editorconfig/editorconfig-vim',
+    'lukas-reineke/indent-blankline.nvim',
+    'tpope/vim-fugitive', -- Git
+    'tpope/vim-rhubarb',
+
+    {
+        'nvim-treesitter/nvim-treesitter',
+        config = require('_treesitter'),
+    },
+    {
+        'nvim-tree/nvim-tree.lua',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        lazy = false,
+        config = require('_nvim-tree'),
+    },
+    {
+        'lewis6991/gitsigns.nvim',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        config = require('_gitsigns'),
+    },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = {
+            'nvim-tree/nvim-web-devicons',
+            'SmiteshP/nvim-gps',
+        },
+        config = require('_statusline'),
+    },
+    {
+        'nvim-telescope/telescope.nvim',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'natecraddock/telescope-zf-native.nvim',
+        },
+        config = require('_telescope'),
+    },
+    { -- Search UI
+        'nvim-pack/nvim-spectre',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+    },
 
     -- Text operations
-    use('AndrewRadev/splitjoin.vim')
-    use('christoomey/vim-sort-motion')
-    use('ntpeters/vim-better-whitespace')
-    use('tpope/vim-abolish')
-    use('tpope/vim-commentary')
-    use('tpope/vim-surround')
-    use({
+    'AndrewRadev/splitjoin.vim',
+    'christoomey/vim-sort-motion',
+    {
+        'ntpeters/vim-better-whitespace',
+        event = 'BufEnter',
+        config = require('_vim-better-whitespace'),
+    },
+    'tpope/vim-abolish',
+    'tpope/vim-commentary',
+    'tpope/vim-surround',
+    {
         'windwp/nvim-autopairs',
         config = function()
             require('nvim-autopairs').setup({})
         end,
-    })
-    use({
+    },
+    {
         'folke/trouble.nvim',
-        requires = 'kyazdani42/nvim-web-devicons',
+        dependencies = 'nvim-tree/nvim-web-devicons',
         config = function()
             require('trouble').setup({})
         end,
-    })
+    },
 
-    -- Completion engine
-    use('L3MON4D3/LuaSnip')
-    use('hrsh7th/cmp-buffer')
-    use('hrsh7th/cmp-cmdline')
-    use('hrsh7th/cmp-nvim-lsp')
-    use('hrsh7th/cmp-path')
-    use('hrsh7th/nvim-cmp')
-    use('jose-elias-alvarez/null-ls.nvim')
-    use('neovim/nvim-lspconfig')
-    use('onsails/lspkind-nvim')
-    use('saadparwaiz1/cmp_luasnip')
-    use({
-        'williamboman/mason.nvim',
-        requires = {
+    {
+        'hrsh7th/nvim-cmp',
+        event = 'BufEnter',
+        dependencies = {
+            'L3MON4D3/LuaSnip',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-cmdline',
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-path',
+            'jose-elias-alvarez/null-ls.nvim',
             'neovim/nvim-lspconfig',
+            'onsails/lspkind-nvim',
+            'saadparwaiz1/cmp_luasnip',
             'williamboman/mason-lspconfig.nvim',
+            'williamboman/mason.nvim',
         },
-    })
-end)
+        config = require('_lsp'),
+    },
+}

@@ -1,5 +1,6 @@
-local present, onedark = pcall(require, 'onedark')
-if present then
+return function()
+    local onedark = require('onedark')
+
     onedark.setup({
         style = 'dark',
         code_style = {
@@ -10,5 +11,6 @@ if present then
             variables = 'none',
         },
     })
-    require('onedark').load()
+
+    onedark.load()
 end
