@@ -41,10 +41,7 @@ return {
     },
     {
         'nvim-lualine/lualine.nvim',
-        dependencies = {
-            'nvim-tree/nvim-web-devicons',
-            'SmiteshP/nvim-gps',
-        },
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = require('_statusline'),
     },
     {
@@ -136,5 +133,9 @@ return {
             'williamboman/mason.nvim',
         },
         config = require('_lsp'),
+    },
+    {
+        'SmiteshP/nvim-navic',
+        dependencies = { 'neovim/nvim-lspconfig' },
     },
 }

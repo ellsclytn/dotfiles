@@ -1,7 +1,6 @@
 return function()
     local lualine = require('lualine')
-    local gps = require('nvim-gps')
-    gps.setup()
+    local navic = require('nvim-navic')
 
     lualine.setup({
         options = {
@@ -12,7 +11,7 @@ return function()
                 'branch',
                 'diff',
                 'diagnostics',
-                { gps.get_location, cond = gps.is_available },
+                { navic.get_location, cond = navic.is_available },
             },
         },
     })
