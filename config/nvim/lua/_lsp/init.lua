@@ -8,10 +8,13 @@ return function()
 
     mason_lspconfig.setup({
         ensure_installed = {
+            'jsonls',
             'rust_analyzer',
-            'tsserver',
+            'sumneko_lua',
             'terraformls',
             'tflint',
+            'tsserver',
+            'yamlls',
         },
     })
 
@@ -27,9 +30,12 @@ return function()
     capabilities = require('cmp_nvim_lsp').default_capabilities()
 
     for _, server in ipairs({
+        'jsonls',
         'rust_analyzer',
+        'sumneko_lua',
         'terraformls',
         'tflint',
+        'yamlls',
     }) do
         lspconfig[server].setup({ on_attach = lsp_on_attach })
     end
