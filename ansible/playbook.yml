@@ -8,11 +8,14 @@
     - name: Remove unused packages
       pacman:
         name:
+          - exfat-utils
+          - gparted
           - network-manager-applet
           - networkmanager
           - networkmanager-openvpn
           - nvidia
           - nvidia-settings
+          - openvpn
           - pulseaudio
           - pulseaudio-alsa
           - pulseaudio-bluetooth

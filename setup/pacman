@@ -21,7 +21,6 @@ docker-compose
 dog
 dust
 exa
-exfat-utils
 fd
 feh
 firefox
@@ -32,7 +31,6 @@ fzf
 git
 git-delta
 gnupg
-gparted
 htop
 i3-wm
 i3lock
@@ -53,7 +51,6 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 openssh
-openvpn
 papirus-icon-theme
 pavucontrol
 pcsclite
