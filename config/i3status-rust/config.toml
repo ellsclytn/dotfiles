@@ -1,21 +1,21 @@
+[theme]
 theme = "semi-native"
-
 [icons]
-name = "awesome5"
+icons = "awesome5"
 [icons.overrides]
 time = ""
 
 ### LAPTOP
 [[block]]
 block = "battery"
-format = "{percentage}"
+format = "$icon $percentage"
 ### LAPTOP
 
 [[block]]
 block = "time"
-format = "%R UTC"
+format = "$timestamp.datetime(f:'%R') UTC"
 timezone = "UTC"
 
 [[block]]
 block = "time"
-format = "%a %d/%m %R"
+format = "$timestamp.datetime(f:'%a %d/%m %R')"
