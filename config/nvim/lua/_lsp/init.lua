@@ -1,16 +1,18 @@
 return function()
-    local lspconfig = require('lspconfig')
+    local cmp_nvim_lsp = require('cmp_nvim_lsp')
     local lsp_on_attach = require('_lsp.on_attach')
+    local lspconfig = require('lspconfig')
     local mason = require('mason')
     local mason_lspconfig = require('mason-lspconfig')
 
-    mason.setup()
+    local lsp_capabilities = cmp_nvim_lsp.default_capabilities()
 
+    mason.setup()
     mason_lspconfig.setup({
         ensure_installed = {
             'jsonls',
+            'lua_ls',
             'rust_analyzer',
-            'sumneko_lua',
             'terraformls',
             'tflint',
             'tsserver',
@@ -18,27 +20,17 @@ return function()
         },
     })
 
-    lspconfig.tsserver.setup({
-        on_attach = function(client)
-            -- Formatting is handled by null-ls (eslint and prettier)
-            client.server_capabilities.documentFormattingProvider = false
-            client.server_capabilities.documentRangeFormattingProvider = false
+    mason_lspconfig.setup_handlers({
+        -- The first entry (without a key) will be the default handler
+        -- and will be called for each installed server that doesn't have
+        -- a dedicated handler.
+        function(server_name)
+            lspconfig[server_name].setup({
+                on_attach = lsp_on_attach,
+                capabilities = lsp_capabilities,
+            })
         end,
     })
-
-    -- nvim-cmp supports additional completion capabilities
-    capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-    for _, server in ipairs({
-        'jsonls',
-        'rust_analyzer',
-        'sumneko_lua',
-        'terraformls',
-        'tflint',
-        'yamlls',
-    }) do
-        lspconfig[server].setup({ on_attach = lsp_on_attach })
-    end
 
     require('_lsp.null-ls')
     require('_lsp.cmp')
