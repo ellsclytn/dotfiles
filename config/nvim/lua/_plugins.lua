@@ -48,7 +48,7 @@ return {
         'nvim-telescope/telescope.nvim',
         dependencies = {
             'nvim-lua/plenary.nvim',
-            'natecraddock/telescope-zf-native.nvim',
+            { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
         },
         config = require('_telescope'),
         keys = {

@@ -22,5 +22,5 @@ return function ()
         },
     })
 
-    telescope.load_extension('zf-native')
+    telescope.load_extension('fzf')
 end
