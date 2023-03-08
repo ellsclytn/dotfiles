@@ -29,6 +29,7 @@
   cmb = "!git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
   co = checkout
   cob = checkout -b
+  cp = cherry-pick
   d = diff
   dbi = !fzf-delete-branches
   dc = diff --cached
