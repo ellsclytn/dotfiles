@@ -108,7 +108,7 @@ return {
     },
     'tpope/vim-abolish',
     'tpope/vim-commentary',
-    'tpope/vim-surround',
+    'kylechui/nvim-surround',
     {
         'windwp/nvim-autopairs',
         config = function()
