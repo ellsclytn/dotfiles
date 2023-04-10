@@ -9,7 +9,6 @@ return {
         config = require('_onedark'),
     },
 
-    'editorconfig/editorconfig-vim',
     'lukas-reineke/indent-blankline.nvim',
     {
         'tpope/vim-fugitive', -- Git
