@@ -8,15 +8,17 @@ return {
         priority = 1000, -- make sure to load this before all the other start plugins
         config = require('_onedark'),
     },
-
-    'lukas-reineke/indent-blankline.nvim',
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        event = 'VeryLazy',
+    },
     {
         'tpope/vim-fugitive', -- Git
-        event = 'BufReadPost',
+        event = 'VeryLazy',
     },
     {
         'tpope/vim-rhubarb',
-        event = 'BufReadPost',
+        event = 'VeryLazy',
     },
     {
         'nvim-treesitter/nvim-treesitter',
