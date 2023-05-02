@@ -107,7 +107,13 @@ return {
         config = require('_vim-better-whitespace'),
     },
     'tpope/vim-abolish',
-    'tpope/vim-commentary',
+    {
+        'numToStr/Comment.nvim',
+        event = 'VeryLazy',
+        config = function()
+            require('Comment').setup()
+        end,
+    },
     'kylechui/nvim-surround',
     {
         'windwp/nvim-autopairs',
