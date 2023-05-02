@@ -13,6 +13,23 @@ return {
         event = 'VeryLazy',
     },
     {
+        'zbirenbaum/copilot-cmp',
+        event = 'InsertEnter',
+        config = function()
+            require('copilot_cmp').setup()
+        end,
+    },
+    {
+        'zbirenbaum/copilot.lua',
+        event = 'InsertEnter',
+        config = function()
+            require('copilot').setup({
+                suggestion = { enabled = false },
+                panel = { enabled = false },
+            })
+        end,
+    },
+    {
         'tpope/vim-fugitive', -- Git
         event = 'VeryLazy',
     },
