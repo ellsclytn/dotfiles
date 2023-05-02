@@ -137,7 +137,7 @@ return {
 
     {
         'hrsh7th/nvim-cmp',
-        event = { 'BufReadPost', 'BufWritePost' },
+        event = 'VeryLazy',
         dependencies = {
             'L3MON4D3/LuaSnip',
             'hrsh7th/cmp-buffer',
