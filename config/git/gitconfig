@@ -6,17 +6,6 @@
   default = simple
 [init]
   defaultBranch = main
-[color]
-  branch = auto
-  diff = auto
-  interactive = auto
-  status = auto
-  ui = true
-[color "diff-highlight"]
-  oldNormal = "red bold"
-  oldHighlight = "red bold 52"
-  newNormal = "green bold"
-  newHighlight = "green bold 22"
 [alias]
   # https://gist.github.com/mwhite/6887990
   a = add
@@ -52,7 +41,7 @@
   sh = show
 [core]
   excludesfile = ~/.gitignore_global
-  pager = delta --dark --syntax-theme="ansi"
+  pager = delta
 [interactive]
   diffFilter = delta --color-only
 [log]
@@ -62,12 +51,7 @@
   gpgsign = true
   verbose = true
 [diff]
-  meta = "11"
-  frag = "magenta bold"
-  commit = "yellow bold"
-  old = "red bold"
-  new = "green bold"
-  whitespace = "red reverse"
+  colorMoved = default
 [diff "gpg"]
   textconv = gpg --quiet --no-tty --decrypt
 [pull]
@@ -79,3 +63,6 @@
   autostash = true
 [fetch]
   prune = true
+[delta]
+  navigate = true
+  light = false
