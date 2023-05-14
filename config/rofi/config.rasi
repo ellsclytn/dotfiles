@@ -1,9 +1,9 @@
 configuration {
   font: "Source Sans Pro 14";
   drun-display-format: "{name}";
-  display-run: " ";
-  display-drun: " ";
-  display-window: " ";
+  display-run: " ";
+  display-drun: "󰨇 ";
+  display-window: "󰍺 ";
   modi: "combi";
   combi-modi: "window,drun,run";
 }
