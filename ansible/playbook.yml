@@ -8,6 +8,7 @@
     - name: Remove unused packages
       pacman:
         name:
+          - asdf-vm
           - exfat-utils
           - gparted
           - network-manager-applet
@@ -269,3 +270,10 @@
       when:
         - laptop
         - not vm
+    - name: Remove asdf configuration
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - ~/.asdf
+        - ~/.tool-versions

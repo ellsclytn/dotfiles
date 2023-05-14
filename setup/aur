@@ -1,5 +1,4 @@
 appimagelauncher
-asdf-vm
 bibata-cursor-theme-bin
 ctop-bin
 docker-credential-pass-bin
@@ -10,6 +9,7 @@ insomnia-bin
 libsane-dsseries
 menu-qalc
 pacman-cleanup-hook
+rtx-bin
 shellcheck-bin
 spotify
 tflint-bin

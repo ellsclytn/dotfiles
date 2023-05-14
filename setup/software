@@ -29,12 +29,13 @@ rustup default stable
 echo "Istalling AUR packages..."
 sudo aura -Aa $(grep -v '^#' ~/.dotfiles/setup/aur)
 
-# asdf & Node
-. /opt/asdf-vm/asdf.sh
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf install nodejs latest
-asdf global nodejs latest
-npm install yarn -g
+eval "$(rtx activate bash)"
+rtx completion fish >~/.config/fish/completions/rtx.fish
+
+# NodeJS
+echo "Istalling NodeJS..."
+rtx install node@lts
+rtx use --global node@lts
 
 # Fresh
 rm -f ~/.config/fish/config.fish
