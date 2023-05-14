@@ -1,7 +1,7 @@
 [theme]
 theme = "semi-native"
 [icons]
-icons = "awesome5"
+icons = "material-nf"
 [icons.overrides]
 time = ""
 

@@ -20,6 +20,7 @@
           - pulseaudio-alsa
           - pulseaudio-bluetooth
           - task
+          - ttf-font-awesome
           - ttf-hack-nerd
           - xbacklight
           - xf86-video-amdgpu
