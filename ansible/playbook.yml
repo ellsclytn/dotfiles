@@ -139,17 +139,6 @@
       when:
         - not laptop
         - not vm
-    - name: Create OpenRGB unit file
-      template:
-        src: ./templates/systemd/system/openrgb.service
-        dest: /etc/systemd/system/openrgb.service
-        owner: root
-        group: root
-        mode: '0644'
-      become: true
-      when:
-        - not laptop
-        - not vm
     - name: Reload systemd
       systemd:
         daemon_reload: true
@@ -157,15 +146,6 @@
     - name: Liquid cooler configuration service
       service:
         name: liquidcfg
-        state: started
-        enabled: true
-      become: true
-      when:
-        - not laptop
-        - not vm
-    - name: OpenRGB configuration service
-      service:
-        name: openrgb
         state: started
         enabled: true
       become: true
