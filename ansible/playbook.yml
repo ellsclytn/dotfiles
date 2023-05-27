@@ -255,6 +255,23 @@
         state: started
         enabled: true
       become: true
+    - name: Geoclue configuration
+      template:
+        src: ./templates/systemd/user/geoclue-agent.service
+        dest: ~/.config/systemd/user/geoclue-agent.service
+        owner: "{{ ansible_user_id }}"
+        group: users
+        mode: "0644"
+    - name: Reload systemd user
+      systemd:
+        daemon_reload: true
+        scope: user
+    - name: Start & enable geoclue-agent
+      systemd:
+        name: geoclue-agent
+        state: started
+        enabled: true
+        scope: user
     - name: Allow fingerprint auth for desired actions
       blockinfile:
         insertafter: "#"
