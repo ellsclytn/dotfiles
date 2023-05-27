@@ -33,6 +33,9 @@ fresh config/flameshot.ini --file=~/.config/Dharkael/flameshot.ini
 # mpv
 fresh config/mpv/mpv.conf --file=~/.config/mpv/mpv.conf
 
+# topgrade
+fresh config/topgrade.toml --file=~/.config/topgrade.toml
+
 # Bin
 fresh bin/\* --bin
 

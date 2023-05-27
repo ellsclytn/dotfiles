@@ -13,5 +13,6 @@ rtx-bin
 shellcheck-bin
 spotify
 tflint-bin
+topgrade-bin
 ttf-ms-fonts
 unipicker
