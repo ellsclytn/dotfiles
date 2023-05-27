@@ -30,6 +30,9 @@ fresh config/starship.toml --file=~/.config/starship.toml
 # Flameshot
 fresh config/flameshot.ini --file=~/.config/Dharkael/flameshot.ini
 
+# mpv
+fresh config/mpv/mpv.conf --file=~/.config/mpv/mpv.conf
+
 # Bin
 fresh bin/\* --bin
 
