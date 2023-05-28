@@ -63,7 +63,7 @@
         path: /etc/X11/xorg.conf.d
         owner: root
         group: root
-        mode: '0755'
+        mode: "0755"
         state: directory
       become: true
     - name: Ensure group "video" exists
@@ -82,7 +82,7 @@
         dest: /etc/udev/rules.d/90-backlight.rules
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       become: true
       when:
         - laptop
@@ -93,7 +93,7 @@
         dest: /etc/X11/xorg.conf.d/10-amdgpu.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       become: true
       when:
         - not laptop
@@ -104,7 +104,7 @@
         dest: /etc/X11/xorg.conf.d/20-mouse.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       become: true
     - name: Keyboard configuration
       template:
@@ -112,14 +112,14 @@
         dest: /etc/X11/xorg.conf.d/30-keyboard.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       become: true
     - name: /etc/systemd/system/getty@tty1.service.d
       file:
         path: /etc/systemd/system/getty@tty1.service.d
         owner: root
         group: root
-        mode: '0755'
+        mode: "0755"
         state: directory
       become: true
     - name: Auto login configuration
@@ -128,7 +128,7 @@
         dest: /etc/systemd/system/getty@tty1.service.d/override.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       become: true
     - name: Liquid cooler configuration file
       template:
@@ -136,7 +136,7 @@
         dest: /etc/systemd/system/liquidcfg.service
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       become: true
       when:
         - not laptop
@@ -184,7 +184,7 @@
       file:
         path: /etc/systemd/resolved.conf.d
         state: directory
-        mode: '0755'
+        mode: "0755"
       become: true
     - name: Fallback DNS configuration
       template:
@@ -192,13 +192,13 @@
         dest: /etc/systemd/resolved.conf.d/fallback_dns.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       become: true
     - name: Create systemd/network directory
       file:
         path: /etc/systemd/network
         state: directory
-        mode: '0755'
+        mode: "0755"
       become: true
     - name: Remove old Wired network config
       ansible.builtin.file:
@@ -211,19 +211,19 @@
         dest: /etc/systemd/network/20-dhcp.network
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       become: true
     - name: Network online wait configuration
       lineinfile:
         path: /etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service
-        regexp: '^ExecStart='
-        line: 'ExecStart=/usr/lib/systemd/systemd-networkd-wait-online --any'
+        regexp: "^ExecStart="
+        line: "ExecStart=/usr/lib/systemd/systemd-networkd-wait-online --any"
       become: true
     - name: Create iwd directory
       file:
         path: /etc/iwd
         state: directory
-        mode: '0755'
+        mode: "0755"
       become: true
     - name: Wireless network configuration
       template:
@@ -231,7 +231,7 @@
         dest: /etc/iwd/main.conf
         owner: root
         group: root
-        mode: '0644'
+        mode: "0644"
       become: true
     - name: Start & enable iwd
       service:
