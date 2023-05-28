@@ -72,7 +72,7 @@
         state: present
     - name: Add self to video group
       ansible.builtin.user:
-        name: ellis
+        name: "{{ ansible_user_id }}"
         groups: video
         append: yes
       become: true
