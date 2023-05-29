@@ -1,8 +1,7 @@
 [Unit]
 Description=redshift needs to get a (geo)clue
+Wants=networkd-wait-online.service
+After=networkd-wait-online.service
 
 [Service]
 ExecStart=/usr/lib/geoclue-2.0/demos/agent
-
-[Install]
-WantedBy=default.target
