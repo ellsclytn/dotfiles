@@ -17,6 +17,7 @@ direnv
 discord
 dkms
 docker
+docker-buildx
 docker-compose
 dog
 dust
