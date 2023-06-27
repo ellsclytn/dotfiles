@@ -12,6 +12,9 @@ format = "$icon $percentage"
 ### LAPTOP
 
 [[block]]
+block = "pomodoro"
+
+[[block]]
 block = "time"
 format = "$timestamp.datetime(f:'%R') UTC"
 timezone = "UTC"
