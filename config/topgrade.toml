@@ -1,3 +1,10 @@
+# Include any additional configuration file(s)
+# [include] sections are processed in the order you write them
+# Files in $CONFIG_DIR/topgrade/topgrade.d/ are automatically included at the beginning of this file
+[include]
+#paths = ["/etc/topgrade.toml"]
+
+[misc]
 # Don't ask for confirmations
 #assume_yes = true
 
@@ -103,12 +110,15 @@ arch_package_manager = "aura"
 #emerge_sync_flags = "-q"
 #emerge_update_flags = "-uDNa --with-bdeps=y world"
 #redhat_distro_sync = false
+#suse_dup = false
 #rpm_ostree = false
 #nix_arguments = "--flake"
 
 [python]
-#enable_pip_review = true   ###disabled by default
-#enable_pipupgrade = true   ###disabled by default
+#enable_pip_review = true                         ###disabled by default
+#enable_pip_review_local = true                   ###disabled by default
+#enable_pipupgrade = true                         ###disabled by default
+#pipupgrade_arguments = "-y -u --pip-path pip"    ###disabled by default
 
 [windows]
 # Manually select Windows updates
