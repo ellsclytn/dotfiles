@@ -62,6 +62,9 @@ fresh-options --file=~/.config/i3/config --marker=#
   fresh khamer/base16-i3 client-properties/base16-onedark.config
   fresh config/i3/keybindings/\* --filter="dot-templater ~/.dotfiles/devices/$device.conf"
   fresh config/i3/\*
+  if [[ -n ${WORK+x} ]]; then
+    fresh config/i3/work/\*
+  fi
 fresh-options
 
 fresh config/i3status-rust/config.toml --file=~/.config/i3status-rust/config.toml --filter="dot-templater ~/.dotfiles/devices/$device.conf"
@@ -85,3 +88,8 @@ fresh git://git.zx2c4.com/password-store src/completion/pass.fish-completion --f
 # Fisher is pretty intent on being able to write to this file, so we just
 # symlink so it can be tracked in Git
 ln -sf ~/.dotfiles/config/fish/fish_plugins ~/.config/fish/fish_plugins
+
+# Picom
+if [[ -n ${WORK+x} ]]; then
+  fresh config/picom.conf --file=~/.config/picom.conf
+fi
