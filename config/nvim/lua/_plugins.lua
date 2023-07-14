@@ -176,6 +176,11 @@ return {
     },
 
     {
+        'simrat39/rust-tools.nvim',
+        event = 'VeryLazy',
+    },
+
+    {
         'hrsh7th/nvim-cmp',
         event = 'VeryLazy',
         dependencies = {

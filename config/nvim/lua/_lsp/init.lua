@@ -1,6 +1,7 @@
 return function()
     local cmp_nvim_lsp = require('cmp_nvim_lsp')
     local lsp_on_attach = require('_lsp.on_attach')
+    local rust_configuration = require('_lsp.rust')
     local lspconfig = require('lspconfig')
     local mason = require('mason')
     local mason_lspconfig = require('mason-lspconfig')
@@ -30,6 +31,7 @@ return function()
                 capabilities = lsp_capabilities,
             })
         end,
+        ['rust_analyzer'] = rust_configuration(lsp_on_attach, lsp_capabilities),
     })
 
     require('_lsp.null-ls')
