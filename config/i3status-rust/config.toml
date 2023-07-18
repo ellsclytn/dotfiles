@@ -1,5 +1,11 @@
 [theme]
 theme = "semi-native"
+[theme.overrides]
+idle_fg = "#c8ccd4"
+info_fg = "#c8ccd4"
+good_fg = "#98c379"
+warning_fg = "#e5c07b"
+critical_fg = "#e06c75"
 [icons]
 icons = "material-nf"
 [icons.overrides]
