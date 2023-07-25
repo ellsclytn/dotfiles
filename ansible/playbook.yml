@@ -87,7 +87,7 @@
       when:
         - laptop
         - not vm
-    - name: Graphics Configuration
+    - name: AMD Graphics Configuration
       template:
         src: ./templates/X11/xorg.conf.d/10-amdgpu.conf
         dest: /etc/X11/xorg.conf.d/10-amdgpu.conf
@@ -98,6 +98,16 @@
       when:
         - not laptop
         - not vm
+    - name: Intel graphics configuration
+      template:
+        src: ./templates/X11/xorg.conf.d/10-intelgpu.conf
+        dest: /etc/X11/xorg.conf.d/10-intelgpu.conf
+        owner: root
+        group: root
+        mode: "0644"
+      become: true
+      when:
+        - laptop
     - name: Mouse/trackpad configuration
       template:
         src: ./templates/X11/xorg.conf.d/20-mouse.conf
