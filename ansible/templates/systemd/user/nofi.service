@@ -1,0 +1,9 @@
+[Unit]
+Description=Nofi notification daemon
+Documentation=man:nofi(1)
+PartOf=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.Notifications
+ExecStart=/usr/bin/nofi

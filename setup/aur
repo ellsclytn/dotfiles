@@ -8,6 +8,7 @@ git-open
 insomnia-bin
 libsane-dsseries
 menu-qalc
+nofi-bin
 pacman-cleanup-hook
 rtx-bin
 shellcheck-bin

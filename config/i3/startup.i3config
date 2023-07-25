@@ -1,6 +1,7 @@
 # Autostart applications
 
 exec_always --no-startup-id feh --bg-fill "/$HOME/Pictures/wallpaper.png"
+exec_always --no-startup-id systemctl --user start nofi
 exec --no-startup-id flameshot
 exec --no-startup-id lxpolkit
 exec --no-startup-id xss-lock -l /home/ellis/bin/lock &

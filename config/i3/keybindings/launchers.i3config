@@ -3,3 +3,5 @@ bindsym $mod+period exec rofi -modi emoji -show emoji -emoji-mode copy -emoji-fo
 bindsym $mod+Shift+period exec rofi-kaomoji
 bindsym $mod+comma exec unipicker --command "rofi -p char -dmenu" --copy
 bindsym $mod+Shift+w exec rofi -show power-menu -modi "power-menu:rofi-power-menu --no-symbols"
+
+bindsym $mod+Shift+p exec dbus-send --print-reply --dest=org.freedesktop.Notifications /org/freedesktop/Notifications/ctl org.freedesktop.Notifications.History

@@ -293,6 +293,15 @@
         owner: "{{ ansible_user_id }}"
         group: users
         mode: "0644"
+    - name: Nofi service
+      template:
+        src: ./templates/systemd/user/nofi.service
+        dest: ~/.config/systemd/user/nofi.service
+        owner: "{{ ansible_user_id }}"
+        group: users
+        mode: "0644"
+      tags:
+        - nofi
     - name: Reload systemd user
       systemd:
         daemon_reload: true
