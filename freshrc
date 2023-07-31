@@ -12,12 +12,6 @@ device=$([[ -z ${LAPTOP+x} ]] && echo "desktop" || echo "laptop")
 
 fresh freshshell/fresh bin/fresh --bin
 
-# Alacritty
-fresh-options --file=~/.config/alacritty/alacritty.yml
-  fresh config/alacritty/\*.yml --file=~/.config/alacritty/alacritty.yml --filter="dot-templater ~/.dotfiles/devices/$device.conf"
-  fresh aaron-williamson/base16-alacritty colors/base16-onedark-256.yml
-fresh-options
-
 fresh config/redshift.conf --file=~/.config/redshift/redshift.conf
 fresh HaoZeke/base16-zathura build_schemes/colors/base16-onedark.config --file=~/.config/zathura/zathurarc
 

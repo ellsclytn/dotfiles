@@ -1,3 +1,40 @@
+[workstation]
+depends = [
+  "graphics",
+  "fish",
+  "alacritty"
+]
+
+[laptop.variables]
+font_size = "12.0"
+
+[desktop.variables]
+font_size = "16.0"
+
+[graphics.variables.colors16]
+base00 = "282c34"
+base01 = "353b45"
+base02 = "3e4451"
+base03 = "545862"
+base04 = "565c64"
+base05 = "abb2bf"
+base06 = "b6bdca"
+base07 = "c8ccd4"
+base08 = "e06c75"
+base09 = "d19a66"
+base0a = "e5c07b"
+base0b = "98c379"
+base0c = "56b6c2"
+base0d = "61afef"
+base0e = "c678dd"
+base0f = "be5046"
+
 [fish.files]
 "config/fish" = "~/.config/fish"
 "config/starship.toml" = "~/.config/starship.toml"
+
+[alacritty]
+depends = ["graphics"]
+
+[alacritty.files]
+"config/alacritty/alacritty.yml" = "~/.config/alacritty/alacritty.yml"
