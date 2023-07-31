@@ -1,0 +1,3 @@
+[fish.files]
+"config/fish" = "~/.config/fish"
+"config/starship.toml" = "~/.config/starship.toml"
