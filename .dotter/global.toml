@@ -2,7 +2,8 @@
 depends = [
   "graphics",
   "fish",
-  "alacritty"
+  "alacritty",
+  "git"
 ]
 
 [laptop.variables]
@@ -38,3 +39,8 @@ depends = ["graphics"]
 
 [alacritty.files]
 "config/alacritty/alacritty.yml" = "~/.config/alacritty/alacritty.yml"
+
+[git.files]
+"config/git/commitmessage" = "~/.commitmessage"
+"config/git/gitconfig" = "~/.gitconfig"
+"config/git/gitignore" = "~/.gitignore"
