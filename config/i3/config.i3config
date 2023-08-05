@@ -41,3 +41,11 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 for_window [class="zoom"] floating enable
 for_window [class="^Steam$"] floating enable
+
+{{include_template "config/i3/colors.i3config"}}
+{{include_template "config/i3/bar.i3config"}}
+{{include_template "config/i3/startup.i3config"}}
+{{include_template "config/i3/keybindings/launchers.i3config"}}
+{{include_template "config/i3/keybindings/layout.i3config"}}
+{{include_template "config/i3/keybindings/navigation.i3config"}}
+{{include_template "config/i3/keybindings/screenshot.i3config"}}

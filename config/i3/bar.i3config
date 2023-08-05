@@ -3,11 +3,11 @@ bar {
   status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
   font pango:Source Sans Pro, Symbols Nerd Font 10
   colors {
-    background #282c34
-    statusline #282c34
-    focused_workspace #e06c75 #e06c75 #c8ccd4
-    active_workspace #e06c75 #e06c75 #c8ccd4
-    inactive_workspace #353b45 #353b45 #282c34
-    urgent_workspace #e5c07b #e5c07b #282c34
+    background $base00
+    statusline $base00
+    focused_workspace $base08 $base08 $base07
+    active_workspace $base08 $base08 $base07
+    inactive_workspace $base01 $base01 $base00
+    urgent_workspace $base0a $base0a $base00
   }
 }

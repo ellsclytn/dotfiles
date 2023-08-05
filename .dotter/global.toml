@@ -9,11 +9,13 @@ depends = [
   "mpv",
   "topgrade",
   "gpg",
-  "neovim"
+  "neovim",
+  "i3"
 ]
 
 [laptop.variables]
 font_size = "12.0"
+laptop = true
 
 [desktop.variables]
 font_size = "16.0"
@@ -73,3 +75,7 @@ depends = ["graphics"]
 
 [redshift.files]
 "config/redshift.conf" = "~/.config/redshift/redshift.conf"
+
+[i3.files]
+"config/i3status-rust/config.toml" = "~/.config/i3status-rust/config.toml"
+"config/i3/config.i3config" = "~/.config/i3/config"

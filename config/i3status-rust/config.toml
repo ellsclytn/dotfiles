@@ -11,11 +11,11 @@ icons = "material-nf"
 [icons.overrides]
 time = ""
 
-### LAPTOP
+{{#if laptop}}
 [[block]]
 block = "battery"
 format = "$icon $percentage"
-### LAPTOP
+{{/if}}
 
 [[block]]
 block = "rofication"
