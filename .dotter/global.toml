@@ -89,3 +89,9 @@ depends = ["graphics"]
 
 [rofi.files]
 "config/rofi/config.rasi" = "~/.config/rofi/config.rasi"
+
+[work.variables]
+work = true
+
+[work.files]
+"config/picom.conf" = "~/.config/picom.conf"

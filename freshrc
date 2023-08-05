@@ -11,8 +11,3 @@
 device=$([[ -z ${LAPTOP+x} ]] && echo "desktop" || echo "laptop")
 
 fresh freshshell/fresh bin/fresh --bin
-
-# Picom
-if [[ -n ${WORK+x} ]]; then
-  fresh config/picom.conf --file=~/.config/picom.conf
-fi

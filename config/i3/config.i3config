@@ -39,7 +39,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-for_window [class="zoom"] floating enable
 for_window [class="^Steam$"] floating enable
 
 {{include_template "config/i3/colors.i3config"}}
@@ -49,3 +48,6 @@ for_window [class="^Steam$"] floating enable
 {{include_template "config/i3/keybindings/layout.i3config"}}
 {{include_template "config/i3/keybindings/navigation.i3config"}}
 {{include_template "config/i3/keybindings/screenshot.i3config"}}
+{{#if work}}
+{{include_template "config/i3/work.i3config"}}
+{{/if}}
