@@ -10,6 +10,7 @@ libsane-dsseries
 menu-qalc
 nofi-bin
 pacman-cleanup-hook
+rofi-power-menu
 rtx-bin
 shellcheck-bin
 spotify

@@ -15,10 +15,6 @@ fresh freshshell/fresh bin/fresh --bin
 # Bin
 fresh bin/\* --bin
 
-# Rofi
-fresh config/rofi/config.rasi --file=~/.config/rofi/config.rasi
-fresh jluttine/rofi-power-menu rofi-power-menu --bin
-
 # Fish
 fresh git://git.zx2c4.com/password-store src/completion/pass.fish-completion --file=~/.config/fish/completions/pass.fish
 

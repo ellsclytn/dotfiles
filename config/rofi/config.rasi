@@ -9,11 +9,11 @@ configuration {
 }
 
 * {
-  background: #353b45;
-  foreground: #abb2bf;
-  placeholder-foreground: #565c64;
-  focus-background: #3e4451;
-  focus-foreground: #c678dd;
+  background: #{{colors16.base01}};
+  foreground: #{{colors16.base05}};
+  placeholder-foreground: #{{colors16.base04}};
+  focus-background: #{{colors16.base02}};
+  focus-foreground: #{{colors16.base0e}};
 }
 
 window {

@@ -11,7 +11,8 @@ depends = [
   "gpg",
   "neovim",
   "i3",
-  "zathura"
+  "zathura",
+  "rofi"
 ]
 
 [laptop.variables]
@@ -85,3 +86,6 @@ depends = ["graphics"]
 
 [zathura.files]
 "config/zathurarc" = "~/.config/zathura/zathurarc"
+
+[rofi.files]
+"config/rofi/config.rasi" = "~/.config/rofi/config.rasi"
