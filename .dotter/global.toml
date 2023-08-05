@@ -80,6 +80,8 @@ depends = ["graphics"]
 [i3.files]
 "config/i3status-rust/config.toml" = "~/.config/i3status-rust/config.toml"
 "config/i3/config.i3config" = "~/.config/i3/config"
+"config/xorg/xinitrc" = "~/.xinitrc"
+"config/xorg/Xresources" = "~/.config/xorg/Xresources"
 
 [zathura.files]
 "config/zathurarc" = "~/.config/zathura/zathurarc"

@@ -1,3 +1,57 @@
+! Template author: Tinted Theming (https://github.com/tinted-theming)
+
+#define base00 #{{colors16.base00}}
+#define base01 #{{colors16.base01}}
+#define base02 #{{colors16.base02}}
+#define base03 #{{colors16.base03}}
+#define base04 #{{colors16.base04}}
+#define base05 #{{colors16.base05}}
+#define base06 #{{colors16.base06}}
+#define base07 #{{colors16.base07}}
+#define base08 #{{colors16.base08}}
+#define base09 #{{colors16.base09}}
+#define base0A #{{colors16.base0a}}
+#define base0B #{{colors16.base0b}}
+#define base0C #{{colors16.base0c}}
+#define base0D #{{colors16.base0d}}
+#define base0E #{{colors16.base0e}}
+#define base0F #{{colors16.base0f}}
+
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
+*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06
+
 URxvt.font: xft:Source Sans Pro:size=10.5
 URxvt.depth:                      32
 URxvt*scrollBar:                  false
