@@ -37,10 +37,8 @@ echo "Istalling NodeJS..."
 rtx install node@lts
 rtx use --global node@lts
 
-# Fresh
-rm -f ~/.config/fish/config.fish
-bash -c "$(curl -sL get.freshshell.com)"
-rm -f ~/.freshrc
-ln -s ~/.dotfiles/freshrc ~/.freshrc
+echo "Installing dotfiles..."
+echo 'packages = ["workstation", "desktop"]' >~/.dotfiles/.dotter/local.toml
+dotter
 
 echo "Done. Time to log out and in again!"

@@ -2,7 +2,7 @@
 
 dotfiles is a set of scripts and configurations to set up Arch Linux with the applications I develop with, and programs I use most.
 
-My dotfiles are managed by [fresh](http://freshshell.com).
+My dotfiles are managed by [dotter](https://github.com/SuperCuber/dotter).
 
 ## Requirements
 
@@ -18,6 +18,14 @@ My dotfiles are managed by [fresh](http://freshshell.com).
 6. From `~/.dotfiles`, run `./setup/software`
 
 ## Post-install
+
+### Per-device configuration
+
+The installation script will assume a personal-use desktop by default. This can be changed later for work and/or laptop specific configuration by editing `.dotter/local.toml`. Just modify the `packages` to include the following:
+
+- `"workstation"`
+- Either `"laptop"` or `"desktop"`
+- `"work"` (optional)
 
 ### YubiKey
 
