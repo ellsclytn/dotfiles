@@ -12,8 +12,6 @@ device=$([[ -z ${LAPTOP+x} ]] && echo "desktop" || echo "laptop")
 
 fresh freshshell/fresh bin/fresh --bin
 
-fresh HaoZeke/base16-zathura build_schemes/colors/base16-onedark.config --file=~/.config/zathura/zathurarc
-
 # Bin
 fresh bin/\* --bin
 

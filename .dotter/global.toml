@@ -10,7 +10,8 @@ depends = [
   "topgrade",
   "gpg",
   "neovim",
-  "i3"
+  "i3",
+  "zathura"
 ]
 
 [laptop.variables]
@@ -79,3 +80,6 @@ depends = ["graphics"]
 [i3.files]
 "config/i3status-rust/config.toml" = "~/.config/i3status-rust/config.toml"
 "config/i3/config.i3config" = "~/.config/i3/config"
+
+[zathura.files]
+"config/zathurarc" = "~/.config/zathura/zathurarc"

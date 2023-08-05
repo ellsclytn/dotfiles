@@ -1,0 +1,32 @@
+set default-bg                  "#{{colors16.base00}}"
+set default-fg                  "#{{colors16.base01}}"
+
+set statusbar-fg                "#{{colors16.base04}}"
+set statusbar-bg                "#{{colors16.base02}}"
+
+set inputbar-bg                 "#{{colors16.base00}}"
+set inputbar-fg                 "#{{colors16.base07}}"
+
+set notification-bg             "#{{colors16.base00}}"
+set notification-fg             "#{{colors16.base07}}"
+
+set notification-error-bg       "#{{colors16.base00}}"
+set notification-error-fg       "#{{colors16.base08}}"
+
+set notification-warning-bg     "#{{colors16.base00}}"
+set notification-warning-fg     "#{{colors16.base08}}"
+
+set highlight-color             "#{{colors16.base0a}}"
+set highlight-active-color      "#{{colors16.base0d}}"
+
+set completion-bg               "#{{colors16.base01}}"
+set completion-fg               "#{{colors16.base0d}}"
+
+set completion-highlight-fg     "#{{colors16.base07}}"
+set completion-highlight-bg     "#{{colors16.base0d}}"
+
+set recolor-lightcolor          "#{{colors16.base00}}"
+set recolor-darkcolor           "#{{colors16.base06}}"
+
+set recolor                     "false"
+set recolor-keephue             "false"
