@@ -12,31 +12,10 @@ device=$([[ -z ${LAPTOP+x} ]] && echo "desktop" || echo "laptop")
 
 fresh freshshell/fresh bin/fresh --bin
 
-fresh config/redshift.conf --file=~/.config/redshift/redshift.conf
 fresh HaoZeke/base16-zathura build_schemes/colors/base16-onedark.config --file=~/.config/zathura/zathurarc
-
-# fd
-fresh config/fdignore --file
-
-# Flameshot
-fresh config/flameshot.ini --file=~/.config/Dharkael/flameshot.ini
-
-# mpv
-fresh config/mpv/mpv.conf --file=~/.config/mpv/mpv.conf
-
-# topgrade
-fresh config/topgrade.toml --file=~/.config/topgrade.toml
 
 # Bin
 fresh bin/\* --bin
-
-# GPG
-fresh config/gnupg/gpg.conf --file=~/.gnupg/gpg.conf
-fresh config/gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
-
-# Neovim
-fresh config/nvim/lua --file=~/.config/nvim/lua/ --marker=--
-fresh config/nvim/init.lua --file=~/.config/nvim/init.lua --marker=--
 
 # i3wm, etc.
 fresh-options --file=~/.config/i3/config --marker=#
