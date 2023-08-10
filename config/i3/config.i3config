@@ -46,6 +46,7 @@ for_window [class="^Steam$"] floating enable
 {{include_template "config/i3/startup.i3config"}}
 {{include_template "config/i3/keybindings/launchers.i3config"}}
 {{include_template "config/i3/keybindings/layout.i3config"}}
+{{include_template "config/i3/keybindings/multimedia.i3config"}}
 {{include_template "config/i3/keybindings/navigation.i3config"}}
 {{include_template "config/i3/keybindings/screenshot.i3config"}}
 {{#if work}}
