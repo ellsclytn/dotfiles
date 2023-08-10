@@ -44,6 +44,7 @@ libqalculate
 libratbag
 lxappearance
 lxsession-gtk3
+maim
 man-db
 mesa
 mpv
@@ -88,6 +89,7 @@ udisks2
 unzip
 wget
 xclip
+xdotool
 xh
 xorg-server
 xorg-xinit
