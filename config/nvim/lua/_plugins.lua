@@ -202,4 +202,10 @@ return {
         'SmiteshP/nvim-navic',
         dependencies = { 'neovim/nvim-lspconfig' },
     },
+    {
+        '2kabhishek/co-author.nvim',
+        dependencies = { 'stevearc/dressing.nvim' },
+        cmd = 'GitCoAuthors',
+        ft = 'gitcommit',
+    },
 }
