@@ -1,8 +1,1 @@
-# Setup fzf
-# ---------
-export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
-
-set -U FZF_LEGACY_KEYBINDINGS 0
-set -U FZF_COMPLETE 2
+set -gx FZF_DEFAULT_OPTS '--height=40% --color=dark --color=fg:-1,bg:-1,hl:#{{colors16.base0e}},fg+:#{{colors16.base07}},bg+:#{{colors16.base01}},hl+:#{{colors16.base0e}} --color=info:#{{colors16.base0b}},prompt:#{{colors16.base0d}},pointer:#{{colors16.base08}},marker:#{{colors16.base0a}},spinner:#{{colors16.base0d}},header:#{{colors16.base0d}}'
