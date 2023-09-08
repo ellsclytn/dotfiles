@@ -162,6 +162,13 @@
       systemd:
         daemon_reload: true
       become: true
+    - name: Snapper btrfs snapshot cleanup service
+      service:
+        name: snapper-cleanup.timer
+        enabled: true
+      become: true
+      tags:
+        - snapper
     - name: Liquid cooler configuration service
       service:
         name: liquidcfg
@@ -353,3 +360,29 @@
       loop:
         - ~/.asdf
         - ~/.tool-versions
+    - name: /etc/snapper/configs
+      file:
+        path: /etc/snapper/configs
+        owner: root
+        group: root
+        mode: "0755"
+        state: directory
+      become: true
+      tags:
+        - snapper
+    - name: Snapper configurations
+      template:
+        src: ./templates/snapper/config.conf
+        dest: "/etc/snapper/configs/{{ config_filename }}"
+        owner: root
+        group: root
+        mode: "0640" # matches what Snapper creates by default
+      vars:
+        subvolume: "{{ item }}"
+        config_filename: "{{'root' if (item == '/') else item}}"
+      loop:
+        - /
+        - /var
+      become: true
+      tags:
+        - snapper
