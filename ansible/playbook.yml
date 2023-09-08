@@ -10,6 +10,7 @@
         name:
           - asdf-vm
           - exfat-utils
+          - eza
           - gparted
           - network-manager-applet
           - networkmanager
@@ -27,6 +28,12 @@
           - xf86-video-amdgpu
           - xf86-video-intel
         state: absent
+      become: true
+    - name: Install replacement packages
+      pacman:
+        name:
+          - eza
+        state: present
       become: true
     - name: Install laptop-specific Pacman packages
       pacman:
