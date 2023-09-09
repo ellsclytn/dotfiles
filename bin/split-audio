@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+pactl load-module module-null-sink
+pactl load-module module-combine-sink slaves=alsa_output.usb-Grace_Design_SDAC-00.analog-stereo,null-sink
