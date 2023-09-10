@@ -1,0 +1,12 @@
+[Added Associations]
+application/pdf=firefox.desktop;
+image/png=gimp.desktop;org.gnome.eog.desktop;
+image/x-portable-anymap=gimp.desktop;
+
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop;
+image/*=org.gnome.eog.desktop;
+inode/directory=thunar.desktop;
+x-scheme-handler/*=firefox.desktop;
+x-scheme-handler/discord-402572971681644545=discord-402572971681644545.desktop;
+x-scheme-handler/terminal=Alacritty.desktop;

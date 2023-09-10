@@ -12,7 +12,8 @@ depends = [
   "neovim",
   "i3",
   "zathura",
-  "rofi"
+  "rofi",
+  "handlr",
 ]
 
 [laptop.variables]
@@ -89,6 +90,10 @@ depends = ["graphics"]
 
 [rofi.files]
 "config/rofi/config.rasi" = "~/.config/rofi/config.rasi"
+
+[handlr.files]
+"config/mimeapps.list" = "~/.config/mimeapps.list"
+"config/handlr/handlr.toml" = "~/.config/handlr/handlr.toml"
 
 [work.variables]
 work = true
