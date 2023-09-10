@@ -20,6 +20,7 @@ docker
 docker-buildx
 docker-compose
 dust
+eog
 eza
 fd
 feh
