@@ -179,6 +179,10 @@ return {
         'simrat39/rust-tools.nvim',
         event = 'VeryLazy',
     },
+    {
+        'IndianBoy42/tree-sitter-just',
+        ft = 'just',
+    },
 
     {
         'hrsh7th/nvim-cmp',
