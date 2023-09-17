@@ -52,7 +52,7 @@
 *color20:      base04
 *color21:      base06
 
-URxvt.font: xft:Source Sans Pro:size=10.5
+URxvt.font: xft:Source Sans 3:size=10.5
 URxvt.depth:                      32
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
