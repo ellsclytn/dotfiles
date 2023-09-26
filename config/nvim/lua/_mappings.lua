@@ -13,6 +13,12 @@ vim.keymap.set('n', '<C-J>', '<C-W><C-J>')
 vim.keymap.set('n', '<C-K>', '<C-W><C-K>')
 vim.keymap.set('n', '<C-L>', '<C-W><C-L>')
 
+-- Resize splits
+vim.keymap.set('n', '<S-H>', '<C-W><') -- Reduce width
+vim.keymap.set('n', '<S-J>', '<C-W>-') -- Reduce height
+vim.keymap.set('n', '<S-K>', '<C-W>+') -- Increase height
+vim.keymap.set('n', '<S-L>', '<C-W>>') --  Increase width
+
 -- Double space over word to Subvert
 vim.keymap.set('n', '<Space><Space>', ':%S/<C-r>=expand("<cword>")<CR>/')
 -- Leader + space over word to find and replace
@@ -29,8 +35,8 @@ vim.keymap.set('n', 'gr', vim.lsp.buf.references)
 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
 vim.keymap.set('n', 'sd', vim.diagnostic.open_float)
 vim.keymap.set('n', 'sa', vim.lsp.buf.code_action)
-vim.keymap.set('n', 'K', vim.lsp.buf.hover)
-vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help)
+vim.keymap.set('n', 'M', vim.lsp.buf.hover)
+vim.keymap.set('n', '<C-m>', vim.lsp.buf.signature_help)
 vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename)
 vim.keymap.set('n', '<leader>fos', function()
     if vim.b.format_on_save then
