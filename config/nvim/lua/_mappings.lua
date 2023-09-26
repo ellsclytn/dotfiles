@@ -8,10 +8,10 @@ vim.keymap.set('v', '<leader>y', '"+y')
 vim.keymap.set('n', '<C-L>', ':setlocal relativenumber!<cr>')
 
 -- Window nav similar to i3 navigation
+vim.keymap.set('n', '<C-H>', '<C-W><C-H>')
 vim.keymap.set('n', '<C-J>', '<C-W><C-J>')
 vim.keymap.set('n', '<C-K>', '<C-W><C-K>')
 vim.keymap.set('n', '<C-L>', '<C-W><C-L>')
-vim.keymap.set('n', '<C-H>', '<C-W><C-H>')
 
 -- Double space over word to Subvert
 vim.keymap.set('n', '<Space><Space>', ':%S/<C-r>=expand("<cword>")<CR>/')
