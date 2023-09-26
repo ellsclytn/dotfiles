@@ -54,7 +54,7 @@ depends = ["graphics"]
 [git.files]
 "config/git/commitmessage" = "~/.commitmessage"
 "config/git/gitconfig" = "~/.gitconfig"
-"config/git/gitignore" = "~/.gitignore"
+"config/git/gitignore" = "~/.gitignore_global"
 
 [fd.files]
 "config/fdignore" = "~/.fdignore"
