@@ -15,6 +15,7 @@
           - network-manager-applet
           - networkmanager
           - networkmanager-openvpn
+          - nofi
           - nvidia
           - nvidia-settings
           - openvpn
@@ -307,15 +308,15 @@
         owner: "{{ ansible_user_id }}"
         group: users
         mode: "0644"
-    - name: Nofi service
-      template:
-        src: ./templates/systemd/user/nofi.service
-        dest: ~/.config/systemd/user/nofi.service
-        owner: "{{ ansible_user_id }}"
-        group: users
-        mode: "0644"
-      tags:
-        - nofi
+    - name: Stop nofi service
+      ansible.builtin.systemd_service:
+        name: nofi
+        state: stopped
+        scope: user
+    - name: Remove nofi service
+      ansible.builtin.file:
+        path: ~/.config/systemd/user/nofi.service
+        state: absent
     - name: Reload systemd user
       systemd:
         daemon_reload: true

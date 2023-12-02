@@ -18,11 +18,6 @@ format = "$icon $percentage"
 {{/if}}
 
 [[block]]
-block = "rofication"
-interval = 1
-socket_path = "/run/user/1000/nofi/socket"
-
-[[block]]
 block = "pomodoro"
 
 [[block]]
