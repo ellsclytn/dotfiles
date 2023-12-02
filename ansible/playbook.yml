@@ -10,7 +10,7 @@
         name:
           - asdf-vm
           - exfat-utils
-          - eza
+          - exa
           - gparted
           - network-manager-applet
           - networkmanager
