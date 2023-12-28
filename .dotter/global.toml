@@ -49,7 +49,7 @@ base0f = "be5046"
 depends = ["graphics"]
 
 [alacritty.files]
-"config/alacritty/alacritty.yml" = "~/.config/alacritty/alacritty.yml"
+"config/alacritty/alacritty.toml" = "~/.config/alacritty/alacritty.toml"
 
 [git.files]
 "config/git/commitmessage" = "~/.commitmessage"

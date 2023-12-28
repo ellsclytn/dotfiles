@@ -1,0 +1,126 @@
+live_config_reload = true
+working_directory = "None"
+
+[bell]
+duration = 0
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[[colors.indexed_colors]]
+color = "0x{{colors16.base09}}"
+index = 16
+
+[[colors.indexed_colors]]
+color = "0x{{colors16.base0f}}"
+index = 17
+
+[[colors.indexed_colors]]
+color = "0x{{colors16.base01}}"
+index = 18
+
+[[colors.indexed_colors]]
+color = "0x{{colors16.base02}}"
+index = 19
+
+[[colors.indexed_colors]]
+color = "0x{{colors16.base04}}"
+index = 20
+
+[[colors.indexed_colors]]
+color = "0x{{colors16.base06}}"
+index = 21
+
+[colors.bright]
+black = '0x{{colors16.base03}}'
+blue = '0x{{colors16.base0d}}'
+cyan = '0x{{colors16.base0c}}'
+green = '0x{{colors16.base0b}}'
+magenta = '0x{{colors16.base0e}}'
+red = '0x{{colors16.base08}}'
+white = '0x{{colors16.base07}}'
+yellow = '0x{{colors16.base0a}}'
+
+[colors.cursor]
+cursor = '0x{{colors16.base05}}'
+text = '0x{{colors16.base00}}'
+
+[colors.normal]
+black = '0x{{colors16.base00}}'
+blue = '0x{{colors16.base0d}}'
+cyan = '0x{{colors16.base0c}}'
+green = '0x{{colors16.base0b}}'
+magenta = '0x{{colors16.base0e}}'
+red = '0x{{colors16.base08}}'
+white = '0x{{colors16.base05}}'
+yellow = '0x{{colors16.base0a}}'
+
+[colors.primary]
+background = '0x{{colors16.base00}}'
+foreground = '0x{{colors16.base05}}'
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[debug]
+log_level = "Warn"
+persistent_logging = false
+print_events = false
+render_timer = false
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = {{font_size}}
+
+[font.bold]
+family = "Hack"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "Hack"
+style = "Italic"
+
+[font.normal]
+family = "Hack"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[mouse]
+hide_when_typing = false
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = false
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[window]
+decorations = "full"
+dynamic_padding = false
+dynamic_title = true
+opacity = 1.0
+startup_mode = "Windowed"
+
+[window.dimensions]
+columns = 0
+lines = 0
+
+[window.padding]
+x = 8
+y = 0
