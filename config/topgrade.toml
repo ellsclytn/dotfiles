@@ -86,7 +86,7 @@ no_self_update = true
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 #"Custom command using interactive shell (unix)" = "-i vim_upgrade"
 "dotter" = "cd ~/.dotfiles && dotter && cd -"
-"rtx completions" = "rtx completion fish > ~/.config/fish/completions/rtx.fish"
+"mise completions" = "mise completion fish > ~/.config/fish/completions/mise.fish"
 
 [brew]
 #greedy_cask = true
