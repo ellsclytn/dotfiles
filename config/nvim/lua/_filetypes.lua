@@ -4,3 +4,5 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.envrc setf sh
 augroup END
 ]])
+
+vim.filetype.add({ extension = { tf = 'terraform' } })
