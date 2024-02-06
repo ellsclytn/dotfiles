@@ -1,5 +1,5 @@
 configuration {
-  font: "Source Sans 3 14";
+  font: "Symbols Nerd Font, Source Sans 3 14";
   drun-display-format: "{name}";
   display-run: " ";
   display-drun: "󰨇 ";

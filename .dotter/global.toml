@@ -41,6 +41,9 @@ base0d = "61afef"
 base0e = "c678dd"
 base0f = "be5046"
 
+[graphics.files]
+"config/fontconfig/fonts.conf" = "~/.config/fontconfig/fonts.conf"
+
 [fish.files]
 "config/fish" = "~/.config/fish"
 "config/starship.toml" = "~/.config/starship.toml"
