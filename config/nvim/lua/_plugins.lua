@@ -176,8 +176,9 @@ return {
     },
 
     {
-        'simrat39/rust-tools.nvim',
-        event = 'VeryLazy',
+        'mrcjkb/rustaceanvim',
+        version = '^4',
+        ft = { 'rust' },
     },
     {
         'IndianBoy42/tree-sitter-just',
