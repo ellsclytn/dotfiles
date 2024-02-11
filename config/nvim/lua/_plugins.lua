@@ -193,7 +193,7 @@ return {
             'hrsh7th/cmp-cmdline',
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-path',
-            'jose-elias-alvarez/null-ls.nvim',
+            'nvimtools/none-ls.nvim',
             'neovim/nvim-lspconfig',
             'onsails/lspkind-nvim',
             'saadparwaiz1/cmp_luasnip',
