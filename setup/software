@@ -8,7 +8,7 @@ export LANG=en_AU.UTF-8
 sudo pacman -S --noconfirm base-devel jq ansible
 
 # libc++ and Spotify
-gpg --keyserver hkp://keyserver.ubuntu.com:80 --receive-keys A2C794A986419D8A 7A3A762FAFD4A51F
+gpg --keyserver hkp://keyserver.ubuntu.com:80 --receive-keys A2C794A986419D8A 6224F9941A8AA6D1
 
 #
 # Aura
