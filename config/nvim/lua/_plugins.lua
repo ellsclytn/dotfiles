@@ -227,4 +227,8 @@ return {
         cmd = 'GitCoAuthors',
         ft = 'gitcommit',
     },
+    {
+        'jghauser/mkdir.nvim',
+        event = 'VeryLazy',
+    },
 }
