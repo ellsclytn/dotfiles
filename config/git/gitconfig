@@ -66,3 +66,13 @@
 [delta]
   navigate = true
   light = false
+
+# Repositories to run regular maintenance on can be defined in ~/.gitconfig_local
+# Example:
+#
+# [maintenance]
+#   repo = /home/ellis/Code/my-repo
+[maintenance "prefetch"]
+  enabled = false
+[include]
+  path = ~/.gitconfig_local
