@@ -194,6 +194,12 @@ return {
         dependencies = { 'rafamadriz/friendly-snippets' },
     },
     {
+        'nvimtools/none-ls.nvim',
+        dependencies = {
+            'nvimtools/none-ls-extras.nvim',
+        },
+    },
+    {
         'hrsh7th/nvim-cmp',
         event = 'VeryLazy',
         dependencies = {
