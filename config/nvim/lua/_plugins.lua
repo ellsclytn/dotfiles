@@ -184,6 +184,10 @@ return {
         'IndianBoy42/tree-sitter-just',
         ft = 'just',
     },
+    {
+        'folke/neodev.nvim',
+        ft = 'lua',
+    },
 
     {
         'L3MON4D3/LuaSnip',

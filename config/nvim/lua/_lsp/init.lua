@@ -1,4 +1,6 @@
 return function()
+    require('neodev').setup({})
+
     local cmp_nvim_lsp = require('cmp_nvim_lsp')
     local lsp_on_attach = require('_lsp.on_attach')
     local lspconfig = require('lspconfig')
