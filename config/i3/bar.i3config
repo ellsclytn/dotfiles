@@ -1,4 +1,5 @@
 bar {
+  id primary
   position top
   status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
   font pango:Source Sans 3, Symbols Nerd Font 10
@@ -10,4 +11,8 @@ bar {
     inactive_workspace $base01 $base01 $base00
     urgent_workspace $base0a $base0a $base00
   }
+
+  {{#if work}}
+  tray_output none
+  {{/if}}
 }
