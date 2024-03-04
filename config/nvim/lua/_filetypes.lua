@@ -6,7 +6,10 @@ augroup END
 ]])
 
 vim.filetype.add({
-    extension = { tf = 'terraform' },
+    extension = {
+        i3config = 'i3config',
+        tf = 'terraform',
+    },
     pattern = {
         ['.*gitconfig.*'] = 'gitconfig',
     },
