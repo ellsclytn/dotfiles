@@ -33,18 +33,6 @@ return function()
                 capabilities = lsp_capabilities,
             })
         end,
-
-        -- Workaround: https://github.com/hashicorp/terraform-ls/issues/1655#issuecomment-1976868459
-        -- This entire block can hopefully be removed once resolved.
-        ['terraformls'] = function()
-            lspconfig.terraformls.setup({
-                init_options = {
-                    terraform = {
-                        path = '/usr/bin/terraform',
-                    },
-                },
-            })
-        end,
     })
 
     require('_lsp.null-ls')
