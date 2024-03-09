@@ -113,7 +113,7 @@ fi
 
 genfstab -L /mnt >>/mnt/etc/fstab
 sed -i '/btrfs/s/relatime/noatime,discard/g' /mnt/etc/fstab
-sed -i 's/^HOOKS=.*/HOOKS=(base systemd autodetect modconf block keyboard sd-vconsole sd-encrypt filesystems)/' /mnt/etc/mkinitcpio.conf
+sed -i 's/^HOOKS=.*/HOOKS=(base systemd autodetect microcode modconf block keyboard sd-vconsole sd-encrypt filesystems)/' /mnt/etc/mkinitcpio.conf
 
 cat <<EOF >/mnt/etc/hosts
 127.0.0.1 localhost
@@ -135,7 +135,6 @@ mkdir -p /mnt/boot/loader/entries
 cat <<EOF >/mnt/boot/loader/entries/arch.conf
 title   Arch Linux
 linux   /vmlinuz-linux
-initrd  /$cpu_brand-ucode.img
 initrd  /initramfs-linux.img
 options rw luks.uuid=$luks_uuid luks.name=$luks_uuid=luks root=/dev/mapper/luks rootflags=subvol=@root net.ifnames=0
 EOF

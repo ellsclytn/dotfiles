@@ -321,6 +321,23 @@
       when:
         - laptop
         - not vm
+    - name: Set mkinitcpio hooks
+      lineinfile:
+        path: /etc/mkinitcpio.conf
+        regexp: '^HOOKS=\('
+        line: "HOOKS=(base systemd autodetect microcode modconf keyboard sd-vconsole block sd-encrypt filesystems fsck)"
+      become: true
+      register: mkinitcpio_conf
+    - name: Remove microcode initrd
+      lineinfile:
+        path: /boot/loader/entries/arch.conf
+        regexp: "^initrd  /.*-ucode.img"
+        state: absent
+      become: true
+    - name: Run mkinitcpio
+      ansible.builtin.shell: mkinitcpio -P
+      become: true
+      when: mkinitcpio_conf.changed
     - name: Remove asdf configuration
       ansible.builtin.file:
         path: "{{ item }}"
