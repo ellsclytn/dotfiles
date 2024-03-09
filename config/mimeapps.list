@@ -3,7 +3,8 @@ application/pdf=firefox.desktop;
 image/jpeg=org.gnome.eog.desktop;
 video/x-matroska=mpv.desktop;
 audio/x-opus+ogg=mpv.desktop;
-image/x-portable-anymap=org.gnome.eog.desktop;
+image/x-portable-anymap=gimp.desktop;org.gnome.eog.desktop;
+video/mp4=mpv.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop;
@@ -13,3 +14,4 @@ video/x-matroska=mpv.desktop;
 x-scheme-handler/*=firefox.desktop;
 x-scheme-handler/discord-402572971681644545=discord-402572971681644545.desktop;
 x-scheme-handler/terminal=Alacritty.desktop;
+video/mp4=mpv.desktop
