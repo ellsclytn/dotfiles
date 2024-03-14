@@ -5,6 +5,7 @@ video/x-matroska=mpv.desktop;
 audio/x-opus+ogg=mpv.desktop;
 image/x-portable-anymap=gimp.desktop;org.gnome.eog.desktop;
 video/mp4=mpv.desktop;
+image/png=org.gnome.eog.desktop;gimp.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop;
