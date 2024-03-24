@@ -35,7 +35,6 @@ return function()
         end,
     })
 
-    require('_lsp.null-ls')
     require('_lsp.rust')
     require('_lsp.cmp')
 end

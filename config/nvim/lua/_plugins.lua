@@ -174,6 +174,12 @@ return {
             { 'gR', '<cmd>Trouble lsp_references<cr>' },
         },
     },
+    {
+        'stevearc/conform.nvim',
+        opts = require('_conform'),
+        event = 'BufWritePre',
+        cmd = 'ConformInfo',
+    },
 
     {
         'mrcjkb/rustaceanvim',
@@ -198,12 +204,6 @@ return {
         dependencies = { 'rafamadriz/friendly-snippets' },
     },
     {
-        'nvimtools/none-ls.nvim',
-        dependencies = {
-            'nvimtools/none-ls-extras.nvim',
-        },
-    },
-    {
         'hrsh7th/nvim-cmp',
         event = 'VeryLazy',
         dependencies = {
@@ -212,7 +212,6 @@ return {
             'hrsh7th/cmp-cmdline',
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-path',
-            'nvimtools/none-ls.nvim',
             'neovim/nvim-lspconfig',
             'onsails/lspkind-nvim',
             'saadparwaiz1/cmp_luasnip',

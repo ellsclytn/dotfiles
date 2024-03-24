@@ -32,13 +32,3 @@ vim.keymap.set('n', 'sa', vim.lsp.buf.code_action)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help)
 vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename)
-vim.keymap.set('n', '<leader>fos', function()
-    if vim.b.format_on_save then
-        --- @field format_on_save boolean
-        vim.b.format_on_save = false
-        print('Format on save disabled')
-    else
-        vim.b.format_on_save = true
-        print('Format on save enabled')
-    end
-end)
