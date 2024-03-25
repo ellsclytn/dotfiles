@@ -57,6 +57,7 @@ return {
         'nvim-treesitter/nvim-treesitter',
         config = require('_treesitter'),
         event = { 'BufReadPost', 'BufWritePost' },
+        cmd = 'TSUpdateSync',
     },
     {
         'nvim-tree/nvim-tree.lua',

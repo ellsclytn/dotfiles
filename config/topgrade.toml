@@ -87,6 +87,7 @@ no_self_update = true
 #"Custom command using interactive shell (unix)" = "-i vim_upgrade"
 "dotter" = "bash -c 'cd ~/.dotfiles && dotter'"
 "sync-packages" = "~/.dotfiles/bin/sync-packages"
+"treesitter" = "nvim --headless +TSUpdateSync +qa"
 
 [brew]
 #greedy_cask = true
