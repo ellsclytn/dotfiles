@@ -30,6 +30,9 @@ return {
         typescript = { 'prettierd', 'eslint_d' },
         javascriptreact = { 'prettierd', 'eslint_d' },
         typescriptreact = { 'prettierd', 'eslint_d' },
+        markdown = { 'prettierd' },
+        yaml = { 'prettierd' },
+        json = { 'prettierd' },
         sh = { 'shfmt' },
     },
     format_on_save = function(bufnr)
