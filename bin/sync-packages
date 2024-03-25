@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+#
+# Install any missing packages based on the lists in
+# ~/.dotfiles/setup/pacman and ~/.dotfiles/setup/aur
+#
+
+function info() {
+  echo -e "\e[34m$1\e[0m"
+}
+
+install_candidates=$(comm -23 <(sort ~/.dotfiles/setup/pacman) <(aura -Q | cut -d ' ' -f1 | sort))
+
+if [[ -n "$install_candidates" ]]; then
+  info "Found new Pacman install candidates:"
+  echo "$install_candidates"
+
+  sudo aura -S $install_candidates
+else
+  info "No new Pacman packages to install"
+fi
+
+install_candidates=$(comm -23 <(sort ~/.dotfiles/setup/aur) <(aura -Q | cut -d ' ' -f1 | sort))
+
+if [[ -n "$install_candidates" ]]; then
+  info "Found new AUR install candidates:"
+  echo "$install_candidates"
+
+  sudo aura -A $install_candidates
+else
+  info "No new AUR packages to install"
+fi
