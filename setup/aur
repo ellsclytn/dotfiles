@@ -10,6 +10,7 @@ handlr-regex-bin
 libsane-dsseries
 menu-qalc
 mise-bin
+numara-bin
 pacman-cleanup-hook
 rofi-power-menu
 shellcheck-bin
