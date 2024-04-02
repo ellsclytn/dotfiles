@@ -11,7 +11,7 @@ return function()
                 'branch',
                 'diff',
                 'diagnostics',
-                { navic.get_location, cond = navic.is_available },
+                'navic',
             },
         },
     })
