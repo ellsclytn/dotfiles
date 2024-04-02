@@ -13,6 +13,7 @@ return function()
     mason_lspconfig.setup({
         ensure_installed = {
             'bashls',
+            'gopls',
             'jsonls',
             'lua_ls',
             'rust_analyzer',

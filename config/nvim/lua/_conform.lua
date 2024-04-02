@@ -21,6 +21,22 @@ end, {
 })
 
 --
+-- Go format on save
+--
+local format_sync_grp = vim.api.nvim_create_augroup('GoFormat', {})
+vim.api.nvim_create_autocmd('BufWritePre', {
+    pattern = '*.go',
+    callback = function()
+        if vim.g.disable_autoformat or vim.b.disable_autoformat then
+            return
+        end
+
+        require('go.format').goimports()
+    end,
+    group = format_sync_grp,
+})
+
+--
 -- Configuration options for stevearc/conform.nvim
 --
 return {
@@ -38,6 +54,11 @@ return {
     format_on_save = function(bufnr)
         -- Disable with a global or buffer-local variable
         if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+            return
+        end
+
+        -- Don't format Go files with this plugin, the GoFormat autocmd will handle it
+        if vim.bo[bufnr].filetype == 'go' then
             return
         end
 
