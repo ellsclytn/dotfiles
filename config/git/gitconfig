@@ -4,6 +4,7 @@
   signingkey = 0xDEF7E66A739ACB11
 [push]
   default = simple
+  autoSetupRemote = true
 [init]
   defaultBranch = main
 [alias]
@@ -34,7 +35,6 @@
   lg = log --pretty=format:"%C(yellow)%h\\ %C(red)%ad%Cred\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --no-merges
   m = commit --amend --verbose
   p = push
-  pn = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
   ras = rebase -i
   rasm = rebase -i origin/HEAD
   s = status -s
