@@ -33,6 +33,7 @@ geoclue
 git
 git-delta
 gnupg
+handlr-regex
 htop
 i3-wm
 i3lock
