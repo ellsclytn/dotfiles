@@ -36,32 +36,34 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     group = format_sync_grp,
 })
 
---
--- Configuration options for stevearc/conform.nvim
---
 return {
-    formatters_by_ft = {
-        lua = { 'stylua' },
-        javascript = { 'prettierd', 'eslint_d' },
-        typescript = { 'prettierd', 'eslint_d' },
-        javascriptreact = { 'prettierd', 'eslint_d' },
-        typescriptreact = { 'prettierd', 'eslint_d' },
-        markdown = { 'prettierd' },
-        yaml = { 'prettierd' },
-        json = { 'prettierd' },
-        sh = { 'shfmt' },
+    'stevearc/conform.nvim',
+    opts = {
+        formatters_by_ft = {
+            lua = { 'stylua' },
+            javascript = { 'prettierd', 'eslint_d' },
+            typescript = { 'prettierd', 'eslint_d' },
+            javascriptreact = { 'prettierd', 'eslint_d' },
+            typescriptreact = { 'prettierd', 'eslint_d' },
+            markdown = { 'prettierd' },
+            yaml = { 'prettierd' },
+            json = { 'prettierd' },
+            sh = { 'shfmt' },
+        },
+        format_on_save = function(bufnr)
+            -- Disable with a global or buffer-local variable
+            if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+                return
+            end
+
+            -- Don't format Go files with this plugin, the GoFormat autocmd will handle it
+            if vim.bo[bufnr].filetype == 'go' then
+                return
+            end
+
+            return { lsp_fallback = true }
+        end,
     },
-    format_on_save = function(bufnr)
-        -- Disable with a global or buffer-local variable
-        if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-            return
-        end
-
-        -- Don't format Go files with this plugin, the GoFormat autocmd will handle it
-        if vim.bo[bufnr].filetype == 'go' then
-            return
-        end
-
-        return { lsp_fallback = true }
-    end,
+    event = 'BufWritePre',
+    cmd = 'ConformInfo',
 }

@@ -32,3 +32,6 @@ vim.keymap.set('n', 'sa', vim.lsp.buf.code_action)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help)
 vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename)
+
+-- Bufferline
+vim.keymap.set('n', '<leader>bl', ':BufferLinePick<CR>')
