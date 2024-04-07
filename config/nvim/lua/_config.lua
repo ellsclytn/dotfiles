@@ -1,5 +1,10 @@
 -- Configuration of things that ship with Neovim (no plugin config)
 
+-- Leader key
+-- lazy.nvim requires this to be configured before loading plugins
+-- Other mappings are kept separate because which-key.nvim is used with them
+vim.g.mapleader = ';'
+
 -- Allow hiding buffers with unsaved changes
 vim.opt.hidden = true
 -- Show absolute line number at cursor position

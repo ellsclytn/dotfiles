@@ -1,6 +1,5 @@
 local modules = {
     '_config',
-    '_mappings',
     '_filetypes',
     '_spelling',
 }
@@ -30,3 +29,5 @@ require('lazy').setup({
         import = 'plugins',
     },
 })
+
+require('_mappings')
