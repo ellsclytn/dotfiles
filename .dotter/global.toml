@@ -14,6 +14,7 @@ depends = [
   "zathura",
   "rofi",
   "handlr",
+  "yazi",
 ]
 
 [laptop.variables]
@@ -97,6 +98,9 @@ depends = ["graphics"]
 [handlr.files]
 "config/mimeapps.list" = "~/.config/mimeapps.list"
 "config/handlr/handlr.toml" = "~/.config/handlr/handlr.toml"
+
+[yazi.files]
+"config/yazi/keymap.toml" = "~/.config/yazi/keymap.toml"
 
 [work.variables]
 work = true
