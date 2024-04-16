@@ -101,6 +101,7 @@ depends = ["graphics"]
 
 [yazi.files]
 "config/yazi/keymap.toml" = "~/.config/yazi/keymap.toml"
+"config/yazi/yazi.toml" = "~/.config/yazi/yazi.toml"
 
 [work.variables]
 work = true
