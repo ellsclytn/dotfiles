@@ -33,15 +33,17 @@ vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help)
 vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename)
 
 -- Buffer management
-vim.keymap.set('n', '<leader>bl', ':BufferLinePick<CR>', { desc = 'Pick buffer' })
-
 wk.register({
+    b = {
+        name = 'Buffers',
+        l = { ':BufferLinePick<cr>', 'Pick buffer' },
+    },
     bd = {
         name = 'Delete buffers',
+        l = { ':BufferLineCloseLeft<cr>', 'Delete buffers to the left' },
+        r = { ':BufferLineCloseRight<cr>', 'Delete buffers to the right' },
+        o = { ':BufferLineCloseOthers<cr>', 'Delete other buffers' },
+        c = { ':b#|bd#<cr>', 'Delete current buffer' },
     },
 }, { prefix = '<leader>' })
 
-vim.keymap.set('n', '<leader>bdl', ':BufferLineCloseLeft<cr>', { desc = 'Delete buffers to the left' })
-vim.keymap.set('n', '<leader>bdr', ':BufferLineCloseRight<cr>', { desc = 'Delete buffers to the right' })
-vim.keymap.set('n', '<leader>bdo', ':BufferLineCloseOthers<cr>', { desc = 'Delete other buffers' })
-vim.keymap.set('n', '<leader>bdc', ':b#|bd#<cr>', { desc = 'Delete current buffer' })
