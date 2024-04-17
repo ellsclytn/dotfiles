@@ -47,3 +47,15 @@ wk.register({
     },
 }, { prefix = '<leader>' })
 
+wk.register({
+    g = {
+        name = 'Git',
+        s = { ':Neogit<cr>', 'Git status' },
+        bl = {
+            function()
+                require('gitsigns').blame_line({ full = true })
+            end,
+            'Toggle blame',
+        },
+    },
+}, { prefix = '<leader>' })
