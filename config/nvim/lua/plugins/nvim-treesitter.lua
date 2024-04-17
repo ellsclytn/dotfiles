@@ -1,5 +1,8 @@
 return {
     'nvim-treesitter/nvim-treesitter',
+    dependencies = {
+        'nvim-treesitter/nvim-treesitter-textobjects',
+    },
     config = function()
         require('nvim-treesitter.configs').setup({
             -- One of "all", or a list of languages
