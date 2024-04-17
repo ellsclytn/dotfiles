@@ -24,5 +24,6 @@ return {
         })
     end,
     event = { 'BufReadPost', 'BufWritePost' },
+    build = ':TSUpdate',
     cmd = 'TSUpdateSync',
 }
