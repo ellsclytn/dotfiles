@@ -22,6 +22,7 @@ docker-compose
 dust
 eog
 eza
+fastfetch
 fd
 feh
 firefox
@@ -50,7 +51,6 @@ maim
 man-db
 mesa
 mpv
-neofetch
 neovim
 noto-fonts
 noto-fonts-cjk

@@ -4,6 +4,7 @@ depends = [
   "fish",
   "alacritty",
   "git",
+  "fastfetch",
   "fd",
   "flameshot",
   "mpv",
@@ -59,6 +60,9 @@ depends = ["graphics"]
 "config/git/commitmessage" = "~/.commitmessage"
 "config/git/gitconfig" = "~/.gitconfig"
 "config/git/gitignore" = "~/.gitignore_global"
+
+[fastfetch.files]
+"config/fastfetch.jsonc" = "~/.config/fastfetch/config.jsonc"
 
 [fd.files]
 "config/fdignore" = "~/.fdignore"
