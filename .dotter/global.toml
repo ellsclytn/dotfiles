@@ -15,6 +15,7 @@ depends = [
   "zathura",
   "rofi",
   "handlr",
+  "wezterm",
   "yazi",
 ]
 
@@ -102,6 +103,9 @@ depends = ["graphics"]
 [handlr.files]
 "config/mimeapps.list" = "~/.config/mimeapps.list"
 "config/handlr/handlr.toml" = "~/.config/handlr/handlr.toml"
+
+[wezterm.files]
+"config/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
 
 [yazi.files]
 "config/yazi/keymap.toml" = "~/.config/yazi/keymap.toml"
