@@ -38,7 +38,7 @@ mise install node@lts
 mise use --global node@lts
 
 echo "Installing dotfiles..."
-echo 'packages = ["workstation", "desktop"]' >~/.dotfiles/.dotter/local.toml
+echo 'packages = ["linux", "desktop"]' >~/.dotfiles/.dotter/local.toml
 dotter
 
 echo "Done. Time to log out and in again!"

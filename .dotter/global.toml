@@ -1,22 +1,40 @@
-[workstation]
+[linux]
 depends = [
-  "graphics",
-  "fish",
   "alacritty",
-  "git",
   "fastfetch",
   "fd",
+  "feh",
+  "fish",
   "flameshot",
-  "mpv",
-  "topgrade",
+  "git",
   "gpg",
-  "neovim",
-  "i3",
-  "zathura",
-  "rofi",
   "handlr",
+  "i3",
+  "linux",
+  "mpv",
+  "neovim",
+  "rofi",
+  "topgrade",
   "wezterm",
   "yazi",
+  "zathura",
+]
+
+[linux.files]
+"bin/split-audio" = "~/.local/bin/split-audio"
+
+[macos]
+depends = [
+  "fastfetch",
+  "fd",
+  "fish",
+  "git",
+  "gpg",
+  "mpv",
+  "neovim",
+  "topgrade",
+  "wezterm",
+  "yazi"
 ]
 
 [laptop.variables]
@@ -26,7 +44,7 @@ laptop = true
 [desktop.variables]
 font_size = "16.0"
 
-[graphics.variables.colors16]
+[colors.variables.colors16]
 base00 = "282c34"
 base01 = "353b45"
 base02 = "3e4451"
@@ -44,18 +62,30 @@ base0d = "61afef"
 base0e = "c678dd"
 base0f = "be5046"
 
-[graphics.files]
-"config/fontconfig/fonts.conf" = "~/.config/fontconfig/fonts.conf"
+[fish]
+depends = ["colors"]
 
 [fish.files]
-"config/fish" = "~/.config/fish"
+"config/fish/fish_plugins" = "~/.config/fish/fish_plugins"
+"config/fish/conf.d" = "~/.config/fish/conf.d"
 "config/starship.toml" = "~/.config/starship.toml"
+"bin/extract" = "~/.local/bin/extract"
 
 [alacritty]
-depends = ["graphics"]
+depends = ["colors", "fontconfig"]
 
 [alacritty.files]
 "config/alacritty/alacritty.toml" = "~/.config/alacritty/alacritty.toml"
+
+[fish.files."config/fish/linux.conf.d"]
+target = "~/.config/fish/conf.d"
+type = "symbolic"
+if = "dotter.packages.linux"
+
+[fish.files."config/fish/macos.conf.d"]
+target = "~/.config/fish/conf.d"
+type = "symbolic"
+if = "dotter.packages.macos"
 
 [git.files]
 "config/git/commitmessage" = "~/.commitmessage"
@@ -68,8 +98,14 @@ depends = ["graphics"]
 [fd.files]
 "config/fdignore" = "~/.fdignore"
 
+[feh.files]
+"bin/img" = "~/.local/bin/img"
+
 [flameshot.files]
 "config/flameshot.ini" = "~/.config/flameshot/flameshot.ini"
+
+[fontconfig.files]
+"config/fontconfig/fonts.conf" = "~/.config/fontconfig/fonts.conf"
 
 [mpv.files]
 "config/mpv/mpv.conf" = "~/.config/mpv/mpv.conf"
@@ -77,9 +113,17 @@ depends = ["graphics"]
 [topgrade.files]
 "config/topgrade.toml" = "~/.config/topgrade.toml"
 
+[topgrade.files."bin/sync-packages"]
+target = "~/.local/bin/sync-packages"
+type = "symbolic"
+if = "dotter.packages.linux"
+
 [gpg.files]
 "config/gnupg/gpg.conf" = "~/.gnupg/gpg.conf"
 "config/gnupg/gpg-agent.conf" = "~/.gnupg/gpg-agent.conf"
+
+[gpg.variables]
+pinentry_program = "/usr/bin/pinentry-gtk-2"
 
 [neovim.files]
 "config/nvim/lua" = "~/.config/nvim/lua"
@@ -88,17 +132,28 @@ depends = ["graphics"]
 [redshift.files]
 "config/redshift.conf" = "~/.config/redshift/redshift.conf"
 
+[i3]
+depends = ["colors"]
+
 [i3.files]
 "config/i3status-rust/config.toml" = "~/.config/i3status-rust/config.toml"
 "config/i3/config.i3config" = "~/.config/i3/config"
 "config/xorg/xinitrc" = "~/.xinitrc"
 "config/xorg/Xresources" = "~/.config/xorg/Xresources"
+"bin/lock" = "~/.local/bin/lock"
+
+[zathura]
+depends = ["colors"]
 
 [zathura.files]
 "config/zathurarc" = "~/.config/zathura/zathurarc"
 
+[rofi]
+depends = ["colors", "fontconfig"]
+
 [rofi.files]
 "config/rofi/config.rasi" = "~/.config/rofi/config.rasi"
+"bin/rofi-kaomoji" = "~/.local/bin/rofi-kaomoji"
 
 [handlr.files]
 "config/mimeapps.list" = "~/.config/mimeapps.list"
@@ -110,9 +165,3 @@ depends = ["graphics"]
 [yazi.files]
 "config/yazi/keymap.toml" = "~/.config/yazi/keymap.toml"
 "config/yazi/yazi.toml" = "~/.config/yazi/yazi.toml"
-
-[work.variables]
-work = true
-
-[work.files]
-"config/picom.conf" = "~/.config/picom.conf"

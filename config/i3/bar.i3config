@@ -11,8 +11,4 @@ bar {
     inactive_workspace $base01 $base01 $base00
     urgent_workspace $base0a $base0a $base00
   }
-
-  {{#if work}}
-  tray_output none
-  {{/if}}
 }

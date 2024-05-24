@@ -1,0 +1,2 @@
+[gpg.variables]
+pinentry_program = "/opt/homebrew/bin/pinentry-mac"
