@@ -36,6 +36,18 @@
         "options": {
           "full_name": "1password"
         }
+      },
+      "slack": {
+        "version": "4.38.125",
+        "options": {
+          "full_name": "slack"
+        }
+      },
+      "zoom": {
+        "version": "6.0.10.34808",
+        "options": {
+          "full_name": "zoom"
+        }
       }
     },
     "brew": {
@@ -2302,6 +2314,15 @@
             }
           }
         }
+      },
+      "hashicorp/tap/terraform": {
+        "version": "1.8.4",
+        "bottle": false
+      }
+    },
+    "tap": {
+      "hashicorp/tap": {
+        "revision": "922f237793f9f215ce737d11b4483a1645cd3d35"
       }
     }
   },
@@ -2313,7 +2334,7 @@
         "Homebrew/homebrew-core": "api",
         "CLT": "15.3.0.0.1.1708646388",
         "Xcode": "15.1",
-        "macOS": "14.4"
+        "macOS": "14.5"
       }
     }
   }
