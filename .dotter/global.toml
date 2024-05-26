@@ -1,6 +1,5 @@
 [linux]
 depends = [
-  "alacritty",
   "fastfetch",
   "fd",
   "feh",
@@ -70,12 +69,6 @@ depends = ["colors"]
 "config/fish/conf.d" = "~/.config/fish/conf.d"
 "config/starship.toml" = "~/.config/starship.toml"
 "bin/extract" = "~/.local/bin/extract"
-
-[alacritty]
-depends = ["colors", "fontconfig"]
-
-[alacritty.files]
-"config/alacritty/alacritty.toml" = "~/.config/alacritty/alacritty.toml"
 
 [fish.files."config/fish/linux.conf.d"]
 target = "~/.config/fish/conf.d"
