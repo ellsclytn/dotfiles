@@ -16,7 +16,6 @@ return function()
             'gopls',
             'jsonls',
             'lua_ls',
-            'rust_analyzer',
             'terraformls',
             'tflint',
             'tsserver',
@@ -25,6 +24,7 @@ return function()
     })
 
     mason_lspconfig.setup_handlers({
+        ['rust_analyzer'] = function() end,
         -- The first entry (without a key) will be the default handler
         -- and will be called for each installed server that doesn't have
         -- a dedicated handler.
