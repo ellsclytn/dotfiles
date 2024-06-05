@@ -89,6 +89,10 @@ no_self_update = true
 {{#if dotter.packages.linux}}
 "sync-packages" = "~/.dotfiles/bin/sync-packages"
 {{/if}}
+{{#if dotter.packages.macos}}
+"brew-bundle" = "brew bundle --global"
+"brew-cleanup" = "brew cleanup"
+{{/if}}
 "treesitter" = "nvim --headless +TSUpdateSync +qa"
 
 [brew]
