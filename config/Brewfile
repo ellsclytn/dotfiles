@@ -69,9 +69,8 @@ cask "tomatobar"
 cask "wezterm"
 cask "zoom"
 
-tap "koekeishiya/formulae"
-brew "koekeishiya/formulae/yabai"
-brew "koekeishiya/formulae/skhd"
+tap "nikitabobko/tap"
+cask "nikitabobko/tap/aerospace"
 
 tap "hashicorp/tap"
 brew "hashicorp/tap/terraform"

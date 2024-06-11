@@ -24,6 +24,7 @@ depends = [
 
 [macos]
 depends = [
+  "aerospace",
   "fastfetch",
   "fd",
   "fish",
@@ -31,10 +32,8 @@ depends = [
   "gpg",
   "mpv",
   "neovim",
-  "skhd",
   "topgrade",
   "wezterm",
-  "yabai",
   "yazi"
 ]
 
@@ -127,9 +126,6 @@ pinentry_program = "/usr/bin/pinentry-gtk-2"
 [redshift.files]
 "config/redshift.conf" = "~/.config/redshift/redshift.conf"
 
-[skhd.files]
-"config/skhd/skhdrc" = "~/.config/skhd/skhdrc"
-
 [i3]
 depends = ["colors"]
 
@@ -160,9 +156,9 @@ depends = ["colors", "fontconfig"]
 [wezterm.files]
 "config/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
 
-[yabai.files]
-"config/yabai/yabairc" = "~/.config/yabai/yabairc"
-
 [yazi.files]
 "config/yazi/keymap.toml" = "~/.config/yazi/keymap.toml"
 "config/yazi/yazi.toml" = "~/.config/yazi/yazi.toml"
+
+[aerospace.files]
+"config/aerospace/aerospace.toml" = "~/.config/aerospace/aerospace.toml"
