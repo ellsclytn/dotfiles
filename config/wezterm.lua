@@ -7,4 +7,23 @@ config.font_size = 17.0
 
 config.enable_tab_bar = false
 
+--[[
+{{#if dotter.packages.macos}}
+--]]
+local act = wezterm.action
+
+config.keys = {
+    {
+        key = 'e',
+        mods = 'CMD',
+        action = act.SendKey {
+            key = 'e',
+            mods = 'ALT'
+        },
+    }
+}
+--[[
+{{/if}}
+--]]
+
 return config
