@@ -54,6 +54,7 @@ brew "wget"
 brew "xh"
 brew "yamllint"
 brew "yazi"
+brew "zbar"
 brew "zoxide"
 
 cask "1password"
