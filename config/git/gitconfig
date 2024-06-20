@@ -17,8 +17,8 @@
   can = commit --amend --no-edit
   cm = commit -m
   cmb = "!git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
-  co = checkout
-  cob = checkout -b
+  sb = switch
+  cob = switch -c
   cp = cherry-pick
   d = diff
   dbi = !fzf-delete-branches
@@ -37,6 +37,7 @@
   p = push
   ras = rebase -i
   rasm = rebase -i origin/HEAD
+  re = restore
   s = status -s
   sh = show
 [core]
