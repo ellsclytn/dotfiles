@@ -9,7 +9,7 @@
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["containers", "node", "pnpm", "yarn"]
+disable = ["containers", "lensfun", "node", "pnpm", "yarn"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
