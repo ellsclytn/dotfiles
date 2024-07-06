@@ -117,7 +117,7 @@ if = "dotter.packages.linux"
 "config/gnupg/gpg-agent.conf" = "~/.gnupg/gpg-agent.conf"
 
 [gpg.variables]
-pinentry_program = "/usr/bin/pinentry-gtk-2"
+pinentry_program = "/usr/bin/pinentry-gnome3"
 
 [neovim.files]
 "config/nvim/lua" = "~/.config/nvim/lua"
