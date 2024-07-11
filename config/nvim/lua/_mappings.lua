@@ -4,7 +4,7 @@ local wk = require('which-key')
 vim.keymap.set('v', '<leader>y', '"+y')
 
 -- Toggle relative/absolute line numbers
-vim.keymap.set('n', '<C-L>', ':setlocal relativenumber!<cr>')
+vim.keymap.set('n', '<leader>rl', ':setlocal relativenumber!<cr>')
 
 -- Window nav similar to i3 navigation
 vim.keymap.set('n', '<C-H>', '<C-W><C-H>')
