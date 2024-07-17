@@ -34,24 +34,24 @@ vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename)
 
 -- Buffer management
 wk.add({
-    { "<leader>b",   group = "Buffers" },
-    { "<leader>bl",  ":BufferLinePick<cr>",        desc = "Pick buffer" },
+    { '<leader>b', group = 'Buffers' },
+    { '<leader>bl', ':BufferLinePick<cr>', desc = 'Pick buffer' },
 
-    { "<leader>bd",  group = "Delete buffers" },
-    { "<leader>bdc", ":b#|bd#<cr>",                desc = "Delete current buffer" },
-    { "<leader>bdl", ":BufferLineCloseLeft<cr>",   desc = "Delete buffers to the left" },
-    { "<leader>bdo", ":BufferLineCloseOthers<cr>", desc = "Delete other buffers" },
-    { "<leader>bdr", ":BufferLineCloseRight<cr>",  desc = "Delete buffers to the right" },
+    { '<leader>bd', group = 'Delete buffers' },
+    { '<leader>bdc', ':b#|bd#<cr>', desc = 'Delete current buffer' },
+    { '<leader>bdl', ':BufferLineCloseLeft<cr>', desc = 'Delete buffers to the left' },
+    { '<leader>bdo', ':BufferLineCloseOthers<cr>', desc = 'Delete other buffers' },
+    { '<leader>bdr', ':BufferLineCloseRight<cr>', desc = 'Delete buffers to the right' },
 })
 
 wk.add({
-    { "<leader>g",  group = "Git" },
-    { "<leader>gs", ":Neogit<cr>", desc = "Git status" },
+    { '<leader>g', group = 'Git' },
+    { '<leader>gs', ':Neogit<cr>', desc = 'Git status' },
     {
-        "<leader>gbl",
+        '<leader>gbl',
         function()
             require('gitsigns').blame_line({ full = true })
         end,
-        desc = "Toggle blame"
+        desc = 'Toggle blame',
     },
 })

@@ -16,11 +16,11 @@ config.keys = {
     {
         key = 'e',
         mods = 'CMD',
-        action = act.SendKey {
+        action = act.SendKey({
             key = 'e',
-            mods = 'ALT'
-        },
-    }
+            mods = 'ALT',
+        }),
+    },
 }
 --[[
 {{/if}}
