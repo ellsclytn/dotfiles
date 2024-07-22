@@ -48,10 +48,14 @@ wk.add({
     { '<leader>g', group = 'Git' },
     { '<leader>gs', ':Neogit<cr>', desc = 'Git status' },
     {
-        '<leader>gbl',
-        function()
-            require('gitsigns').blame_line({ full = true })
-        end,
-        desc = 'Toggle blame',
+        mode = { 'n', 'v' },
+        {
+            '<leader>gbl',
+            function()
+                require('gitsigns').blame_line({ full = true })
+            end,
+            desc = 'Toggle blame',
+        },
+        { '<leader>gbr', ':GBrowse<cr>', desc = 'Open in browser' },
     },
 })
