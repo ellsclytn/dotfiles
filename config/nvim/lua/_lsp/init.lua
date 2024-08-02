@@ -9,6 +9,8 @@ return function()
 
     local lsp_capabilities = cmp_nvim_lsp.default_capabilities()
 
+    vim.lsp.set_log_level('off')
+
     mason.setup()
     mason_lspconfig.setup({
         ensure_installed = {
