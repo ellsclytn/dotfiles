@@ -54,6 +54,7 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 openssh
+opentofu
 papirus-icon-theme
 pass
 pass-otp
@@ -82,7 +83,6 @@ starship
 stylua
 systemd-resolvconf
 tailspin
-terraform
 thunar
 traceroute
 ttf-dejavu
