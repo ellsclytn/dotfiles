@@ -62,9 +62,9 @@ alt-shift-r = 'reload-config'
 alt-r = 'mode resize'
 
 [mode.resize.binding]
-h = 'resize width -50'
-j = 'resize height -50'
-k = 'resize height +50'
-l = 'resize width +50'
+h = 'resize width -100'
+j = 'resize height -100'
+k = 'resize height +100'
+l = 'resize width +100'
 enter = 'mode main'
 esc = 'mode main'
