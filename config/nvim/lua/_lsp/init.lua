@@ -20,7 +20,7 @@ return function()
             'lua_ls',
             'terraformls',
             'tflint',
-            'tsserver',
+            'ts_ls',
             'yamlls',
         },
     })
