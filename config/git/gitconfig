@@ -38,6 +38,7 @@
   ras = rebase -i
   rasm = rebase -i origin/HEAD
   re = restore
+  ref = rev-parse
   s = status -s
   sh = show
 [core]
