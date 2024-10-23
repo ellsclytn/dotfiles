@@ -71,6 +71,7 @@ cask "slack"
 cask "spotify"
 cask "tomatobar"
 cask "wezterm"
+cask "yubico-yubikey-manager"
 cask "zoom"
 
 tap "nikitabobko/tap"
