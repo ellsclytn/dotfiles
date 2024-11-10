@@ -1,6 +1,11 @@
 # Autostart applications
 
-exec_always --no-startup-id feh --bg-fill "/$HOME/Pictures/wallpaper.png"
+exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
+exec gsettings set org.gnome.desktop.interface cursor-theme Bibata-Modern-Classic
+
+exec_always import-gsettings
+
+# exec_always --no-startup-id feh --bg-fill "/$HOME/Pictures/wallpaper.png"
 exec --no-startup-id flameshot
 exec --no-startup-id lxpolkit
-exec --no-startup-id xss-lock -l /home/ellis/.dotfiles/bin/lock &
+# exec --no-startup-id xss-lock -l /home/ellis/.dotfiles/bin/lock &

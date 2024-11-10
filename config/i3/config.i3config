@@ -50,3 +50,17 @@ for_window [class="firefox" window_role="alert"] floating enable
 {{include_template "config/i3/keybindings/multimedia.i3config"}}
 {{include_template "config/i3/keybindings/navigation.i3config"}}
 {{include_template "config/i3/keybindings/screenshot.i3config"}}
+
+# Set cursor theme
+seat seat0 xcursor_theme "Bibata-Modern-Classic" "24"
+
+input type:touchpad {
+  pointer_accel 0.5
+}
+
+input type:pointer {
+  accel_profile "flat"
+  pointer_accel 1.0
+}
+
+output * bg ~/Pictures/wallpaper.png fill
