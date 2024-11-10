@@ -33,11 +33,8 @@ for_window [urgent=latest] focus
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# exit sway (logs you out of your X session)
+bindsym $mod+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit'"
 
 for_window [class="^Steam$"] floating enable
 for_window [class="firefox" window_role="alert"] floating enable
@@ -45,8 +42,12 @@ for_window [class="firefox" window_role="alert"] floating enable
 {{include_template "config/i3/colors.i3config"}}
 {{include_template "config/i3/bar.i3config"}}
 {{include_template "config/i3/startup.i3config"}}
+{{include_template "config/i3/io.i3config"}}
 {{include_template "config/i3/keybindings/launchers.i3config"}}
 {{include_template "config/i3/keybindings/layout.i3config"}}
 {{include_template "config/i3/keybindings/multimedia.i3config"}}
 {{include_template "config/i3/keybindings/navigation.i3config"}}
 {{include_template "config/i3/keybindings/screenshot.i3config"}}
+
+# Set cursor theme
+seat seat0 xcursor_theme "Bibata-Modern-Classic" "24"

@@ -1,9 +1,0 @@
-systemctl --user import-environment DISPLAY
-
-# Bind Caps lock to be Ctrl
-setxkbmap -option caps:ctrl_modifier
-
-# Setup Xresources for term if they exist
-[[ -f ~/.config/xorg/Xresources ]] && xrdb -merge ~/.config/xorg/Xresources
-
-exec i3

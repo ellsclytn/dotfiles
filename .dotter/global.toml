@@ -10,11 +10,11 @@ depends = [
   "gpg",
   "gtk",
   "handlr",
-  "i3",
   "linux",
   "mpv",
   "neovim",
   "rofi",
+  "sway",
   "television",
   "tldr",
   "topgrade",
@@ -146,15 +146,14 @@ pinentry_program = "/usr/bin/pinentry-gnome3"
 "config/nvim/lsp" = "~/.config/nvim/lsp"
 "config/nvim/init.lua" = "~/.config/nvim/init.lua"
 
-[i3]
+[sway]
 depends = ["colors"]
 
-[i3.files]
+[sway.files]
 "config/i3status-rust/config.toml" = "~/.config/i3status-rust/config.toml"
 "config/i3/config.i3config" = "~/.config/i3/config"
-"config/xorg/xinitrc" = "~/.xinitrc"
-"config/xorg/Xresources" = "~/.config/xorg/Xresources"
-"bin/lock" = "~/.local/bin/lock"
+"config/sway/swaylock" = "~/.config/swaylock/config"
+"config/sway/swayidle" = "~/.config/swayidle/config"
 
 [zathura]
 depends = ["colors"]

@@ -23,4 +23,4 @@ fi
 
 results=$(curl -s "$base_url$query" | jq -r '.data[]')
 
-echo "$results" | rofi -show -dmenu -p "results" | xclip -selection c
+echo "$results" | rofi -show -dmenu -p "results" | wl-copy -n

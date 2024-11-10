@@ -1,0 +1,20 @@
+input "type:keyboard" {
+  xkb_options caps:ctrl_modifier
+}
+
+input "type:pointer" {
+  accel_profile flat
+  pointer_accel 0
+}
+
+input "type:touchpad" {
+  tap enabled
+}
+
+output * {
+  background ~/Pictures/wallpaper.png fill
+}
+
+output DP-1 {
+  adaptive_sync on
+}

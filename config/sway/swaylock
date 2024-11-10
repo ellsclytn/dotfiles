@@ -1,0 +1,14 @@
+image=~/Pictures/wallpaper.png
+scaling=fill
+inside-color=00000000
+inside-ver-color={{colors16.base0a}}
+inside-wrong-color={{colors16.base0f}}
+key-hl-color={{colors16.base0d}}
+line-uses-inside
+line-uses-ring
+ring-color={{colors16.base0b}}
+ring-clear-color={{colors16.base0b}}
+ring-caps-lock-color={{colors16.base0b}}
+ring-ver-color={{colors16.base0a}}
+ring-wrong-color={{colors16.base0f}}
+separator-color=00000000

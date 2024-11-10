@@ -44,10 +44,7 @@
     - name: /etc/X11/xorg.conf.d
       file:
         path: /etc/X11/xorg.conf.d
-        owner: root
-        group: root
-        mode: "0755"
-        state: directory
+        state: absent
       become: true
     - name: Ensure group "video" exists
       ansible.builtin.group:
@@ -70,43 +67,6 @@
       when:
         - laptop
         - not vm
-    - name: AMD Graphics Configuration
-      template:
-        src: ./templates/X11/xorg.conf.d/10-amdgpu.conf
-        dest: /etc/X11/xorg.conf.d/10-amdgpu.conf
-        owner: root
-        group: root
-        mode: "0644"
-      become: true
-      when:
-        - not laptop
-        - not vm
-    - name: Intel graphics configuration
-      template:
-        src: ./templates/X11/xorg.conf.d/10-intelgpu.conf
-        dest: /etc/X11/xorg.conf.d/10-intelgpu.conf
-        owner: root
-        group: root
-        mode: "0644"
-      become: true
-      when:
-        - laptop
-    - name: Mouse/trackpad configuration
-      template:
-        src: ./templates/X11/xorg.conf.d/20-mouse.conf
-        dest: /etc/X11/xorg.conf.d/20-mouse.conf
-        owner: root
-        group: root
-        mode: "0644"
-      become: true
-    - name: Keyboard configuration
-      template:
-        src: ./templates/X11/xorg.conf.d/30-keyboard.conf
-        dest: /etc/X11/xorg.conf.d/30-keyboard.conf
-        owner: root
-        group: root
-        mode: "0644"
-      become: true
     - name: /etc/systemd/system/getty@tty1.service.d
       file:
         path: /etc/systemd/system/getty@tty1.service.d
@@ -270,7 +230,7 @@
       loop:
         - sudo
         - login
-        - i3lock
+        - swaylock
       when:
         - laptop
         - not vm

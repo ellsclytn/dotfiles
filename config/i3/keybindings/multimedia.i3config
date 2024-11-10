@@ -5,8 +5,8 @@
 ######################
 
 # Use brightness keys
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
 
 # Use volume keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id "~/.dotfiles/bin/increase-output-volume-capped"
