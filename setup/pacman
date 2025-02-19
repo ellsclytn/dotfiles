@@ -48,6 +48,7 @@ lxsession-gtk3
 maim
 man-db
 mesa
+mise
 mpv
 neovim
 noto-fonts
@@ -91,6 +92,7 @@ ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
 udisks2
 unzip
+usage
 wezterm
 wget
 xclip
