@@ -10,8 +10,8 @@ return {
         'neovim/nvim-lspconfig',
         'onsails/lspkind-nvim',
         'saadparwaiz1/cmp_luasnip',
-        'williamboman/mason-lspconfig.nvim',
-        'williamboman/mason.nvim',
+        { 'williamboman/mason-lspconfig.nvim', version = '^1.0.0' },
+        { 'williamboman/mason.nvim', version = '^1.0.0' },
     },
     config = require('_lsp'),
 }
