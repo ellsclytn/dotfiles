@@ -2,7 +2,7 @@ return {
     'jay-babu/mason-nvim-dap.nvim',
     depends = {
         'mfussenegger/nvim-dap',
-        { 'williamboman/mason.nvim', version = '^1.0.0' },
+        'williamboman/mason.nvim',
     },
     event = 'VeryLazy',
     opts = {
