@@ -68,6 +68,9 @@
 [delta]
   navigate = true
   light = false
+[rerere]
+  enabled = true
+  autoupdate = true
 
 # Repositories to run regular maintenance on can be defined in ~/.gitconfig_local
 # Example:
