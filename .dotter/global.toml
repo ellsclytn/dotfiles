@@ -82,9 +82,7 @@ type = "symbolic"
 if = "dotter.packages.macos"
 
 [git.files]
-"config/git/commitmessage" = "~/.commitmessage"
 "config/git/gitconfig" = "~/.gitconfig"
-"config/git/gitignore" = "~/.gitignore_global"
 
 [fastfetch.files]
 "config/fastfetch.jsonc" = "~/.config/fastfetch/config.jsonc"
