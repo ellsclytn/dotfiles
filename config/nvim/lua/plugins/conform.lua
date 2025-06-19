@@ -40,15 +40,17 @@ return {
     'stevearc/conform.nvim',
     opts = {
         formatters_by_ft = {
-            lua = { 'stylua' },
             javascript = { 'prettierd', 'eslint_d' },
-            typescript = { 'prettierd', 'eslint_d' },
             javascriptreact = { 'prettierd', 'eslint_d' },
-            typescriptreact = { 'prettierd', 'eslint_d' },
-            markdown = { 'prettierd' },
-            yaml = { 'prettierd' },
             json = { 'prettierd' },
+            lua = { 'stylua' },
+            markdown = { 'prettierd' },
+            ruby = { 'rubocop' },
             sh = { 'shfmt' },
+            tf = { 'terraform_fmt' },
+            typescript = { 'prettierd', 'eslint_d' },
+            typescriptreact = { 'prettierd', 'eslint_d' },
+            yaml = { 'prettierd' },
         },
         format_on_save = function(bufnr)
             -- Disable with a global or buffer-local variable
