@@ -2,8 +2,8 @@ set $mod Mod4
 
 font pango:Source Sans 3 10
 
-new_window pixel 1
-new_float normal
+default_border pixel 1
+default_floating_border normal
 
 tiling_drag off
 
