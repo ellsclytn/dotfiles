@@ -13,6 +13,5 @@ return function()
         capabilities = cmp_nvim_lsp.default_capabilities(),
     })
 
-    require('_lsp.rust')
     require('_lsp.cmp')
 end
