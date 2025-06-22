@@ -2,26 +2,16 @@ return function()
     require('_lsp.on_attach')
 
     local cmp_nvim_lsp = require('cmp_nvim_lsp')
-    local lspconfig = require('lspconfig')
     local mason = require('mason')
     local mason_lspconfig = require('mason-lspconfig')
-
-    local lsp_capabilities = cmp_nvim_lsp.default_capabilities()
 
     vim.lsp.set_log_level('off')
     mason.setup()
     mason_lspconfig.setup()
 
-    for _, server in ipairs(mason_lspconfig.get_installed_servers()) do
-        -- Specific rust-analyzer setup.
-        if server == 'rust_analyzer' then
-        -- Other servers.
-        else
-            vim.lsp.config(server, {
-                capabilities = lsp_capabilities,
-            })
-        end
-    end
+    vim.lsp.config('*', {
+        capabilities = cmp_nvim_lsp.default_capabilities(),
+    })
 
     require('_lsp.rust')
     require('_lsp.cmp')
