@@ -1,6 +1,7 @@
 return function()
+    require('_lsp.on_attach')
+
     local cmp_nvim_lsp = require('cmp_nvim_lsp')
-    local lsp_on_attach = require('_lsp.on_attach')
     local lspconfig = require('lspconfig')
     local mason = require('mason')
     local mason_lspconfig = require('mason-lspconfig')
@@ -17,7 +18,6 @@ return function()
         -- Other servers.
         else
             vim.lsp.config(server, {
-                on_attach = lsp_on_attach,
                 capabilities = lsp_capabilities,
             })
         end
