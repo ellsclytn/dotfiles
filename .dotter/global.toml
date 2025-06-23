@@ -119,6 +119,7 @@ pinentry_program = "/usr/bin/pinentry-gnome3"
 
 [neovim.files]
 "config/nvim/lua" = "~/.config/nvim/lua"
+"config/nvim/lsp" = "~/.config/nvim/lsp"
 "config/nvim/init.lua" = "~/.config/nvim/init.lua"
 
 [redshift.files]

@@ -10,5 +10,21 @@ vim.api.nvim_create_autocmd('LspAttach', {
         if client.server_capabilities.documentSymbolProvider then
             require('nvim-navic').attach(client, bufnr)
         end
+
+        if client.name == 'markdown_oxide' then
+            vim.api.nvim_create_user_command('Daily', function(a)
+                local input = a.args
+
+                if input == '' then
+                    input = 'today'
+                end
+
+                client:exec_cmd({
+                    title = 'jump',
+                    command = 'jump',
+                    arguments = { input },
+                })
+            end, { desc = 'Open daily note', nargs = '*' })
+        end
     end,
 })
