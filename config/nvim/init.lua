@@ -1,6 +1,7 @@
 local modules = {
     '_config',
     '_filetypes',
+    '_lsp',
     '_spelling',
 }
 
