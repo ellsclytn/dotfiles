@@ -1,3 +1,4 @@
+arc-gtk-theme
 bibata-cursor-theme-bin
 docker-credential-pass-bin
 doggo-bin
@@ -12,6 +13,7 @@ menu-qalc
 pacman-cleanup-hook
 rofi-power-menu
 shellcheck-bin
+sipcalc
 spotify
 tflint-bin
 topgrade-bin
