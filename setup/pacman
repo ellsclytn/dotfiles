@@ -94,6 +94,8 @@ usage
 wezterm
 wget
 xclip
+xdg-desktop-portal
+xdg-desktop-portal-gtk
 xdotool
 xh
 xorg-server

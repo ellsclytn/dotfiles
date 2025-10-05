@@ -16,6 +16,7 @@ depends = [
   "rofi",
   "topgrade",
   "wezterm",
+  "xdg-desktop-portal",
   "yazi",
   "zathura",
 ]
@@ -159,6 +160,9 @@ depends = ["colors", "fontconfig"]
 
 [wezterm.files]
 "config/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
+
+[xdg-desktop-portal.files]
+"config/xdg-desktop-portal/portals.conf" = "~/.config/xdg-desktop-portal/portals.conf"
 
 [yazi.files]
 "config/yazi/keymap.toml" = "~/.config/yazi/keymap.toml"
