@@ -7,16 +7,12 @@ localectl set-locale LANG=en_AU.UTF-8
 export LANG=en_AU.UTF-8
 sudo pacman -S --noconfirm base-devel jq ansible
 
-# libc++ and Spotify
-gpg --keyserver hkp://keyserver.ubuntu.com:80 --receive-keys A2C794A986419D8A 6224F9941A8AA6D1
-
 #
-# Aura
+# Paru
 #
-git clone https://aur.archlinux.org/aura-bin.git /tmp/aura-bin
-cd /tmp/aura-bin
-makepkg
-sudo pacman -U --noconfirm /tmp/aura-bin/*.pkg.tar.zst
+git clone https://aur.archlinux.org/paru-bin.git /tmp/paru-bin
+cd /tmp/paru-bin
+makepkg -si
 cd -
 
 ansible-playbook ansible/playbook.yml -K
@@ -27,7 +23,11 @@ rustup install stable
 rustup default stable
 
 echo "Istalling AUR packages..."
-sudo aura -Aa $(grep -v '^#' ~/.dotfiles/setup/aur)
+AUR_PACKAGES=$(grep -v '^#' ~/.dotfiles/setup/aur)
+failed_aur_packages=()
+for package in $AUR_PACKAGES; do
+  paru -S --noconfirm "$package" || failed_aur_packages+=("$package")
+done
 
 eval "$(mise activate bash)"
 mise completion fish >~/.config/fish/completions/mise.fish
@@ -40,5 +40,12 @@ mise use --global node@lts
 echo "Installing dotfiles..."
 echo 'packages = ["linux", "desktop"]' >~/.dotfiles/.dotter/local.toml
 dotter
+
+if [ ${#failed_aur_packages[@]} -ne 0 ]; then
+  echo "The following AUR packages failed to install:"
+  for pkg in "${failed_aur_packages[@]}"; do
+    echo " - $pkg"
+  done
+fi
 
 echo "Done. Time to log out and in again!"
