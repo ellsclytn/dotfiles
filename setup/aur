@@ -19,3 +19,5 @@ tflint-bin
 topgrade-bin
 ttf-ms-fonts
 unipicker
+xf86-input-libinput-git
+xorg-server-git
