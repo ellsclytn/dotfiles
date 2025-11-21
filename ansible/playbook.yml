@@ -256,55 +256,9 @@
         state: started
         enabled: true
       become: true
-    - name: Network online detection configuration
-      template:
-        src: ./templates/systemd/user/networkd-wait-online.service
-        dest: ~/.config/systemd/user/networkd-wait-online.service
-        owner: "{{ ansible_facts.user_id }}"
-        group: users
-        mode: "0644"
-    - name: Geoclue configuration
-      template:
-        src: ./templates/systemd/user/geoclue-agent.service
-        dest: ~/.config/systemd/user/geoclue-agent.service
-        owner: "{{ ansible_facts.user_id }}"
-        group: users
-        mode: "0644"
-    - name: Redshift configuration override directory
-      file:
-        path: ~/.config/systemd/user/redshift.service.d
-        owner: "{{ ansible_facts.user_id }}"
-        group: users
-        mode: "0755"
-        state: directory
-    - name: Redshift configuration
-      template:
-        src: ./templates/systemd/user/redshift.service.d/override.conf
-        dest: ~/.config/systemd/user/redshift.service.d/override.conf
-        owner: "{{ ansible_facts.user_id }}"
-        group: users
-        mode: "0644"
     - name: Reload systemd user
       systemd:
         daemon_reload: true
-        scope: user
-    - name: Start & enable network online detection
-      systemd:
-        name: networkd-wait-online
-        state: started
-        enabled: true
-        scope: user
-    - name: Start & enable geoclue-agent
-      systemd:
-        name: geoclue-agent
-        state: started
-        enabled: true
-        scope: user
-    - name: Start & enable redshift
-      systemd:
-        name: redshift
-        state: started
-        enabled: true
         scope: user
     - name: Allow fingerprint auth for desired actions
       blockinfile:
