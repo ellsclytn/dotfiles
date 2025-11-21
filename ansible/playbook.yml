@@ -2,8 +2,8 @@
 - hosts: 127.0.0.1
   connection: local
   vars:
-    laptop: "{{ lookup('env', 'LAPTOP') | bool }}"
-    vm: "{{ lookup('env', 'VM_TEST') | bool }}"
+    laptop: "{{ lookup('env', 'LAPTOP', default='false') | bool }}"
+    vm: "{{ lookup('env', 'VM_TEST', default='false') | bool }}"
   tasks:
     - name: Install replacement packages
       pacman:
@@ -56,7 +56,7 @@
         state: present
     - name: Add self to video group
       ansible.builtin.user:
-        name: "{{ ansible_user_id }}"
+        name: "{{ ansible_facts.user_id }}"
         groups: video
         append: yes
       become: true
@@ -260,20 +260,20 @@
       template:
         src: ./templates/systemd/user/networkd-wait-online.service
         dest: ~/.config/systemd/user/networkd-wait-online.service
-        owner: "{{ ansible_user_id }}"
+        owner: "{{ ansible_facts.user_id }}"
         group: users
         mode: "0644"
     - name: Geoclue configuration
       template:
         src: ./templates/systemd/user/geoclue-agent.service
         dest: ~/.config/systemd/user/geoclue-agent.service
-        owner: "{{ ansible_user_id }}"
+        owner: "{{ ansible_facts.user_id }}"
         group: users
         mode: "0644"
     - name: Redshift configuration override directory
       file:
         path: ~/.config/systemd/user/redshift.service.d
-        owner: "{{ ansible_user_id }}"
+        owner: "{{ ansible_facts.user_id }}"
         group: users
         mode: "0755"
         state: directory
@@ -281,7 +281,7 @@
       template:
         src: ./templates/systemd/user/redshift.service.d/override.conf
         dest: ~/.config/systemd/user/redshift.service.d/override.conf
-        owner: "{{ ansible_user_id }}"
+        owner: "{{ ansible_facts.user_id }}"
         group: users
         mode: "0644"
     - name: Reload systemd user
