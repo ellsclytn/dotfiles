@@ -63,7 +63,7 @@ return {
                 return
             end
 
-            return { lsp_fallback = true }
+            return { lsp_fallback = 'fallback' }
         end,
     },
     event = 'BufWritePre',
