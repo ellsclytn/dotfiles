@@ -6,7 +6,7 @@ if status --is-interactive
   abbr --add --global dotfiles "cd ~/.dotfiles"
   abbr --add --global du "dust"
   abbr --add --global f "zi"
-  abbr --add --global rm "gomi"
+  abbr --add --global rm "sleep 3 && rm"
   abbr --add --global update "topgrade"
   abbr --add --global v "nvim"
   abbr --add --global vi "nvim"
