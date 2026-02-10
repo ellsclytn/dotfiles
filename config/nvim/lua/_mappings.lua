@@ -113,4 +113,9 @@ wk.add({
         desc = 'System Clipboard register',
         mode = { 'n', 'v' },
     },
+    {
+        '<leader>ta',
+        ':TerraformAddress<cr>',
+        desc = 'Yank Terraform address',
+    },
 })
