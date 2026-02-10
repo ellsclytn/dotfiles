@@ -1,8 +1,5 @@
 local wk = require('which-key')
 
--- Copy to system clipboard
-vim.keymap.set('v', '<leader>y', '"+y')
-
 -- Toggle relative/absolute line numbers
 vim.keymap.set('n', '<leader>rl', ':setlocal relativenumber!<cr>')
 
@@ -105,5 +102,15 @@ wk.add({
             require('dapui').eval(nil, { enter = true })
         end,
         desc = 'Evaluate',
+    },
+})
+
+-- Misc/ungrouped
+wk.add({
+    {
+        '<leader>c',
+        '"+',
+        desc = 'System Clipboard register',
+        mode = { 'n', 'v' },
     },
 })
