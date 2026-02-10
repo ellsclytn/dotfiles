@@ -44,6 +44,7 @@ wk.add({
     { '<leader>bdr', ':BufferLineCloseRight<cr>', desc = 'Delete buffers to the right' },
 })
 
+-- Git
 wk.add({
     { '<leader>g', group = 'Git' },
     { '<leader>gs', ':Neogit<cr>', desc = 'Git status' },
@@ -60,6 +61,7 @@ wk.add({
     },
 })
 
+-- Debug
 wk.add({
     { '<leader>d', group = 'Debug' },
     {
