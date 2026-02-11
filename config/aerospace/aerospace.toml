@@ -1,5 +1,7 @@
 # Reference: https://github.com/i3/i3/blob/next/etc/config
 
+start-at-login = true
+
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
