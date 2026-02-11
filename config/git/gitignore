@@ -3,3 +3,4 @@ docker-compose.override.yml
 *.tfplan
 *.tfstate*
 .DS_Store
+.claude/
