@@ -1,25 +1,85 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+check_and_move() {
+  local dir="$1"
+  local count=$(ls -A "$dir" 2>/dev/null | wc -l)
+  if [ "$count" -eq 1 ]; then
+    local item=$(ls -A "$dir")
+    mv "$dir/$item" .
+    rmdir "$dir"
+  fi
+}
 
 if [ -z "$1" ]; then
   echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
 else
   if [ -f "$1" ]; then
     case $1 in
-    *.tar.bz2) tar xvjf "${@}" ;;
-    *.tar.gz) tar xvzf "${@}" ;;
-    *.tar.xz) tar xvJf "${@}" ;;
-    *.lzma) unlzma "${@}" ;;
-    *.bz2) bunzip2 "${@}" ;;
-    *.rar) unrar x -ad "${@}" ;;
-    *.gz) gunzip "${@}" ;;
-    *.tar) tar xvf "${@}" ;;
-    *.tbz2) tar xvjf "${@}" ;;
-    *.tgz) tar xvzf "${@}" ;;
-    *.zip) unzip "${@}" ;;
-    *.Z) uncompress "${@}" ;;
-    *.7z) 7z x "${@}" ;;
-    *.xz) unxz "${@}" ;;
-    *.exe) cabextract "${@}" ;;
+    *.tar.bz2)
+      base="${1%.tar.bz2}"
+      mkdir -p "$base"
+      tar xvjf "$1" -C "$base"
+      check_and_move "$base"
+      ;;
+    *.tar.gz)
+      base="${1%.tar.gz}"
+      mkdir -p "$base"
+      tar xvzf "$1" -C "$base"
+      check_and_move "$base"
+      ;;
+    *.tar.xz)
+      base="${1%.tar.xz}"
+      mkdir -p "$base"
+      tar xvJf "$1" -C "$base"
+      check_and_move "$base"
+      ;;
+    *.lzma) unlzma "$1" ;;
+    *.bz2) bunzip2 "$1" ;;
+    *.rar)
+      base="${1%.rar}"
+      mkdir -p "$base"
+      unrar x -ad "$1" "$base"
+      check_and_move "$base"
+      ;;
+    *.gz) gunzip "$1" ;;
+    *.tar)
+      base="${1%.tar}"
+      mkdir -p "$base"
+      tar xvf "$1" -C "$base"
+      check_and_move "$base"
+      ;;
+    *.tbz2)
+      base="${1%.tbz2}"
+      mkdir -p "$base"
+      tar xvjf "$1" -C "$base"
+      check_and_move "$base"
+      ;;
+    *.tgz)
+      base="${1%.tgz}"
+      mkdir -p "$base"
+      tar xvzf "$1" -C "$base"
+      check_and_move "$base"
+      ;;
+    *.zip)
+      base="${1%.zip}"
+      mkdir -p "$base"
+      unzip "$1" -d "$base"
+      check_and_move "$base"
+      ;;
+    *.Z) uncompress "$1" ;;
+    *.7z)
+      base="${1%.7z}"
+      mkdir -p "$base"
+      7z x "$1" -o"$base"
+      check_and_move "$base"
+      ;;
+    *.xz) unxz "$1" ;;
+    *.exe)
+      base="${1%.exe}"
+      mkdir -p "$base"
+      cabextract "$1" -d "$base"
+      check_and_move "$base"
+      ;;
     *) echo "extract: '$1' - unknown archive method" ;;
     esac
   else
