@@ -119,3 +119,249 @@ wk.add({
         desc = 'Yank Terraform address',
     },
 })
+
+-- Treesitter textobjects
+local select_textobjects = {
+    {
+        binding = 'a=',
+        desc = 'Select outer part of an assignment',
+        query_string = '@assignment.outer',
+    },
+    {
+        binding = 'i=',
+        desc = 'Select inner part of an assignment',
+        query_string = '@assignment.inner',
+    },
+    {
+        binding = 'l=',
+        desc = 'Select left hand side of an assignment',
+        query_string = '@assignment.lhs',
+    },
+    {
+        binding = 'r=',
+        desc = 'Select right hand side of an assignment',
+        query_string = '@assignment.rhs',
+    },
+    {
+        binding = 'aa',
+        desc = 'Select outer part of a parameter/argument',
+        query_string = '@parameter.outer',
+    },
+    {
+        binding = 'ia',
+        desc = 'Select inner part of a parameter/argument',
+        query_string = '@parameter.inner',
+    },
+    {
+        binding = 'ai',
+        desc = 'Select outer part of a conditional',
+        query_string = '@conditional.outer',
+    },
+    {
+        binding = 'ii',
+        desc = 'Select inner part of a conditional',
+        query_string = '@conditional.inner',
+    },
+    {
+        binding = 'al',
+        desc = 'Select outer part of a loop',
+        query_string = '@loop.outer',
+    },
+    {
+        binding = 'il',
+        desc = 'Select inner part of a loop',
+        query_string = '@loop.inner',
+    },
+    {
+        binding = 'af',
+        desc = 'Select outer part of a function call',
+        query_string = '@call.outer',
+    },
+    {
+        binding = 'if',
+        desc = 'Select inner part of a function call',
+        query_string = '@call.inner',
+    },
+    {
+        binding = 'am',
+        desc = 'Select outer part of a method/function definition',
+        query_string = '@function.outer',
+    },
+    {
+        binding = 'im',
+        desc = 'Select inner part of a method/function definition',
+        query_string = '@function.inner',
+    },
+    {
+        binding = 'ac',
+        desc = 'Select outer part of a class',
+        query_string = '@class.outer',
+    },
+    {
+        binding = 'ic',
+        desc = 'Select inner part of a class',
+        query_string = '@class.inner',
+    },
+}
+
+for _, textobject in ipairs(select_textobjects) do
+    wk.add({
+        {
+            textobject.binding,
+            function()
+                require('nvim-treesitter-textobjects.select').select_textobject(textobject.query_string, 'textobjects')
+            end,
+            desc = textobject.desc,
+            mode = { 'x', 'o' },
+        },
+    })
+end
+
+local move_textobjects = {
+    {
+        binding = ']f',
+        desc = 'Next function call start',
+        query_string = '@call.outer',
+        call = 'goto_next_start',
+    },
+    {
+        binding = ']m',
+        desc = 'Next method/function def start',
+        query_string = '@function.outer',
+        call = 'goto_next_start',
+    },
+    {
+        binding = ']c',
+        desc = 'Next class start',
+        query_string = '@class.outer',
+        call = 'goto_next_start',
+    },
+    {
+        binding = ']i',
+        desc = 'Next conditional start',
+        query_string = '@conditional.outer',
+        call = 'goto_next_start',
+    },
+    {
+        binding = ']l',
+        desc = 'Next loop start',
+        query_string = '@loop.outer',
+        call = 'goto_next_start',
+    },
+    {
+        binding = ']s',
+        desc = 'Next scope',
+        query_string = '@local.scope',
+        call = 'goto_next_start',
+    },
+    {
+        binding = ']z',
+        desc = 'Next fold',
+        query_string = '@fold',
+        call = 'goto_next_start',
+    },
+    {
+        binding = ']F',
+        desc = 'Next function call end',
+        query_string = '@call.outer',
+        call = 'goto_next_end',
+    },
+    {
+        binding = ']M',
+        desc = 'Next method/function def end',
+        query_string = '@function.outer',
+        call = 'goto_next_end',
+    },
+    {
+        binding = ']C',
+        desc = 'Next class end',
+        query_string = '@class.outer',
+        call = 'goto_next_end',
+    },
+    {
+        binding = ']I',
+        desc = 'Next conditional end',
+        query_string = '@conditional.outer',
+        call = 'goto_next_end',
+    },
+    {
+        binding = ']L',
+        desc = 'Next loop end',
+        query_string = '@loop.outer',
+        call = 'goto_next_end',
+    },
+    {
+        binding = '[f',
+        desc = 'Prev function call start',
+        query_string = '@call.outer',
+        call = 'goto_previous_start',
+    },
+    {
+        binding = '[m',
+        desc = 'Prev method/function def start',
+        query_string = '@function.outer',
+        call = 'goto_previous_start',
+    },
+    {
+        binding = '[c',
+        desc = 'Prev class start',
+        query_string = '@class.outer',
+        call = 'goto_previous_start',
+    },
+    {
+        binding = '[i',
+        desc = 'Prev conditional start',
+        query_string = '@conditional.outer',
+        call = 'goto_previous_start',
+    },
+    {
+        binding = '[l',
+        desc = 'Prev loop start',
+        query_string = '@loop.outer',
+        call = 'goto_previous_start',
+    },
+    {
+        binding = '[F',
+        desc = 'Prev function call end',
+        query_string = '@call.outer',
+        call = 'goto_previous_end',
+    },
+    {
+        binding = '[M',
+        desc = 'Prev method/function def end',
+        query_string = '@function.outer',
+        call = 'goto_previous_end',
+    },
+    {
+        binding = '[C',
+        desc = 'Prev class end',
+        query_string = '@class.outer',
+        call = 'goto_previous_end',
+    },
+    {
+        binding = '[I',
+        desc = 'Prev conditional end',
+        query_string = '@conditional.outer',
+        call = 'goto_previous_end',
+    },
+    {
+        binding = '[L',
+        desc = 'Prev loop end',
+        query_string = '@loop.outer',
+        call = 'goto_previous_end',
+    },
+}
+
+for _, textobject in ipairs(move_textobjects) do
+    wk.add({
+        {
+            textobject.binding,
+            function()
+                print(textobject.call)
+                require('nvim-treesitter-textobjects.move')[textobject.call](textobject.query_string, 'textobjects')
+            end,
+            desc = textobject.desc,
+            mode = { 'n', 'x', 'o' },
+        },
+    })
+end
