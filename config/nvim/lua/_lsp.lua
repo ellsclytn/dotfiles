@@ -1,3 +1,3 @@
 require('_lsp.on_attach')
 
-vim.lsp.set_log_level('off')
+vim.lsp.log.set_level(vim.log.levels.OFF)
