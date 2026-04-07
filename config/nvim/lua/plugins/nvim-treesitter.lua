@@ -1,29 +1,12 @@
+local timeout = 10 * 60000 -- 10 min
+
 return {
     'nvim-treesitter/nvim-treesitter',
-    dependencies = {
-        'nvim-treesitter/nvim-treesitter-textobjects',
-    },
-    config = function()
-        require('nvim-treesitter.configs').setup({
-            -- One of "all", or a list of languages
-            ensure_installed = 'all',
-
-            -- Install languages synchronously (only applied to `ensure_installed`)
-            sync_install = false,
-
-            highlight = {
-                -- `false` will disable the whole extension
-                enable = true,
-
-                -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-                -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-                -- Using this option may slow down your editor, and you may see some duplicate highlights.
-                -- Instead of true it can also be a list of languages
-                additional_vim_regex_highlighting = false,
-            },
-        })
+    branch = 'main',
+    lazy = false,
+    build = function()
+        local ts = require('nvim-treesitter')
+        ts.update():wait(timeout)
+        ts.install({ 'stable', 'unstable' }):wait(timeout)
     end,
-    event = { 'BufReadPost', 'BufWritePost' },
-    build = ':TSUpdate',
-    cmd = 'TSUpdateSync',
 }
