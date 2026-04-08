@@ -93,7 +93,6 @@ no_self_update = true
 "brew-bundle" = "brew bundle --global"
 "brew-cleanup" = "brew cleanup"
 {{/if}}
-"treesitter" = "nvim --headless +TSUpdateSync +qa"
 
 [brew]
 #greedy_cask = true
