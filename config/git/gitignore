@@ -4,3 +4,4 @@ docker-compose.override.yml
 *.tfstate*
 .DS_Store
 .claude/
+mise.local.toml
