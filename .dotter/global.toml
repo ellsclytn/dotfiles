@@ -105,7 +105,17 @@ if = "dotter.packages.macos"
 "config/mpv/mpv.conf" = "~/.config/mpv/mpv.conf"
 
 [topgrade.files]
-"config/topgrade.toml" = "~/.config/topgrade.toml"
+"config/topgrade/topgrade.toml" = "~/.config/topgrade.toml"
+
+[topgrade.files."config/topgrade/linux.toml"]
+target = "~/.config/topgrade.d/linux.toml"
+type = "symbolic"
+if = "dotter.packages.linux"
+
+[topgrade.files."config/topgrade/macos.toml"]
+target = "~/.config/topgrade.d/macos.toml"
+type = "symbolic"
+if = "dotter.packages.macos"
 
 [topgrade.files."bin/sync-packages"]
 target = "~/.local/bin/sync-packages"

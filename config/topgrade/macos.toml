@@ -1,0 +1,3 @@
+[commands]
+"brew-bundle" = "brew bundle --global"
+"brew-cleanup" = "brew cleanup"

@@ -1,0 +1,2 @@
+[commands]
+"sync-packages" = "~/.dotfiles/bin/sync-packages"

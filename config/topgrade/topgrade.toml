@@ -86,13 +86,6 @@ no_self_update = true
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 #"Custom command using interactive shell (unix)" = "-i vim_upgrade"
 "dotter" = "bash -c 'cd ~/.dotfiles && dotter'"
-{{#if dotter.packages.linux}}
-"sync-packages" = "~/.dotfiles/bin/sync-packages"
-{{/if}}
-{{#if dotter.packages.macos}}
-"brew-bundle" = "brew bundle --global"
-"brew-cleanup" = "brew cleanup"
-{{/if}}
 
 [brew]
 #greedy_cask = true
