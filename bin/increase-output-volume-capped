@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+target='+5%'
+volume=$(pactl get-sink-volume @DEFAULT_SINK@ | head -n1 | cut -d/ -f2 | tr -d ' %')
+
+if ((volume > 95)); then
+  target='100%'
+fi
+
+pactl set-sink-volume @DEFAULT_SINK@ $target
