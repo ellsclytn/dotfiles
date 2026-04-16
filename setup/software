@@ -15,7 +15,7 @@ cd /tmp/paru-bin
 makepkg -si
 cd -
 
-ansible-playbook ansible/playbook.yml -K
+ansible-playbook ansible/playbook.yml -K --skip-tags encrypted,aur
 
 export PATH="$PATH:$HOME/.cargo/bin"
 
