@@ -28,6 +28,7 @@ fish
 fisher
 flameshot
 fzf
+gammastep
 geoclue
 git
 git-delta
@@ -66,7 +67,6 @@ piper
 pipewire
 pipewire-pulse
 playerctl
-redshift
 ripgrep
 rofi
 rofi-emoji
