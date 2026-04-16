@@ -1,2 +1,3 @@
 [commands]
+"ansible" = "ansible-playbook ansible/playbook.yml -K"
 "sync-packages" = "~/.dotfiles/bin/sync-packages"
