@@ -1,0 +1,4 @@
+api_key="{{ api_key }}"
+device_id="{{ device_id }}"
+base_url="{{ base_url }}"
+port=58573
