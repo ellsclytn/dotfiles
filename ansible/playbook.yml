@@ -392,3 +392,33 @@
         scope: user
       tags:
         - aur
+    - name: geoclue config
+      template:
+        src: ./templates/geoclue/geoclue.conf
+        dest: "/etc/geoclue/geoclue.conf"
+        owner: root
+        group: root
+        mode: "0644"
+      become: true
+    - name: geoclue service
+      service:
+        name: geoclue.service
+        enabled: true
+        state: started
+      become: true
+    - name: geoclue agent service overrides directory
+      file:
+        path: "~/.config/systemd/user/ha-geoip.service.d"
+        mode: "0755"
+        state: directory
+    - name: geoclue agent service config
+      template:
+        src: ./templates/ha-geoip/geoclue-agent.conf
+        dest: "~/.config/systemd/user/ha-geoip.service.d/geoclue-agent.conf"
+        mode: "0644"
+    - name: geoclue agent service
+      ansible.builtin.systemd_service:
+        name: geoclue-agent.service
+        enabled: true
+        state: started
+        scope: user
