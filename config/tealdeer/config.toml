@@ -1,0 +1,2 @@
+[directories]
+custom_pages_dir = "{{dotter.current_dir}}/tldr/"

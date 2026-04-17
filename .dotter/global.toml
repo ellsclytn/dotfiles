@@ -168,7 +168,7 @@ depends = ["colors", "fontconfig"]
 "bin/rofi-kaomoji" = "~/.local/bin/rofi-kaomoji"
 
 [tldr.files]
-"tldr" = "~/.local/share/tealdeer/pages"
+"config/tealdeer/config.toml" = "~/.config/tealdeer/config.toml"
 
 [handlr.files]
 "config/mimeapps.list" = "~/.config/mimeapps.list"
