@@ -9,6 +9,7 @@ ha-localizer-bin
 jnv-bin
 libsane-dsseries
 menu-qalc
+networkd-dispatcher
 pacman-cleanup-hook
 rofi-power-menu
 shellcheck-bin

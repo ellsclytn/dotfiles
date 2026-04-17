@@ -376,6 +376,14 @@
       become: true
       tags:
         - aur
+    - name: networkd-dispatcher service
+      service:
+        name: networkd-dispatcher.service
+        enabled: true
+        state: started
+      become: true
+      tags:
+        - aur
     - name: HA GeoIP Service
       ansible.builtin.systemd_service:
         name: ha-geoip.service
