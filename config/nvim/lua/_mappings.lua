@@ -174,6 +174,16 @@ local select_textobjects = {
         query_string = '@conditional.outer',
     },
     {
+        binding = 'ib',
+        desc = 'Select inner part of a block',
+        query_string = '@block.inner',
+    },
+    {
+        binding = 'ab',
+        desc = 'Select outer part of a block',
+        query_string = '@block.outer',
+    },
+    {
         binding = 'ii',
         desc = 'Select inner part of a conditional',
         query_string = '@conditional.inner',
