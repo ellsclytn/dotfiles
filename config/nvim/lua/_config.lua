@@ -28,5 +28,9 @@ vim.opt.backspace = 'indent,eol,start'
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+-- Treat hyphens and underscores as characters, not separators by default
+vim.opt.iskeyword:append('_')
+vim.opt.iskeyword:append('-')
+
 -- Leave a bit of space when scrolling
 vim.opt.scrolloff = 8

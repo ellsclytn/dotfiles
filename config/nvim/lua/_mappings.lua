@@ -118,6 +118,22 @@ wk.add({
         ':TerraformAddress<cr>',
         desc = 'Yank Terraform address',
     },
+    {
+        -- Word separator toggle
+        '<leader>ws',
+        function()
+            if vim.tbl_contains(vim.opt.iskeyword:get(), '_') then
+                vim.opt.iskeyword:remove('_')
+                vim.opt.iskeyword:remove('-')
+                vim.notify('iskeyword: _ and - are word separators')
+            else
+                vim.opt.iskeyword:append('_')
+                vim.opt.iskeyword:append('-')
+                vim.notify('iskeyword: _ and - are word characters')
+            end
+        end,
+        desc = 'Toggle word separators (_ and -)',
+    },
 })
 
 -- Treesitter textobjects
