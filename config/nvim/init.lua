@@ -31,4 +31,5 @@ require('lazy').setup({
     },
 })
 
+vim.cmd('colorscheme onedark')
 require('_mappings')
