@@ -48,6 +48,8 @@ return {
             ruby = { 'rubocop' },
             sh = { 'shfmt' },
             tf = { 'terraform_fmt' },
+            terraform = { 'terraform_fmt' },
+            ['terraform-vars'] = { 'terraform_fmt' },
             typescript = { 'prettierd', 'eslint_d' },
             typescriptreact = { 'prettierd', 'eslint_d' },
             yaml = { 'prettierd' },
