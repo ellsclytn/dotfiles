@@ -15,6 +15,7 @@ depends = [
   "mpv",
   "neovim",
   "rofi",
+  "television",
   "tldr",
   "topgrade",
   "wezterm",
@@ -36,6 +37,7 @@ depends = [
   "gpg",
   "mpv",
   "neovim",
+  "television",
   "tldr",
   "topgrade",
   "wezterm",
@@ -166,6 +168,9 @@ depends = ["colors", "fontconfig"]
 [rofi.files]
 "config/rofi/config.rasi" = "~/.config/rofi/config.rasi"
 "bin/rofi-kaomoji" = "~/.local/bin/rofi-kaomoji"
+
+[television.files]
+"config/television/cable" = "~/.config/television/cable"
 
 [tldr.files]
 "config/tealdeer/config.toml" = "~/.config/tealdeer/config.toml"
