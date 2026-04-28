@@ -11,4 +11,5 @@ if status --is-interactive
   abbr --add --global v "nvim"
   abbr --add --global vi "nvim"
   abbr --add --global vim "nvim"
+  abbr --add --global tfrm "cd \$(tv tfrm)"
 end

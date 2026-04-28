@@ -1,0 +1,14 @@
+[metadata]
+name = "tfrm"
+requirements = ["fd", "git"]
+description = """
+A channel to select from Terraform root modules on your local machine.
+
+This channel uses `fd` to find directories that contain a `.terraform.lock.hcl` file, and then allows you to cd to the directory.
+"""
+
+[source]
+command = """
+git rev-parse --is-inside-work-tree > /dev/null 2>&1 || { echo "Not inside a git repo"; exit 1; } && \
+  fd -H -E .git -t f '.terraform.lock.hcl' $(git rev-parse --show-toplevel) --exec dirname '{}'
+"""
