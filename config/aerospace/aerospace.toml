@@ -6,7 +6,7 @@ enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
 [mode.main.binding]
-alt-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
+alt-enter = 'exec-and-forget open -n /Applications/Ghostty.app'
 
 alt-h = 'focus left'
 alt-j = 'focus down'
@@ -70,3 +70,9 @@ k = 'resize height +100'
 l = 'resize width +100'
 enter = 'mode main'
 esc = 'mode main'
+
+[[on-window-detected]]
+if.app-id="com.mitchellh.ghostty"
+run= [
+  "layout floating",
+]

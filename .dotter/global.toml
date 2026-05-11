@@ -6,6 +6,7 @@ depends = [
   "fish",
   "flameshot",
   "gammastep",
+  "ghostty",
   "git",
   "gpg",
   "gtk",
@@ -33,6 +34,7 @@ depends = [
   "fastfetch",
   "fd",
   "fish",
+  "ghostty",
   "git",
   "gpg",
   "mpv",
@@ -108,6 +110,9 @@ if = "dotter.packages.macos"
 
 [gammastep.files]
 "config/gammastep/config.ini" = "~/.config/gammastep/config.ini"
+
+[ghostty.files]
+"config/ghostty/config.ghostty" = "~/.config/ghostty/config.ghostty"
 
 [mpv.files]
 "config/mpv/mpv.conf" = "~/.config/mpv/mpv.conf"
