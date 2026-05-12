@@ -9,7 +9,7 @@ tiling_drag off
 
 floating_modifier $mod
 
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec "ghostty +new-window"
 
 # Window kill command
 bindsym $mod+Shift+q kill
