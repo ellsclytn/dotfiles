@@ -48,4 +48,14 @@ if [ ${#failed_aur_packages[@]} -ne 0 ]; then
   done
 fi
 
+echo "Downloading wallpaper..."
+set -o pipefail
+wallpaper_path="$HOME/Pictures/wallpaper.png"
+mkdir -p "$HOME/Pictures"
+curl -o "$wallpaper_path" "https://w.wallhaven.cc/full/gj/wallhaven-gjrrmd.png"
+if ! echo "c8b48dfa717c03ec61f68e471be23b2732a5a1855b06c1833e3e7735dc9ac43b" "wallpaper.png" | sha256sum -c --quiet; then
+  rm -f "$wallpaper_path"
+  echo "${wallpaper_path} deleted due to failed checksum"
+fi
+
 echo "Done. Time to log out and in again!"
