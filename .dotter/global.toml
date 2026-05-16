@@ -14,6 +14,7 @@ depends = [
   "linux",
   "mpv",
   "neovim",
+  "npm",
   "rofi",
   "sway",
   "television",
@@ -38,6 +39,7 @@ depends = [
   "gpg",
   "mpv",
   "neovim",
+  "npm",
   "television",
   "tldr",
   "topgrade",
@@ -148,6 +150,9 @@ pinentry_program = "/usr/bin/pinentry-gnome3"
 "config/nvim/lua" = "~/.config/nvim/lua"
 "config/nvim/lsp" = "~/.config/nvim/lsp"
 "config/nvim/init.lua" = "~/.config/nvim/init.lua"
+
+[npm.files]
+"config/npm/npmrc" = "~/.config/npm/npmrc"
 
 [sway]
 depends = ["colors"]
