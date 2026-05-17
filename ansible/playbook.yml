@@ -5,12 +5,6 @@
     laptop: "{{ lookup('env', 'LAPTOP', default='false') | bool }}"
     vm: "{{ lookup('env', 'VM_TEST', default='false') | bool }}"
   tasks:
-    - name: Install replacement packages
-      pacman:
-        name:
-          - eza
-        state: present
-      become: true
     - name: Install laptop-specific Pacman packages
       pacman:
         name:
@@ -160,11 +154,6 @@
         state: directory
         mode: "0755"
       become: true
-    - name: Remove old Wired network config
-      ansible.builtin.file:
-        path: /etc/systemd/network/20-wired.network
-        state: absent
-      become: true
     - name: Network configuration
       template:
         src: ./templates/systemd/network/20-dhcp.network
@@ -251,13 +240,6 @@
       ansible.builtin.shell: mkinitcpio -P
       become: true
       when: mkinitcpio_conf.changed
-    - name: Remove asdf configuration
-      ansible.builtin.file:
-        path: "{{ item }}"
-        state: absent
-      loop:
-        - ~/.asdf
-        - ~/.tool-versions
     - name: /etc/snapper/configs
       file:
         path: /etc/snapper/configs
