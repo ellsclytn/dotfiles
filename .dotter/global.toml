@@ -37,6 +37,7 @@ depends = [
   "ghostty",
   "git",
   "gpg",
+  "hammerspoon",
   "mpv",
   "neovim",
   "npm",
@@ -195,3 +196,6 @@ depends = ["colors", "fontconfig"]
 
 [aerospace.files]
 "config/aerospace/aerospace.toml" = "~/.config/aerospace/aerospace.toml"
+
+[hammerspoon.files]
+"config/hammerspoon/init.lua" = "~/.hammerspoon/init.lua"
