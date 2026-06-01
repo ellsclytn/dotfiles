@@ -1,4 +1,3 @@
-adobe-source-sans-fonts
 alsa-utils
 ansible
 asciinema
@@ -90,6 +89,7 @@ ttf-dejavu
 ttf-hack
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
+ttf-ubuntu-nerd
 udisks2
 unzip
 usage

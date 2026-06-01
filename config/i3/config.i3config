@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Source Sans 3 10
+font pango:Ubuntu Nerd Font 10
 
 default_border pixel 1
 default_floating_border normal
