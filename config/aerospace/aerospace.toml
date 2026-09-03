@@ -70,9 +70,3 @@ k = 'resize height +100'
 l = 'resize width +100'
 enter = 'mode main'
 esc = 'mode main'
-
-[[on-window-detected]]
-if.app-id="com.mitchellh.ghostty"
-run= [
-  "layout floating",
-]
