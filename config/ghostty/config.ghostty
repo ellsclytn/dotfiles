@@ -4,4 +4,5 @@ theme = One Half Dark
 
 # {{#if dotter.packages.macos}}
 keybind = cmd+e=esc:e
+quit-after-last-window-closed = true
 # {{/if}}
