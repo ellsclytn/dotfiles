@@ -12,4 +12,7 @@ if status --is-interactive
   abbr --add --global vi "nvim"
   abbr --add --global vim "nvim"
   abbr --add --global tfrm "cd \$(tv tfrm)"
+  abbr --add --global tfi "terraform init"
+  abbr --add --global tfpl "terraform plan -out plan.tfplan"
+  abbr --add --global tfap "terraform apply plan.tfplan"
 end
