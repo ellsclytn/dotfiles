@@ -2,7 +2,6 @@ return {
     'saghen/blink.cmp',
     dependencies = {
         'rafamadriz/friendly-snippets', -- optional: provides snippets for the snippet source
-        'fang2hou/blink-copilot',
     },
 
     -- use a release tag to download pre-built binaries
@@ -21,7 +20,6 @@ return {
         },
         sources = {
             default = {
-                'copilot',
                 'lazydev',
                 'lsp',
                 'buffer',
@@ -29,12 +27,6 @@ return {
                 'path',
             },
             providers = {
-                copilot = {
-                    name = 'copilot',
-                    module = 'blink-copilot',
-                    score_offset = 100,
-                    async = true,
-                },
                 lazydev = {
                     name = 'LazyDev',
                     module = 'lazydev.integrations.blink',
