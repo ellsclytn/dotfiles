@@ -13,6 +13,9 @@ input "type:touchpad" {
 
 output * {
   background ~/Pictures/wallpaper.png fill
+  {{#if laptop}}
+  max_render_time 15
+  {{/if}}
 }
 
 output DP-1 {
